@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <!--Meta Charset-->
     <meta charset="UTF-8">
@@ -20,10 +21,6 @@
     <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
     <link rel="icon" href="img/logo.png"> <!--Icono de pestaña-->
 
-    <!--Datepicker-->
-    <script src="https://unpkg.com/gijgo@1.9.13/js/gijgo.min.js" type="text/javascript"></script>
-    <link href="https://unpkg.com/gijgo@1.9.13/css/gijgo.min.css" rel="stylesheet" type="text/css"/>
-
     <!--Normalize-->
     <link rel="stylesheet" href="css/normalize.css">
     
@@ -32,11 +29,10 @@
 
     <title>SQUAWK! - Ingresar</title>
 </head>
-<body>
 
+<body>
     <header>
         <div class="main-header-container">
-
             <div class="header-title-container">
                 <a href="index.php" class="xy-center-cont">
                     <h1>
@@ -57,28 +53,23 @@
                         Registrarse
                     </span>
                 </a>
-            </div>
-            
+            </div>    
         </div> <!--main-header-container-->
     </header>
-    
 
     <main>
         <div class="main-container">
-
             <section class="main-title-container">
                 <h1 class="text-center">
                     Ingresar
                 </h1>
             </section>
             
-            <section class="main-signup-container"> <!--Recicled because muh code-->
-                <form action="home.php" method="POST" enctype="multipart/form-data">
-                    
+            <section class="main-login-container"> <!--Recicled because muh code-->
+                <form action="home.php" method="POST"> 
                     <!-- Campos de login -->
                     <fieldset class="center-text"> 
                         <div class="form-text" class="row">
-
                             <div>
                                 <input class="form-control form-control-sm fs-1-5rem" type="text" name="username" value="" placeholder="Nombre de Usuario" required>
                             </div>
@@ -86,11 +77,8 @@
                             <div>
                                 <input class="form-control form-control-sm fs-1-5rem" type="password" name="reg_passwd" placeholder="Contraseña" required>
                             </div>
-
                         </div>
-                    </fieldset>
-                       
-                    <br>
+                    </fieldset> <br>
 
                     <!-- login-button -->
                     <div class="center-text">
@@ -98,18 +86,15 @@
                         <br> <br> 
                         <button class="btn btn-primary fs-1-5rem" type="submit"> Ingresar </button>
                     </div>
-    
                 </form>
             </section> <!-- Main-signup-container -->
         </div> <!-- Main-container -->
-
     </main>
 
     <footer>
         <div class="main-footer-container">
             <nav class="barra-navegacion">
-                <ul>
-                    
+                <ul>  
                     <li>
                         <a class="active fs-1-5rem border-black" href="login.php"> Ingreso <br>
                             <span title="Ingresa a tu nido">
@@ -149,11 +134,10 @@
                             </span>
                         </a>
                     </li>
-                
                 </ul>
             </nav>
         </div> <!-- main-footer-container -->         
     </footer>
-
 </body>
+
 </html>

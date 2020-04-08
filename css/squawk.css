@@ -118,7 +118,7 @@ main
     font-weight: 600;
 }
 
-.main-signup-container
+.main-signup-container, .main-profile-container, .main-login-container, .main-index-container
 {
     background-color: #0f4c81;
     border-radius: 1rem;
@@ -204,8 +204,29 @@ a:hover
 }
 
 
-/** Login.php **/
+/** profile.php **/
+textarea 
+{
+    width: 100%;
+    height: 10rem;
+}
 
+.pfp-container
+{
+    display: flex;
+    flex: row wrap;
+    justify-content: space-evenly;
+}
+
+.profile
+{
+    margin: 1rem;
+}
+
+/* File Upload */
+
+
+/** Login.php **/
 
 
 /** Index WIP - sólo porque el Netlify me pide un fucking index**/
@@ -243,3 +264,4 @@ blockquote
 {
     font-style: italic;
 }
+

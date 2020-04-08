@@ -18,11 +18,7 @@
 
     <!--Icons-->
     <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
-    <link rel="icon" href="img/logo.png"> <!--Icono de pestaña-->
-
-    <!--Datepicker-->
-    <script src="https://unpkg.com/gijgo@1.9.13/js/gijgo.min.js" type="text/javascript"></script>
-    <link href="https://unpkg.com/gijgo@1.9.13/css/gijgo.min.css" rel="stylesheet" type="text/css"/>
+    <link rel="icon" href="img/logo.png"> <!--Icono de pestaña--> 
 
     <!--Normalize-->
     <link rel="stylesheet" href="css/normalize.css">
@@ -32,11 +28,10 @@
 
     <title>SQUAWK! - Registro</title>
 </head>
-<body>
 
+<body>
     <header>
         <div class="main-header-container">
-
             <div class="header-title-container">
                 <a href="index.php" class="xy-center-cont">
                     <h1>
@@ -59,14 +54,11 @@
                     <i class="fa fa-sign-in header-login-icon" aria-hidden="true" alt="Ingresar"></i>
                 </a>
             </div>
-            
         </div> <!--main-header-container-->
     </header>
-    
 
     <main>
         <div class="main-container">
-
             <section class="main-title-container">
                 <h1 class="text-center">
                     Registro
@@ -75,7 +67,6 @@
             
             <section class="main-signup-container">
                 <form action="register.php" method="POST" enctype="multipart/form-data">
-                    
                     <!-- Datos de la cuenta-->
                     <fieldset class="center-text"> 
                         <div class="form-text" class="row">
@@ -95,19 +86,14 @@
                             <div>
                                 <input class="form-control form-control-sm fs-1-5rem" type="password" name="reg_passwdC" placeholder="Confirmar contraseña" required>
                             </div>
-
                         </div>
-                    </fieldset>
-                    
-                    <br>
+                    </fieldset> <br>
                      
                     <!--Datepicker, cuando encuentre algo mejor lo cambio-->
                     <fieldset>
                         <legend class="center-text">Ingrese fecha de nacimiento</legend>
                         <input class="form-control form-control-sm fs-1-5rem" type="date" name="fecha_nac" step="1" max="2002-12-31">
-                    </fieldset>
-                       
-                    <br>
+                    </fieldset> <br>
                     
                     <!-- Genero -->
                     <fieldset> 
@@ -117,10 +103,7 @@
                             <span> Personalizado <br> <input type="radio" name="genero" value="o"> </span>
                             <span> Femenino <br><input type="radio" name="genero" value="f"> </span>
                         </div>  
-                    </fieldset>
-                    
-                    <br>
-                    <br>
+                    </fieldset> <br> <br>
 
                     <!-- Acepta terminos y condiciones -->
                     <div class="center-text"> 
@@ -128,18 +111,15 @@
                         <br> <br>
                         <button class="btn btn-primary fs-1-5rem" type="submit"> Registro</button>
                     </div>
-    
                 </form>
             </section> <!-- Main-signup-container -->
         </div> <!-- Main-container -->
-
     </main>
 
     <footer>
         <div class="main-footer-container">
             <nav class="barra-navegacion">
-                <ul>
-                    
+                <ul>  
                     <li>
                         <a class="active fs-1-5rem border-black" href="register.php"> Registro <br>
                             <span title="Crea una cuenta para buitrear!">
@@ -179,11 +159,10 @@
                             </span>
                         </a>
                     </li>
-                
                 </ul>
             </nav>
         </div> <!-- main-footer-container -->         
     </footer>
-
 </body>
+
 </html>
