@@ -30,7 +30,7 @@
     <!--Own CSS-->
     <link rel="stylesheet" href="css/squawk.css">
 
-    <title>SQUAWK! - Registro</title>
+    <title>SQUAWK! - Ingresar</title>
 </head>
 <body>
 
@@ -52,11 +52,10 @@
             </div>
             
             <div class="header-login-container">
-                <a href="login.php" class="xy-center-cont"> 
+                <a href="index.php" class="xy-center-cont"> 
                     <span class="header-login-span">
-                        Login
+                        Home
                     </span>
-                    <i class="fa fa-sign-in header-login-icon" aria-hidden="true" alt="Ingresar"></i>
                 </a>
             </div>
             
@@ -69,67 +68,43 @@
 
             <section class="main-title-container">
                 <h1 class="text-center">
-                    Registro
+                    Welcome to SQUAWK!
                 </h1>
             </section>
             
-            <section class="main-signup-container">
-                <form action="register.php" method="POST" enctype="multipart/form-data">
-                    
-                    <!-- Datos de la cuenta-->
-                    <fieldset class="center-text"> 
-                        <div class="form-text" class="row">
-                            <legend class="center-text">Datos de la cuenta</legend>
-                            <div>
-                                <input class="form-control form-control-sm fs-1-5rem" type="text" name="username" value="" placeholder="Nombre de Usuario" required>
-                            </div>
-                            
-                            <div>
-                                <input class="form-control form-control-sm fs-1-5rem" type="email" name="reg_email" value="" placeholder="Email" required>
-                            </div>
-                            
-                            <div>
-                                <input class="form-control form-control-sm fs-1-5rem" type="password" name="reg_passwd" placeholder="Contraseña" required>
-                            </div>
-                        
-                            <div>
-                                <input class="form-control form-control-sm fs-1-5rem" type="password" name="reg_passwdC" placeholder="Confirmar contraseña" required>
-                            </div>
+            <section class="main-signup-container"> <!--Recicled because muh code-->
+               <h2 class="text-center">This is totally a WIP!</h2>
+               <br>
+               <article class="text-center">
+                    <blockquote>
+                        "What is this site for? I don't even know myself yet! <br>
+                        It seems to be some kind of experimental Social Media. <br>
+                        No biggie, it's only a project made for a course. <br>
+                        Is that the right word? "Course"? IDK, dud. <br>
+                        Greetings to my friend, the Comfybro himself. <br>
+                        Love you, fren, thanks for all the tips and pointers!"
+                    </blockquote>
+                    <br>
+                    <marquee behavior="scroll" direction="right"> - the codey boi</marquee>
+               </article> 
+            </section> <!-- Main-signup-container -->
+            
+            <section class="main-buttons-container">
+                <!-- login/register-buttons -->
 
-                        </div>
-                    </fieldset>
-                    
-                    <br>
-                     
-                    <!--Datepicker, cuando encuentre algo mejor lo cambio-->
-                    <fieldset>
-                        <legend class="center-text">Ingrese fecha de nacimiento</legend>
-                        <input class="form-control form-control-sm fs-1-5rem" type="date" name="fecha_nac" step="1" max="2002-12-31">
-                    </fieldset>
-                       
-                    <br>
-                    
-                    <!-- Genero -->
-                    <fieldset> 
-                        <legend class="center-text">Seleccione g&eacute;nero</legend>
-                        <div class="radios center-text">
-                            <span> Masculino <br> <input type="radio" name="genero" value="m"> </span>
-                            <span> Personalizado <br> <input type="radio" name="genero" value="o"> </span>
-                            <span> Femenino <br><input type="radio" name="genero" value="f"> </span>
-                        </div>  
-                    </fieldset>
-                    
-                    <br>
-                    <br>
+                <div class="center-text">
+                    Si no ten&eacute;s una cuenta, pod&eacute;s registrarte ac&aacute; <br> <br>
+                    <button class="boton-index btn btn-primary fs-1-5rem"> <a href="register.php">Registrar</a> </button>
+                </div> 
 
-                    <!-- Acepta terminos y condiciones -->
-                    <div class="center-text"> 
-                        <input type="checkbox" name="acepta" value="s" checked required> <span class="fs-1-5rem">Acepto los <a href="terms.php">Términos y Condiciones</a></span>
-                        <br> <br>
-                        <button class="btn btn-primary fs-1-5rem" type="submit"> Registro</button>
-                    </div>
-    
-                </form>
+                <br>
+
+                <span class="divisor"></span>
+
+                <div class="center-text">
+                    Si ya ten&eacute;s una cuenta, pod&eacute;s ingresar ac&aacute; <br> <br>
+                    <button class="boton-index btn btn-success fs-1-5rem"> <a href="login.php">Login</a> </button>
+                </div>
             </section> <!-- Main-signup-container -->
         </div> <!-- Main-container -->
 
@@ -141,9 +116,9 @@
                 <ul>
                     
                     <li>
-                        <a class="active fs-1-5rem border-black" href="register.php"> Registro <br>
-                            <span title="Crea una cuenta para buitrear!">
-                                <i class="fa fa-user-plus" aria-hidden="true"></i>
+                        <a class="active fs-1-5rem border-black" href="profile.php"> Inicio <br>
+                            <span title="De vuelta al nido">
+                                <i class="fa fa-home" aria-hidden="true"></i>
                             </span>
                         </a>
                     </li>
@@ -157,9 +132,9 @@
                     </li>
                     
                     <li>
-                        <a class="fs-1-5rem border-black" href="index.php"> Inicio <br>
-                            <span title="De vuelta al nido">
-                                <i class="fa fa-home" aria-hidden="true"></i>
+                        <a class="fs-1-5rem border-black" href="register.php"> Registro <br>
+                            <span title="Crea una cuenta para buitrear!">
+                                <i class="fa fa-user-plus" aria-hidden="true"></i>
                             </span>
                         </a>
                     </li>
