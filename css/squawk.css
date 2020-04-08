@@ -258,6 +258,7 @@ textarea
 .divisor
 {
     border: solid 1px white;
+    margin: 0 auto;
 }
 
 blockquote
