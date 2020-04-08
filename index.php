@@ -116,7 +116,7 @@
                 <ul>
                     
                     <li>
-                        <a class="active fs-1-5rem border-black" href="profile.php"> Inicio <br>
+                        <a class="active fs-1-5rem border-black" href="index.php"> Inicio <br>
                             <span title="De vuelta al nido">
                                 <i class="fa fa-home" aria-hidden="true"></i>
                             </span>
