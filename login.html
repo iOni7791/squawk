@@ -48,12 +48,12 @@
             </div>
             
             <div class="header-login-container">
-                <a href="index.html" class="xy-center-cont"> 
+                <a href="register.html" class="xy-center-cont"> 
                     <span class="header-login-span">
-                        Home
+                        Registrarse
                     </span>
                 </a>
-            </div>
+            </div>    
         </div> <!--main-header-container-->
     </header>
 
@@ -61,61 +61,52 @@
         <div class="main-container">
             <section class="main-title-container">
                 <h1 class="text-center">
-                    Welcome to SQUAWK!
+                    Ingresar
                 </h1>
             </section>
             
-            <section class="main-index-container"> <!--Recicled because muh code-->
-               <h2 class="text-center">This is totally a WIP!</h2>
-               <br>
-               <article class="text-center">
-                    <blockquote>
-                        "What is this site for? I don't even know myself yet! <br>
-                        It seems to be some kind of experimental Social Media. <br>
-                        No biggie, it's only a project made for a course. <br>
-                        Is that the right word? "Course"? IDK, dud. <br>
-                        Greetings to my friend, the Comfybro himself. <br>
-                        Love you, fren, thanks for all the tips and pointers!"
-                    </blockquote>
-                    <br>
-                    <marquee behavior="scroll" direction="right"> - the codey boi</marquee>
-               </article> 
-            </section> <!-- Main-signup-container -->
-            
-            <section class="main-buttons-container">
-                <!-- login/register-buttons -->
-                <div class="center-text">
-                    Si no ten&eacute;s una cuenta, pod&eacute;s registrarte ac&aacute; <br> <br>
-                    <button class="boton-index btn btn-primary fs-1-5rem"> <a href="register.html">Registrar</a> </button>
-                </div> <br>
+            <section class="main-login-container"> <!--Recicled because muh code-->
+                <form action="home.html" method="POST"> 
+                    <!-- Campos de login -->
+                    <fieldset class="center-text"> 
+                        <div class="form-text" class="row">
+                            <div>
+                                <input class="form-control form-control-sm fs-1-5rem" type="text" name="username" value="" placeholder="Nombre de Usuario" required>
+                            </div>
+                                                        
+                            <div>
+                                <input class="form-control form-control-sm fs-1-5rem" type="password" name="reg_passwd" placeholder="Contraseña" required>
+                            </div>
+                        </div>
+                    </fieldset> <br>
 
-                <span class="divisor"></span>
-
-                <div class="center-text">
-                    Si ya ten&eacute;s una cuenta, pod&eacute;s ingresar ac&aacute; <br> <br>
-                    <button class="boton-index btn btn-success fs-1-5rem"> <a href="login.html">Login</a> </button>
-                </div>
+                    <!-- login-button -->
+                    <div class="center-text">
+                        <input type="checkbox" name="acepta" value="s" checked> <span class="fs-1-5rem">Recordar contrase&ntilde;a</span>
+                        <br> <br> 
+                        <button class="btn btn-primary fs-1-5rem" type="submit"> Ingresar </button>
+                    </div>
+                </form>
             </section> <!-- Main-signup-container -->
         </div> <!-- Main-container -->
-
     </main>
 
     <footer>
         <div class="main-footer-container">
             <nav class="barra-navegacion">
-                <ul>
+                <ul>  
                     <li>
-                        <a class="active fs-1-5rem border-black" href="index.html"> Inicio <br>
-                            <span title="De vuelta al nido">
-                                <i class="fa fa-home" aria-hidden="true"></i>
+                        <a class="active fs-1-5rem border-black" href="login.html"> Ingreso <br>
+                            <span title="Ingresa a tu nido">
+                            <i class="fa fa-sign-in fs-1-5rem" aria-hidden="true"></i>
                             </span>
                         </a>
                     </li>
                     
                     <li>
-                        <a class="fs-1-5rem border-black" href="login.html"> Ingreso <br>
-                            <span title="Ingresa a tu nido">
-                            <i class="fa fa-sign-in fs-1-5rem" aria-hidden="true"></i>
+                        <a class="fs-1-5rem border-black" href="index.html"> Inicio <br>
+                            <span title="De vuelta al nido">
+                                <i class="fa fa-home" aria-hidden="true"></i>
                             </span>
                         </a>
                     </li>
@@ -137,13 +128,12 @@
                     </li>
                     
                     <li>
-                        <a class="fs-1-5rem border-black" href="profile.html"> Perfil <br>
-                            <span title="Acicala tu perfil">
-                                <i class="fa fa-user-circle" aria-hidden="true"></i>
+                        <a class="fs-1-5rem border-black" href="contacto.html">
+                            <span title="Un contacto para graznarnos"> Contacto <br>
+                                <i class="fa fa-envelope" aria-hidden="true"></i>
                             </span>
                         </a>
                     </li>
-                
                 </ul>
             </nav>
         </div> <!-- main-footer-container -->         
