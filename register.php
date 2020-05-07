@@ -30,32 +30,11 @@
 </head>
 
 <body>
-    <header>
-        <div class="main-header-container">
-            <div class="header-title-container">
-                <a href="index.php" class="xy-center-cont">
-                    <h1>
-                        SQUAWK!
-                    </h1>
-                </a>
-            </div>
-            
-            <div class="header-logo-container height-100">
-                <a href="index.php" class="a-logo xy-center-cont">
-                    <img class="header-logo" src="img/logo.png" alt="SQUAWK!">
-                </a>
-            </div>
-            
-            <div class="header-login-container">
-                <a href="login.php" class="xy-center-cont"> 
-                    <span class="header-login-span">
-                        Login
-                    </span>
-                    <i class="fa fa-sign-in header-login-icon" aria-hidden="true" alt="Ingresar"></i>
-                </a>
-            </div>
-        </div> <!--main-header-container-->
-    </header>
+    
+    <?php
+        //Agregar acá una funcionalidad similar al footer
+        require_once("header.php");
+    ?>
 
     <main>
         <div class="main-container">

@@ -30,31 +30,11 @@
 </head>
 
 <body>
-    <header>
-        <div class="main-header-container">
-            <div class="header-title-container">
-                <a href="index.php" class="xy-center-cont">
-                    <h1>
-                        SQUAWK!
-                    </h1>
-                </a>
-            </div>
-            
-            <div class="header-logo-container height-100">
-                <a href="index.php" class="a-logo xy-center-cont">
-                    <img class="header-logo" src="img/logo.png" alt="SQUAWK!">
-                </a>
-            </div>
-            
-            <div class="header-login-container">
-                <a href="logout.php" class="xy-center-cont"> 
-                    <span class="header-login-span">
-                        Cerrar <br> Sesión
-                    </span>
-                </a>
-            </div> 
-        </div> <!--main-header-container-->
-    </header>
+    
+    <?php
+        //Agregar acá una funcionalidad similar al footer
+        require_once("header.php");
+    ?>
     
     <main>
         <div class="main-container">
@@ -195,33 +175,33 @@
                     </li>
                     
                     <li>
-                        <a class="fs-1-5rem border-black" href="index.php"> Inicio <br>
-                            <span title="De vuelta al nido">
-                                <i class="fa fa-home" aria-hidden="true"></i>
+                        <a class="fs-1-5rem border-black" href="friends.php"> Amigos <br>
+                            <span title="Tus amigos, los buitres">
+                                <i class="fa fa-users" aria-hidden="true"></i>
                             </span>
                         </a>
                     </li>
-                    
+
                     <li>
-                        <a class="fs-1-5rem border-black" href="register.php"> Registro <br>
-                            <span title="Crea una cuenta para buitrear!">
-                                <i class="fa fa-user-plus" aria-hidden="true"></i>
+                        <a class="fs-1-5rem border-black" href="index.php"> Feed <br>
+                            <span title="Las graznadas de tus amigos">
+                                <i class="fa fa-newspaper-o" aria-hidden="true"></i>
                             </span>
                         </a>
                     </li>
-                    
+                                        
                     <li>
                         <a class="fs-1-5rem border-black" href="faq.php">
-                            <span title="Preguntas Frecuentemente Graznadas"> F.A.Q. <br>
-                                <i class="fa fa-question-circle" aria-hidden="true"></i>
+                            <span title="Tus graznadas"> Posts <br>
+                                <i class="fa fa-pencil-square-o" aria-hidden="true"></i>
                             </span>
                         </a>
                     </li>
                     
                     <li>
-                        <a class="fs-1-5rem border-black" href="contacto.php">
-                            <span title="Un contacto para graznarnos"> Contacto <br>
-                                <i class="fa fa-envelope" aria-hidden="true"></i>
+                        <a class="fs-1-5rem border-black" href="logout.php">
+                            <span title="Salir volando"> Salir <br>
+                                <i class="fa fa-sign-out" aria-hidden="true"></i>
                             </span>
                         </a>
                     </li>
