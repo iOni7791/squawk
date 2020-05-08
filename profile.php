@@ -115,18 +115,29 @@
                     <fieldset>
                         <legend class="center-text fs-1-5rem">Fecha de nacimiento</legend>
                         <input class="form-control form-control-sm fs-1-5rem" type="date" name="fecha_nac" step="1" max="2002-12-31">
-                    </fieldset> <br>
+                    </fieldset> 
+                    <br>
 
                     <!-- Genero -->
                     <fieldset> 
                         <legend class="center-text fs-1-5rem">Seleccione g&eacute;nero</legend>
                         <div class="radios center-text">
-                            <span> Masculino <br> <input type="radio" name="genero" value="m"> </span>
-                            <span> Personalizado <br> <input type="radio" name="genero" value="o"> </span>
-                            <span> Femenino <br><input type="radio" name="genero" value="f"> </span>
+                            <span> 
+                                <label for="m"> Masculino</label> <br> 
+                                <input type="radio" id="m" name="genero" value="m"> 
+                            </span>
+                            <span> 
+                                <label for="o">Personalizado</label><br> 
+                                <input type="radio" id="o" name="genero" value="o"> 
+                                <!-- Habría que poner acá un pequeño campo para ingresar el genero con un Script acá para que aparezca al seleccionar esta opción -->
+                            </span>
+                            <span> 
+                                <label for="f">Femenino</label><br>
+                                <input type="radio" id="f" name="genero" value="f"> 
+                            </span>
                         </div>  
-                    </fieldset> <br>
-
+                    </fieldset> 
+                    <br>
                     <div class="center-text"> 
                         <button class="btn btn-primary fs-1-5rem" type="submit">Actualizar</button>
                     </div> 

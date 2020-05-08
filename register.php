@@ -68,7 +68,7 @@
                         </div>
                     </fieldset> <br>
                      
-                    <!--Datepicker, cuando encuentre algo mejor lo cambio-->
+                    <!--Datepicker, cuando encuentre algo mejor lo cambio hay que hacer que cuente 18 años para atrás-->
                     <fieldset>
                         <legend class="center-text">Ingrese fecha de nacimiento</legend>
                         <input class="form-control form-control-sm fs-1-5rem" type="date" name="fecha_nac" step="1" max="2002-12-31">
@@ -78,9 +78,19 @@
                     <fieldset> 
                         <legend class="center-text">Seleccione g&eacute;nero</legend>
                         <div class="radios center-text">
-                            <span> Masculino <br> <input type="radio" name="genero" value="m"> </span>
-                            <span> Personalizado <br> <input type="radio" name="genero" value="o"> </span>
-                            <span> Femenino <br><input type="radio" name="genero" value="f"> </span>
+                            <span> 
+                                <label for="m"> Masculino</label> <br> 
+                                <input type="radio" id="m" name="genero" value="m"> 
+                            </span>
+                            <span> 
+                                <label for="o">Personalizado</label><br> 
+                                <input type="radio" id="o" name="genero" value="o">
+                                <!-- Habría que poner acá un pequeño campo para ingresar el genero con un Script acá para que aparezca al seleccionar esta opción --> 
+                            </span>
+                            <span> 
+                                <label for="f">Femenino</label><br>
+                                <input type="radio" id="f" name="genero" value="f"> 
+                            </span>
                         </div>  
                     </fieldset> <br> <br>
 

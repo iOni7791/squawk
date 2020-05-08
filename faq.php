@@ -86,6 +86,11 @@
                             del curso <strong><u> Desarrollo Web Fullstack</u></strong> de <strong> <a href="https://www.digitalhouse.com/">Digital House</a></strong>.
                         </blockquote>
                         <br>
+                        <div class="text-center">
+                            <p>Si posee alguna otra duda o sugerencia, por favor cont&aacute;ctenos</p>
+                            <a href="contacto.php" class="btn btn-success fs-1-5rem">Contactar</a>
+                        </div>
+                        <br>
                         <marquee behavior="scroll" direction="right"> Saludos! </marquee>
                     
                </article>
