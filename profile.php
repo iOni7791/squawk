@@ -1,3 +1,7 @@
+<?php
+    session_start();
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -173,53 +177,10 @@
         </div> <!-- Main-container -->
     </main>
 
-    <footer>
-        <div class="main-footer-container">
-            <nav class="barra-navegacion">
-                <ul>
-                    <li>
-                        <a class="active fs-1-5rem border-black" href="profile.php"> Perfil <br>
-                            <span title="Acicala tu perfil">
-                                <i class="fa fa-user-circle" aria-hidden="true"></i>
-                            </span>
-                        </a>
-                    </li>
-                    
-                    <li>
-                        <a class="fs-1-5rem border-black" href="friends.php"> Amigos <br>
-                            <span title="Tus amigos, los buitres">
-                                <i class="fa fa-users" aria-hidden="true"></i>
-                            </span>
-                        </a>
-                    </li>
-
-                    <li>
-                        <a class="fs-1-5rem border-black" href="index.php"> Feed <br>
-                            <span title="Las graznadas de tus amigos">
-                                <i class="fa fa-newspaper-o" aria-hidden="true"></i>
-                            </span>
-                        </a>
-                    </li>
-                                        
-                    <li>
-                        <a class="fs-1-5rem border-black" href="faq.php">
-                            <span title="Tus graznadas"> Posts <br>
-                                <i class="fa fa-pencil-square-o" aria-hidden="true"></i>
-                            </span>
-                        </a>
-                    </li>
-                    
-                    <li>
-                        <a class="fs-1-5rem border-black" href="logout.php">
-                            <span title="Salir volando"> Salir <br>
-                                <i class="fa fa-sign-out" aria-hidden="true"></i>
-                            </span>
-                        </a>
-                    </li>
-                </ul>
-            </nav>
-        </div> <!-- main-footer-container -->         
-    </footer>
-</body>
+    <?php
+        $active = 3;
+        require_once("footer.php");
+    ?>
+<</body>
 
 </html>

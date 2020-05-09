@@ -1,7 +1,13 @@
 <?php
+    session_start();
     date_default_timezone_set('America/Argentina/Buenos_Aires');
     $diaBase = date('d-m-Y');
-    require('fechaCastellano.php');
+    require_once('fechaCastellano.php');
+    require_once("db.php");
+    checaLogin();
+
+    $usuarioActual = $_SESSION["usuario"];
+    $_SESSION["logueado"] = false;
 ?>
 
 <!DOCTYPE html>

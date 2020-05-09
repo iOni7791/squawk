@@ -1,4 +1,5 @@
 <?php
+    session_start();
     date_default_timezone_set('America/Argentina/Buenos_Aires');
     $diaBase = date('d-m-Y');
     require('fechaCastellano.php');

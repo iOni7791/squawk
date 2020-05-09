@@ -1,3 +1,6 @@
+<?php
+    session_start();
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -31,7 +34,6 @@
 </head>
 
 <body>
-    
     <?php
         //Agregar acá una funcionalidad similar al footer
         require_once("header.php");

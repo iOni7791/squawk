@@ -17,7 +17,7 @@
                             </span>
                         </a>
                     </li>
-                    
+                    <?php if (!$_SESSION["logueado"]): ?>
                     <li>
                         <a class="<?= $active == 3 ? "active":"" ?> fs-1-5rem border-black" href="register.php"> Registro <br>
                             <span title="Crea una cuenta para buitrear!">
@@ -25,6 +25,15 @@
                             </span>
                         </a>
                     </li>
+                    <?php else: ?>
+                        <li>
+                        <a class="<?= $active == 3 ? "active":"" ?> fs-1-5rem border-black" href="profile.php"> Perfil <br>
+                            <span title="Edita tu perfil!">
+                                <i class="fa fa-user-plus" aria-hidden="true"></i>
+                            </span>
+                        </a>
+                    </li>
+                    <?php endif; ?>
                     
                     <li>
                         <a class="<?= $active == 4 ? "active":"" ?> fs-1-5rem border-black" href="faq.php">
