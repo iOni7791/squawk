@@ -60,3 +60,77 @@
         return $res;
 
     }
+
+    function login($db){
+        $query = $db->prepare('SELECT COUNT(username) FROM usuarios WHERE email = "'.$_POST["email"].'"');
+        $query->execute();
+        $result = $query->fetch(PDO::FETCH_ASSOC);
+        if($result['COUNT(username)'] == 1){
+            $query = $db->prepare('SELECT password FROM usuarios WHERE email = "'.$_POST["email"].'"');
+            $query->execute();
+            $pass = $query->fetch(PDO::FETCH_ASSOC);
+            if( password_verify($_POST["contrasenia"], $pass['password']) ){
+                cargarSession($db);
+                return true;
+            }
+        }
+        return false;
+    }
+
+    function cargarSession($db){
+        if (isset($_POST['email'])):
+            $emailToSend = $_POST['email'];
+        else:
+            $emailToSend = $_COOKIE["email"];
+        endif;
+        $query = $db->prepare('SELECT COUNT(username) as contador FROM usuarios WHERE email = "'.$emailToSend.'"');
+        $query->execute();
+        $result = $query->fetch(PDO::FETCH_ASSOC);
+        if($result['contador'] == 1):
+            $query = $db->prepare('SELECT id, nombre,  username, email, password, fecha_nac, genero_id, imagen FROM usuarios WHERE email = "' .$emailToSend .'"');
+            $query->execute();
+            $result = $query->fetch(PDO::FETCH_ASSOC);
+            var_dump($result);
+            $_SESSION["usuario"] = $result;
+        else:
+         //   var_dump($result);
+         //   die("el cargar sesion no esta levantando lo correcto");
+        endif;   
+
+/**
+        $usF = file_get_contents("usuarios.json");
+        $listaUsuarios = json_decode($usF, true);
+        $indiceU = 0;
+//      foreach($listaUsuarios as $clave => $usuario){
+        foreach($listaUsuarios as $usuario){
+                if($_POST["email"] == $usuario["reg_email"]){
+//                  $indiceU = $clave;
+                    $_SESSION["usuario"] = $usuario;
+            }
+        }*/
+/*      foreach($usA[$indiceU] as $clave => $dato){
+            $_SESSION[$clave] = $dato;
+        }
+*/
+     }
+
+
+    function recordar($email, $contrasenia, $persiste){
+        if ($persiste):
+            $tiempo = time() + (60 * 60 * 24 * 30);
+            setcookie("email", $email, $tiempo);
+            setcookie("contrasenia", $contrasenia, $tiempo);
+            setcookie("logeado", true, $tiempo);
+        else:
+            setcookie("email", $email);
+            setcookie("contrasenia", $contrasenia);
+            setcookie("logeado", true);
+        endif;
+
+    }
+
+    function levanta($db){
+            cargarSession($db);
+            header('Location: posts.php');
+    }
+

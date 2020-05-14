@@ -8,6 +8,34 @@
 
     $usuarioActual = $_SESSION["usuario"];
     $_SESSION["logueado"] = false;
+
+    
+    if(!$_POST):
+        if( isset($_COOKIE["logeado"]) and isset($_COOKIE["email"])):
+            levanta($db);
+        endif;
+    else:
+        $loged = login($db);
+        
+    endif;
+        
+        if($loged):
+            if(isset($_POST["recordar"])):
+                recordar($_POST["email"],$_POST["contrasenia"], True);
+            else:
+                recordar($_POST["email"],$_POST["contrasenia"], False);
+            endif;
+
+            levanta($db);
+/*            echo "<pre>";
+            var_dump($_SESSION);
+            var_dump($_COOKIE);
+            echo "</pre>";
+            */
+            
+            header('Location: posts.php');
+        endif;
+
 ?>
 
 <!DOCTYPE html>
