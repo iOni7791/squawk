@@ -1,6 +1,8 @@
 <?php
     session_start();
+    $_SESSION["logueado"] = true;
 ?>
+
 
 <!DOCTYPE html>
 <html lang="en">
