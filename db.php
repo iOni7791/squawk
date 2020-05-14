@@ -16,15 +16,15 @@
         return $db;    
     }  
 
-    function checaLogin(){
-        if (!$_COOKIE["logeado"]):
-            header('Location: login.php');
-        endif;
+//    function checaLogin(){ //Comenté estas líneas porque no me dejaban entrar al index
+//        if (!$_COOKIE["logeado"]): //Comenté estas líneas porque no me dejaban entrar al index
+//            header('Location: login.php'); //Comenté estas líneas porque no me dejaban entrar al index
+//        endif; //Comenté estas líneas porque no me dejaban entrar al index
     
 //        if (!isset($_SESSION["usuario"])):
 //            die("no se envio el usuario.");
 //       endif;
-    }
+//    } //Comenté estas líneas porque no me dejaban entrar al index
     
     function getLikes($postID){
         $db = conectarBase();

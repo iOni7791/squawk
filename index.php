@@ -3,10 +3,10 @@
     date_default_timezone_set('America/Argentina/Buenos_Aires');
     $diaBase = date('d-m-Y');
     require_once('fechaCastellano.php');
-    require_once("db.php");
-    checaLogin();
+    //require_once("db.php");
+    //checaLogin();
 
-    $usuarioActual = $_SESSION["usuario"];
+    //$usuarioActual = $_SESSION["usuario"];
     $_SESSION["logueado"] = false;
 ?>
 
@@ -56,8 +56,9 @@
                             <li><a href="profile.php">Perfil</a></li>
                             <li><a href="faq.php">F.A.Q.</a></li>
                             <li><a href="contacto.php">Contacto</a></li>
-                            <li><a href="newPost.php">Nuevos post (... en proceso)</a></li>
-                            <li><a href="posts.php">Posteos (... en proceso)</a></li>
+                            <li><a href="newPost.php">Nuevos post</a></li>
+                            <li><a href="posts.php">Posteos</a></li>
+                            <li><a href="friends.php">Amigos (En progreso...)</a></li>
                         </ul>
                         <br><br>
                         <marquee behavior="scroll" direction="right"> Saludos! </marquee>
@@ -70,14 +71,14 @@
                 <!-- login/register-buttons -->
                 <div class="center-text button-element">
                     Si no ten&eacute;s una cuenta, pod&eacute;s registrarte ac&aacute; <br> <br>
-                    <button class="boton-index btn btn-primary fs-1-5rem"> <a href="register.html">Registrar</a> </button>
+                    <button class="boton-index btn btn-primary fs-1-5rem"> <a href="register.php">Registrar</a> </button>
                 </div> <br>
 
                 <span class="divisor"></span>
 
                 <div class="center-text button-element">
                     Si ya ten&eacute;s una cuenta, pod&eacute;s ingresar ac&aacute; <br> <br>
-                    <button class="boton-index btn btn-success fs-1-5rem"> <a href="login.html">Login</a> </button>
+                    <button class="boton-index btn btn-success fs-1-5rem"> <a href="login.php">Login</a> </button>
                 </div>
             </section> <!-- Main-signup-container -->
         </div> <!-- Main-container -->

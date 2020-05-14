@@ -1,4 +1,9 @@
 <?php
+    session_start();
+    $_SESSION["logueado"] = true;
+?>
+
+<?php
     function guardarArchivo()
         {
             if($_FILES["upload"]["error"] =! 0)
@@ -100,6 +105,7 @@
     </main>
 
     <?php
+        $active = 3;
         require_once("loggedFooter.php");
     ?>
 </body>

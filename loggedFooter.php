@@ -19,9 +19,9 @@
                     </li>
 
                     <li>
-                        <a class="<?= $active == 3 ? "active":"" ?> fs-1-5rem border-black" href="index.php"> Feed <br>
-                            <span title="Las graznadas de tus amigos">
-                                <i class="fa fa-newspaper-o" aria-hidden="true"></i>
+                        <a class="<?= $active == 3 ? "active":"" ?> fs-1-5rem border-black" href="newPost.php"> Squawk! <br>
+                            <span title="Crear un nuevo graznido">
+                                <i class="fa fa-pencil-square" aria-hidden="true"></i>
                             </span>
                         </a>
                     </li>
