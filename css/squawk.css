@@ -27,6 +27,8 @@ h1
     font-size: 2rem;
 }
 
+
+
 /**Utilities**/
 
 .fs-1-5rem
@@ -338,6 +340,44 @@ ul.no-deco
 
 /**Posts**/
 
+.profile-banner-container
+{
+    background-color: #0f4c81;
+    margin-top: 0.1rem;
+    margin-bottom: 1rem;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.img-banner img
+{
+    height: 10rem;
+    width: 100%;
+}
+
+.profile-banner-picture,  
+.profile-banner-picture img
+{
+    width: 8rem;
+    border-radius: 50%;
+}
+
+.profile-banner-statistics,
+.profile-banner-info 
+{
+    margin-top: 0.1rem;
+    margin-bottom: 1rem;
+    width: 100%;
+}
+
+.profile-banner-statistics
+{
+    display: flex;
+    justify-content: center;
+}
+
 .post-container,
 .comment-container
 {
@@ -360,7 +400,9 @@ ul.no-deco
 }
 
 .post-profile-picture, 
-.post-profile-picture img
+.post-profile-picture img,
+.friend-profile-picture, 
+.friend-profile-picture img
 {
     width: 5rem;
     margin-right: 0.5rem;
@@ -452,4 +494,63 @@ ul.no-deco
     font-weight: 100;
     font-size: 1.1rem;
     font-style: italic;
+}
+
+/**Friends**/
+
+.friends-container
+{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    flex-shrink: 0; 
+}
+
+.friends
+{
+    width: 33%;
+    border-radius: 1rem;
+    display: flex;
+    justify-content: flex-start;
+    padding: 0.5rem;
+    background-color: #0c5ca1;
+    margin-bottom: 0.5rem;
+}
+
+@media (max-width: 520px) 
+{
+    .friends
+    {
+        width: 100%;
+        display: flex;
+        justify-content: flex-start;
+        padding: 0.5rem;
+        background-color: #0c5ca1;
+        margin-bottom: 0.5rem;
+    }  
+}
+
+@media (min-width: 530px) and (max-width: 768px)
+{
+    .friends
+    {
+        width: 49.5%;
+        display: flex;
+        justify-content: flex-start;
+        padding: 0.5rem;
+        background-color: #0c5ca1;
+        margin-bottom: 0.5rem;
+    }  
+}
+
+.friends:nth-last-of-type(1)
+{
+    margin-right: none;
+}
+
+.friend-profile-picture, 
+.friend-profile-picture img
+{
+    width: 5rem;
+    margin-right: 0.5rem;
 }
