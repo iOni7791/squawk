@@ -36,7 +36,7 @@
                     <div class="profile-banner-name center-text">
                         <a href="profile.php">Mi Nombre de Usuario</a>
                     </div>
-                </div>
+                </div> 
                 <div class="profile-banner-statistics">
                     <div class="user-posts">
                         XXX <br> posts
