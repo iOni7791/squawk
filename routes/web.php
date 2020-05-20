@@ -16,8 +16,8 @@
 }); */
 
 Route::get('/', 'pages@index');
-Route::get('/login', 'pages@login');
-Route::get('/register', 'pages@register');
+Route::get('/milogin', 'pages@milogin');
+Route::get('/miregister', 'pages@miregister');
 Route::get('/faq', 'pages@faq');
 Route::get('/contact', 'pages@contact');
 

@@ -7,7 +7,6 @@
     <?php
         require_once("headLibraries.php");
     ?>
-
     <title>SQUAWK! - Inicio</title>
 </head>
 
@@ -44,7 +43,7 @@
                             <li><a href="friends.php">Amigos (En progreso...)</a></li>
                         </ul>
                         <br><br>
-                        <marquee behavior="scroll" direction="right"> Saludos! </marquee>
+                        <!-- <marquee behavior="scroll" direction="right"> Saludos! </marquee> -->
 
                </article>
                <br>
@@ -67,9 +66,6 @@
         </div> <!-- Main-container -->
 
     </main>
-    <?php
-        $active = 1;
-    ?>
     @include('footer')
 </body>
 
