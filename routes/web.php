@@ -15,9 +15,12 @@
     return view('welcome');
 }); */
 
-Route::get('/', function () {
-    return view('home');
-});
+Route::get('/', 'pages@index');
+Route::get('/login', 'pages@login');
+Route::get('/register', 'pages@register');
+Route::get('/faq', 'pages@faq');
+Route::get('/contact', 'pages@contact');
+
 Auth::routes();
 // Route::get('/home', 'HomeController@index')->name('home');
 

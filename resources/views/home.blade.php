@@ -12,12 +12,7 @@
 </head>
 
 <body>
-
-    <?php
-        //Agregar acá una funcionalidad similar al footer
-        require_once("header.php");
-    ?>
-
+    @include('header')
     <main>
         <div class="main-container">
             <section class="main-title-container">
@@ -25,15 +20,15 @@
                     Bienvenidos a <strong>SQUAWK!</strong>
                 </h1>
             </section>
-            
+
             <section class="main-index-container"> <!--Recicled because muh code-->
                <h2 class="text-center">Este proyecto todavía está en desarrollo!</h2>
                <br>
                <article class="intro-container">
-                    
+
                         <strong>Squawk!</strong> es una <em>red social</em>, un proyecto desarrollado por <strong> <a href="https://www.linkedin.com/in/javiermacedo/">Javier Macedo</a></strong>
                         y <strong><a href="https://www.linkedin.com/in/cristian-quispe-5ba821144/">Cristian Quispe</a></strong>
-                        para el curso de <strong><u> Desarrollo Web Fullstack</u></strong> de <strong> <a href="https://www.digitalhouse.com/">Digital House</a></strong>. 
+                        para el curso de <strong><u> Desarrollo Web Fullstack</u></strong> de <strong> <a href="https://www.digitalhouse.com/">Digital House</a></strong>.
                         <br>
                         <br>
                         <h3 class="text-center">Por ahora, y hasta el día de hoy, aca va el dia fechaCastellano ($diaBase), el proyecto cuenta con las siguientes maquetas:</h3><br>
@@ -50,11 +45,11 @@
                         </ul>
                         <br><br>
                         <marquee behavior="scroll" direction="right"> Saludos! </marquee>
-                    
+
                </article>
-               <br> 
+               <br>
             </section> <!-- Main-index-container -->
-            
+
             <section class="main-buttons-container">
                 <!-- login/register-buttons -->
                 <div class="center-text button-element">
@@ -74,8 +69,8 @@
     </main>
     <?php
         $active = 1;
-        require_once("footer.php");
     ?>
+    @include('footer')
 </body>
 
 </html>
