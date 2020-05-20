@@ -25,11 +25,11 @@ class pages extends Controller
     public function faq()
     {
         $activo = 4;
-        return view('home',compact('activo'));
+        return view('faq',compact('activo'));
     }
     public function contact()
     {
         $activo = 5;
-        return view('home',compact('activo'));
+        return view('contact',compact('activo'));
     }
 }

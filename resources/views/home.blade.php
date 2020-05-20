@@ -1,17 +1,6 @@
-<!DOCTYPE html>
-<html lang="en">
+@extends('layouts.base')
 
-<head>
-
-    <!-- Coloqué todas las librerías y snippets necesarios en headLibraries.php -->
-    <?php
-        require_once("headLibraries.php");
-    ?>
-    <title>SQUAWK! - Inicio</title>
-</head>
-
-<body>
-    @include('header')
+@section('contenido')
     <main>
         <div class="main-container">
             <section class="main-title-container">
@@ -66,7 +55,4 @@
         </div> <!-- Main-container -->
 
     </main>
-    @include('footer')
-</body>
-
-</html>
+@endsection
