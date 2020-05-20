@@ -15,12 +15,12 @@ class pages extends Controller
     public function milogin()
     {
         $activo = 2;
-        return view('home',compact('activo'));
+        return view('auth.login',compact('activo'));
     }
     public function miregister()
     {
         $activo = 3;
-        return view('home',compact('activo'));
+        return view('auth.register',compact('activo'));
     }
     public function faq()
     {
