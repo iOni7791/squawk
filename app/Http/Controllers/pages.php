@@ -59,4 +59,22 @@ class pages extends Controller
             return $this->goPosts();
         endif;
     }
+    public function posts()
+    {
+        $activo = 4;
+        if (Auth::guest()):
+            return view('posts',compact('activo'));
+        else:
+            return $this->goPosts();
+        endif;
+    }
+    public function friends()
+    {
+        $activo = 2;
+        if (Auth::guest()):
+            return view('friends',compact('activo'));
+        else:
+            return $this->goPosts();
+        endif;
+    }
 }
