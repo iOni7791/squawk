@@ -46,7 +46,7 @@
                         <br>
                         <div class="text-center">
                             <p>Si posee alguna otra duda o sugerencia, por favor cont&aacute;ctenos</p>
-                            <a href="contacto.php" class="btn btn-success fs-1-5rem">Contactar</a>
+                            <a href="contact" class="btn btn-success fs-1-5rem">Contactar</a>
                         </div>
                         <br>
                         <!-- <marquee behavior="scroll" direction="right"> Saludos! </marquee> -->

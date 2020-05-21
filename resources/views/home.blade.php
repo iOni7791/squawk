@@ -21,15 +21,15 @@
                         <br>
                         <h3 class="text-center">Por ahora, y hasta el día de hoy, aca va el dia fechaCastellano ($diaBase), el proyecto cuenta con las siguientes maquetas:</h3><br>
                         <ul class="no-deco text-center">
-                            <li><a href="index.php">Inicio</a></li>
-                            <li><a href="register.php">Registro</a></li>
-                            <li><a href="login.php">Login</a></li>
-                            <li><a href="profile.php">Perfil</a></li>
-                            <li><a href="faq.php">F.A.Q.</a></li>
-                            <li><a href="contacto.php">Contacto</a></li>
-                            <li><a href="newPost.php">Nuevos post</a></li>
-                            <li><a href="posts.php">Posteos</a></li>
-                            <li><a href="friends.php">Amigos (En progreso...)</a></li>
+                            <li><a href="./">Inicio</a></li>
+                            <li><a href="miregister">Registro</a></li>
+                            <li><a href="milogin">Login</a></li>
+                            <li><a href="profile">Perfil</a></li>
+                            <li><a href="faq">F.A.Q.</a></li>
+                            <li><a href="contact">Contacto</a></li>
+                            <li><a href="newPost">Nuevos post</a></li>
+                            <li><a href="posts">Posteos</a></li>
+                            <li><a href="friends">Amigos (En progreso...)</a></li>
                         </ul>
                         <br><br>
                         <!-- <marquee behavior="scroll" direction="right"> Saludos! </marquee> -->
@@ -42,14 +42,14 @@
                 <!-- login/register-buttons -->
                 <div class="center-text button-element">
                     Si no ten&eacute;s una cuenta, pod&eacute;s registrarte ac&aacute; <br> <br>
-                    <button class="boton-index btn btn-primary fs-1-5rem"> <a href="register.php">Registrar</a> </button>
+                    <button class="boton-index btn btn-primary fs-1-5rem"> <a href="miregister">Registrar</a> </button>
                 </div> <br>
 
                 <span class="divisor"></span>
 
                 <div class="center-text button-element">
                     Si ya ten&eacute;s una cuenta, pod&eacute;s ingresar ac&aacute; <br> <br>
-                    <button class="boton-index btn btn-success fs-1-5rem"> <a href="login.php">Login</a> </button>
+                    <button class="boton-index btn btn-success fs-1-5rem"> <a href="milogin">Login</a> </button>
                 </div>
             </section> <!-- Main-signup-container -->
         </div> <!-- Main-container -->
