@@ -20,7 +20,7 @@ Route::get('/milogin', 'pages@milogin');
 Route::get('/miregister', 'pages@miregister');
 Route::get('/faq', 'pages@faq');
 Route::get('/contact', 'pages@contact');
-Route::get('/newPost', 'pages@contact');
+//Route::get('/newPost', 'pages@contact');
 Route::get('/posts', 'pages@posts');
 Route::get('/friends', 'pages@friends');
 
