@@ -68,19 +68,19 @@ class pages extends Controller
     }
     public function posts()
     {
-        $user = Auth::user();
-        $posts =  Posts::all()->where('id_usuario', $user['id']);
+        if (Auth::user() ):
+            $user = Auth::user();
+            $posts =  Posts::all()->where('id_usuario', $user['id']);
 
-        foreach ($posts as $lugar=>$unpost):
-            $coms = Comentarios::all()->where('id_post', $unpost['id']);
-            $posts[$lugar]['coms'] = $coms;
-            $like = Likes::all()->where('id_post', $unpost['id']);
-            $posts[$lugar]['likes'] = $like;
-        endforeach;
-        //dd($posts);
+            foreach ($posts as $lugar=>$unpost):
+                $coms = Comentarios::all()->where('id_post', $unpost['id']);
+                $posts[$lugar]['coms'] = $coms;
+                $like = Likes::all()->where('id_post', $unpost['id']);
+                $posts[$lugar]['likes'] = $like;
+            endforeach;
+            //dd($posts);
 
-        $activo = 4;
-        if (Auth::guest() ):
+            $activo = 4;
             return view('posts',compact('activo', 'posts', 'user'));
         else:
             return $this->goPosts();
