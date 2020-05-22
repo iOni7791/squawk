@@ -18,6 +18,9 @@
 Route::get('/', 'pages@index');
 Route::get('/milogin', 'pages@milogin');
 Route::get('/miregister', 'pages@miregister');
+
+Route::post('/miregister', 'pages@index');
+
 Route::get('/faq', 'pages@faq');
 Route::get('/contact', 'pages@contact');
 //Route::get('/newPost', 'pages@contact');
