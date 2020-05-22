@@ -67,19 +67,22 @@
                                 <div class="post-profile-picture">
                                     <a href="profile.php"><img src="img/logo.png" alt="MiNombre"></a>
                                 </div>
-                                <div class="user-comment-container">
-                                    <p><a href="profile.php">Otro usuario</a></p>
-                                    <div class="comment">
-                                        {{ $uncoment['contenido_c'] }}
-                                    </div>
+                            </div>
+
+                            <div class="user-comment-container">
+                                <div class="user-link">
+                                    <a href="profile.php">Otro usuario</a>
+                                </div> 
+                                <div class="comment">
+                                    <blockquote>{{ $uncoment['contenido_c'] }}</blockquote>
+                                </div>
 <!--                                    <div class="comment-statistics">
                                         <span><strong>XXX</strong> reacciones</span>
                                         <span><strong>XXX</strong> respuestas</span>
                                     </div>
--->
-                                </div>
-                            </div>
-
+-->                         </div>
+                                
+                              
 <!--                        <div class="actions-container-comment center-text">
                                 <a href="#">Reaccionar! <i class="fa fa-thumbs-up" aria-hidden="true"></i></a>
                                 <a href="#">Responder <i class="fa fa-comment-o" aria-hidden="true"></i></a>

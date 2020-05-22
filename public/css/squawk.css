@@ -389,6 +389,12 @@ ul.no-deco {
     padding: 0.1rem;
 }
 
+.comment-container {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 1.5rem;
+}
+
 .post-img-container img {
     width: 100%;
     margin-bottom: 0.5rem;
@@ -408,7 +414,8 @@ ul.no-deco {
 .friend-profile-picture,
 .friend-profile-picture img {
     width: 5rem;
-    margin-right: 0.5rem;
+    margin-right: 2rem;
+    border-radius: 50%;
 }
 
 .statistics {
@@ -472,15 +479,24 @@ ul.no-deco {
     margin-bottom: 0.1rem;
 }
 
-.user-comment-container {
+.comment{
     background-color: rgb(40, 105, 245);
     border-radius: 1rem;
     width: 100%;
     padding: 0.5rem;
 }
 
-.comment blockquote {
-    text-align: right;
+.user-link
+{
+    display: block;
+}
+
+.user-link::after {
+    content: " dijo: ";
+}
+
+.comment blockquote{
+    font-style: normal;
 }
 
 .comment blockquote::after {
