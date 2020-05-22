@@ -35,9 +35,8 @@
                         @endif
 
                         <div class="statistics center-text">
-                            <a href="#">XXX<br>Reacciones</a>
-                            <a href="#">XXX<br>Comentarios</a>
-                            <a href="#">XXX veces<br>Compartido</a>
+                            <a class="statistic" href="#">XXX<br>Reacciones</a>
+                            <a class="statistic" href="#">XXX<br>Comentarios</a>
                         </div>
                         <!--
                         <div class="text-container">
@@ -45,9 +44,8 @@
                         </div>
                     -->
                         <div class="actions-container center-text">
-                            <a href="#"><i class="fa fa-thumbs-up" aria-hidden="true"></i><br>Reaccionar!</a>
-                            <a href="#"><i class="fa fa-comment-o" aria-hidden="true"></i><br>Comentar</a>
-                            <a href="#"><i class="fa fa-share" aria-hidden="true"></i><br>Compartir</a>
+                            <a class="action" href="#"><i class="fa fa-thumbs-up" aria-hidden="true"></i><br>Reaccionar!</a>
+                            <a class="action" href="#"><i class="fa fa-comment-o" aria-hidden="true"></i><br>Comentar</a>
                         </div>
                         <form class="comment-response" action="posts.php"> <!--hacer visible con JS al presionar el botón COMENTAR/RESPONDER-->
                             <div class="comment-response-textarea">
