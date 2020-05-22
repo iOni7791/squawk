@@ -11,7 +11,7 @@
 
             <section class="main-index-container row justify-content-center"> <!--Recicled because muh code-->
                 <div class="col-md-10">
-                    <form action="mailto:emailDestino@email.com" enctype="text/plain">
+                    <form action="mailto:yoni7791@gmail.com" enctype="text/plain">
                         @csrf
                         <div class="form-group row"> 
                             <label for="nombre" class="col-md-4 col-form-label text-md-right fs-1-5rem">{{ __('Nombre') }}</label>
