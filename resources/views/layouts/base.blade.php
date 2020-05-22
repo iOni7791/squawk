@@ -100,35 +100,35 @@
                     @endguest
                     @auth
                         <li>
-                            <a class="{{ $activo == 1 ? "active":"" }} fs-1-5rem border-black" href="profile.php"> Perfil <br>
+                            <a class="{{ $activo == 1 ? "active":"" }} fs-1-5rem border-black" href="profile"> Perfil <br>
                                 <span title="Acicala tu perfil">
                                     <i class="fa fa-user-circle" aria-hidden="true"></i>
                                 </span>
                             </a>
                         </li>
                         <li>
-                            <a class="{{ $activo == 2 ? "active":"" }} fs-1-5rem border-black" href="friends.php"> Amigos <br>
+                            <a class="{{ $activo == 2 ? "active":"" }} fs-1-5rem border-black" href="friends"> Amigos <br>
                                 <span title="Tus amigos, los buitres">
                                     <i class="fa fa-users" aria-hidden="true"></i>
                                 </span>
                             </a>
                         </li>
                         <li>
-                            <a class="{{ $activo == 3 ? "active":"" }} fs-1-5rem border-black" href="profile.php"> Perfil <br>
+                            <a class="{{ $activo == 3 ? "active":"" }} fs-1-5rem border-black" href="profile"> Perfil <br>
                                 <span title="Edita tu perfil!">
                                     <i class="fa fa-user-plus" aria-hidden="true"></i>
                                 </span>
                             </a>
                         </li>
                         <li>
-                            <a class="{{ $activo == 4 ? "active":"" }} fs-1-5rem border-black" href="posts.php">
+                            <a class="{{ $activo == 4 ? "active":"" }} fs-1-5rem border-black" href="posts">
                                 <span title="Tus graznadas"> Posts <br>
                                     <i class="fa fa-pencil-square-o" aria-hidden="true"></i>
                                 </span>
                             </a>
                         </li>
                         <li>
-                            <a class="{{ $activo == 5 ? "active":"" }} fs-1-5rem border-black" href="logout.php">
+                            <a class="{{ $activo == 5 ? "active":"" }} fs-1-5rem border-black" href="logout">
                                 <span title="Salir volando"> Salir <br>
                                     <i class="fa fa-sign-out" aria-hidden="true"></i>
                                 </span>

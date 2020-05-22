@@ -26,6 +26,8 @@ Route::get('/contact', 'pages@contact');
 //Route::get('/newPost', 'pages@contact');
 Route::get('/posts', 'pages@posts');
 Route::get('/friends', 'pages@friends');
+Route::get('/logout', 'pages@logout');
+
 
 Auth::routes();
 // Route::get('/home', 'HomeController@index')->name('home');
