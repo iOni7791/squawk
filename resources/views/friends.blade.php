@@ -6,27 +6,15 @@
 
         <section class="profile-banner-container">
             <div class="profile-banner-info">
-                <div class="img-banner">
-                    <a href="profile.php"><img src="img/fullstack.PNG" alt="Imagen de banner de [Usuario]"></a>
+                <div class="banner user-posts">
+                    <h2>XXX</h2> <br> posts <br> graznados
                 </div>
-                <div class="profile-banner-picture">
-                    <a href="posts.php"><img src="img/perfil-prueba.png" alt="Foto de perfil de [Usuario]"></a>
-                </div>
-                <div class="profile-banner-name center-text">
+                <div class="banner profile-banner-picture">
+                    <a href="posts.php"><img src="img/perfil-prueba.png" alt="Foto de perfil de [Usuario]"></a> <br>
                     <a href="profile.php">Mi Nombre de Usuario</a>
                 </div>
-            </div>
-            <div class="profile-banner-statistics">
-                <div class="user-posts">
-                    XXX <br> posts
-                </div>
-                <span class="divisor"></span>
-                <div class="user-reactions">
-                    XXX personas <br> reaccionaron
-                </div>
-                <span class="divisor"></span>
-                <div class="user-shared-posts">
-                    XXX personas <br> compartieron posts
+                <div class="banner user-reactions">
+                    <h2>XXX</h2> <br> personas <br> reaccionaron
                 </div>
             </div>
         </section>
@@ -40,7 +28,7 @@
         <section class="main-index-container">
             <div class="input-group">
                 <input type="text" class="form-control" placeholder="Buscar amigos...">
-                <div class="input-group-append">
+                <div class="search-but input-group-append">
                     <button class="btn btn-secondary" type="button">
                         <i class="fa fa-search"></i>
                     </button>
