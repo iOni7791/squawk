@@ -2,8 +2,12 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Controllers\Controller;
+use App\Posts;
+
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use PharIo\Manifest\Author;
 use phpDocumentor\Reflection\Types\This;
 
 class pages extends Controller
@@ -61,9 +65,12 @@ class pages extends Controller
     }
     public function posts()
     {
+        $posts =  Posts::all()->where('id_usuario', '34');
+        //dd($posts);
+
         $activo = 4;
-        if (Auth::guest()):
-            return view('posts',compact('activo'));
+        if (Auth::guest() or posts<1):
+            return view('posts',compact('activo', 'posts'));
         else:
             return $this->goPosts();
         endif;
