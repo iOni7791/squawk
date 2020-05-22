@@ -134,7 +134,7 @@
                                 </span>
                             </a>
                         </li>
-                        @endauth
+                    @endauth
                 </ul>
             </nav>
         </div> <!-- main-footer-container -->

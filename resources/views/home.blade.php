@@ -41,14 +41,14 @@
             <section class="main-buttons-container">
                 <!-- login/register-buttons -->
                 <div class="center-text button-element">
-                    Si no ten&eacute;s una cuenta, pod&eacute;s registrarte ac&aacute; <br> <br>
+                    <p class="opcion-index"> Si no ten&eacute;s una cuenta, pod&eacute;s registrarte ac&aacute; </p> <br>
                     <button class="boton-index btn btn-primary fs-1-5rem"> <a href="miregister">Registrar</a> </button>
                 </div> <br>
 
                 <span class="divisor"></span>
 
                 <div class="center-text button-element">
-                    Si ya ten&eacute;s una cuenta, pod&eacute;s ingresar ac&aacute; <br> <br>
+                   <p class="opcion-index"> Si ya ten&eacute;s una cuenta, pod&eacute;s ingresar ac&aacute; </p> <br>
                     <button class="boton-index btn btn-success fs-1-5rem"> <a href="milogin">Login</a> </button>
                 </div>
             </section> <!-- Main-signup-container -->
