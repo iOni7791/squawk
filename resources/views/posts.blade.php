@@ -74,19 +74,21 @@
                                     <div class="comment">
                                         {{ $uncoment['contenido_c'] }}
                                     </div>
-                                    <div class="comment-statistics">
+<!--                                    <div class="comment-statistics">
                                         <span><strong>XXX</strong> reacciones</span>
                                         <span><strong>XXX</strong> respuestas</span>
                                     </div>
+-->
                                 </div>
                             </div>
 
-                            <div class="actions-container-comment center-text">
+<!--                        <div class="actions-container-comment center-text">
                                 <a href="#">Reaccionar! <i class="fa fa-thumbs-up" aria-hidden="true"></i></a>
                                 <a href="#">Responder <i class="fa fa-comment-o" aria-hidden="true"></i></a>
                             </div>
+                        -->
                         </div> <!--comment-container1-->
-                        <br>
+<!--                         <br>  -->
 
                         @endif
                     @endforeach
