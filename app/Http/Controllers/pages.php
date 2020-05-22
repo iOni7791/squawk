@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Http\Controllers\Controller;
+use App\User;
 use App\Posts;
 use App\Comentarios;
 use App\Likes;
@@ -67,8 +68,8 @@ class pages extends Controller
     }
     public function posts()
     {
-        $posts =  Posts::all()->where('id_usuario', '30');
-        //dd($posts);
+        $user = Auth::user();
+        $posts =  Posts::all()->where('id_usuario', $user['id']);
 
         foreach ($posts as $lugar=>$unpost):
             $coms = Comentarios::all()->where('id_post', $unpost['id']);
@@ -80,7 +81,7 @@ class pages extends Controller
 
         $activo = 4;
         if (Auth::guest() ):
-            return view('posts',compact('activo', 'posts'));
+            return view('posts',compact('activo', 'posts', 'user'));
         else:
             return $this->goPosts();
         endif;
@@ -94,4 +95,12 @@ class pages extends Controller
             return $this->goPosts();
         endif;
     }
+
+    public function logout(){
+
+        Auth::logout();
+
+        return $this->goPosts();
+    }
+
 }
