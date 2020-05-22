@@ -101,6 +101,7 @@ class pages extends Controller
         Auth::logout();
 
         return $this->goPosts();
+        //asdfasdf
     }
 
 }
