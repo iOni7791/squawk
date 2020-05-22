@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use App\Http\Controllers\Controller;
 use App\Posts;
+use App\Comentarios;
+use App\Likes;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
@@ -65,7 +67,15 @@ class pages extends Controller
     }
     public function posts()
     {
-        $posts =  Posts::all()->where('id_usuario', '1');
+        $posts =  Posts::all()->where('id_usuario', '30');
+        //dd($posts);
+
+        foreach ($posts as $lugar=>$unpost):
+            $coms = Comentarios::all()->where('id_post', $unpost['id']);
+            $posts[$lugar]['coms'] = $coms;
+            $like = Likes::all()->where('id_post', $unpost['id']);
+            $posts[$lugar]['likes'] = $like;
+        endforeach;
         //dd($posts);
 
         $activo = 4;
