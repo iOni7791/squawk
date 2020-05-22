@@ -65,11 +65,11 @@ class pages extends Controller
     }
     public function posts()
     {
-        $posts =  Posts::all()->where('id_usuario', '34');
+        $posts =  Posts::all()->where('id_usuario', '1');
         //dd($posts);
 
         $activo = 4;
-        if (Auth::guest() or posts<1):
+        if (Auth::guest() ):
             return view('posts',compact('activo', 'posts'));
         else:
             return $this->goPosts();

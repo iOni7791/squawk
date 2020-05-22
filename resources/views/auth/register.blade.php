@@ -7,7 +7,7 @@
             {{ __('Registro') }}
         </h1>
     </section>
-    
+
     <div class="main-signup-container row justify-content-center">
         <div class="col-md-10">
 
@@ -67,45 +67,45 @@
                         <div class="form-group row">
                             <label for="fecha_nac" class="col-md-4 col-form-label text-md-right">{{ __('Fecha de Nacimiento') }}</label>
 
-                            <div class="col-md-8">   
-                                <input class="form-control" type="date" id="fecha_nac" name="fecha_nac" value="{{ old('fecha_nac') }}" step="1" max="2002-12-31" required autocomplete="fecha_nac">   
+                            <div class="col-md-8">
+                                <input class="form-control" type="date" id="fecha_nac" name="fecha_nac" value="{{ old('fecha_nac') }}" step="1" max="2002-12-31" required autocomplete="fecha_nac">
                             </div>
                         </div>
                         <br>
 
                         <div class="form-group row radios">
-                                                  
+
                             <div class="col-md-7 col-lg-4">
-                                <input type="radio" id="m" name="genero" value="m"> 
-                                <label for="m"> Masculino</label>     
+                                <input type="radio" id="m" name="genero" value="m">
+                                <label for="m"> Masculino</label>
                             </div>
                             <br>
                             <div class="col-md-7 col-lg-4">
                                     <input type="radio" id="o" name="genero">
                                     <label for="o">Personalizado</label>
                                     <input class="form-control" type="text" name="genero">
-                                    <!-- Habría que poner acá un pequeño campo para ingresar el genero con un Script acá para que aparezca al seleccionar esta opción --> 
+                                    <!-- Habría que poner acá un pequeño campo para ingresar el genero con un Script acá para que aparezca al seleccionar esta opción -->
                             </div>
                             <br>
                             <div class="col-md-7 col-lg-4">
-                                <input type="radio" id="f" name="genero" value="f"> 
-                                <label for="f">Femenino</label>        
+                                <input type="radio" id="f" name="genero" value="f">
+                                <label for="f">Femenino</label>
                             </div>
-                            
+
                         </div>
 
                         <br>
                         <div class="form-group row mb-0 justify-content-center">
                             <div>
                                 <button type="submit" class="btn btn-primary fs-1-5rem">
-                                    {{ __('Registrar') }}
+                                    Registrar
                                 </button>
                             </div>
                         </div>
                         <br>
                     </form>
-                
-            
+
+
         </div>
     </div>
 </div>
