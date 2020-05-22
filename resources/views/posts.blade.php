@@ -15,10 +15,10 @@
                     <article class="post-container">
                         <div class="post-info-container">
                             <div class="post-profile-picture">
-                                <a href="profile"><img src="img/logo.png" alt="MiNombre"></a>
+                                <a href="profile"><img src="img/profiles/{{$user['imagen']}}" alt="MiNombre"></a>
                             </div>
                             <div class="post-user-time-container">
-                                <p><a href="profile">Yo</a></p>
+                                <p><a href="profile">{{$user['name']}}</a></p>
                                 <em>Hace XX minutos</em>
                             </div>
                         </div>
