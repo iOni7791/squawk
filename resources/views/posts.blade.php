@@ -61,31 +61,34 @@
 
                     <br>
 
-                    <h3>Comentarios</h3>
+                    <!-- <h3>Comentarios</h3> -->
                     @foreach ($item['coms'] as $uncoment)
-                    <div class="comment-container">
-                        <div class="comment-info-container">
-                            <div class="post-profile-picture">
-                                <a href="profile.php"><img src="img/logo.png" alt="MiNombre"></a>
-                            </div>
-                            <div class="user-comment-container">
-                                <p><a href="profile.php">Otro usuario</a></p>
-                                <div class="comment">
-                                    {{ $uncoment['contenido_c'] }}
+                        @if ($uncoment['contenido_c'])
+                        <div class="comment-container">
+                            <div class="comment-info-container">
+                                <div class="post-profile-picture">
+                                    <a href="profile.php"><img src="img/logo.png" alt="MiNombre"></a>
                                 </div>
-                                <div class="comment-statistics">
-                                    <span><strong>XXX</strong> reacciones</span>
-                                    <span><strong>XXX</strong> respuestas</span>
+                                <div class="user-comment-container">
+                                    <p><a href="profile.php">Otro usuario</a></p>
+                                    <div class="comment">
+                                        {{ $uncoment['contenido_c'] }}
+                                    </div>
+                                    <div class="comment-statistics">
+                                        <span><strong>XXX</strong> reacciones</span>
+                                        <span><strong>XXX</strong> respuestas</span>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
 
-                        <div class="actions-container-comment center-text">
-                            <a href="#">Reaccionar! <i class="fa fa-thumbs-up" aria-hidden="true"></i></a>
-                            <a href="#">Responder <i class="fa fa-comment-o" aria-hidden="true"></i></a>
-                        </div>
-                    </div> <!--comment-container1-->
-                    <br>
+                            <div class="actions-container-comment center-text">
+                                <a href="#">Reaccionar! <i class="fa fa-thumbs-up" aria-hidden="true"></i></a>
+                                <a href="#">Responder <i class="fa fa-comment-o" aria-hidden="true"></i></a>
+                            </div>
+                        </div> <!--comment-container1-->
+                        <br>
+
+                        @endif
                     @endforeach
 
                     <form class="comment-response" action="posts.php"> <!--hacer visible con JS al presionar el botón COMENTAR/RESPONDER-->
