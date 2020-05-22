@@ -27,3 +27,4 @@ Route::get('/friends', 'pages@friends');
 Auth::routes();
 // Route::get('/home', 'HomeController@index')->name('home');
 
+// <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.7.1/js/bootstrap-datepicker.js"></script>
