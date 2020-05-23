@@ -15,11 +15,11 @@
                     <article class="post-container">
                         <div class="post-info-container">
                             <div class="post-profile-picture">
-                                <a href="profile"><img src="img/profiles/{{$user['imagen']}}" alt="MiNombre"></a>
+                                <a href="profile"><img src="img/profiles/{{$user['imagen']}}" alt="{{$user['name']}}"></a>
                             </div>
                             <div class="post-user-time-container">
-                                <p><a href="profile">{{$user['name']}}</a></p>
-                                <em>Hace XX minutos</em>
+                                <p><a href="profile"><strong>{{$user['name']}}</strong></a><br>
+                                <em>Publicado: {{ $item['created_at']->format('d/m/Y H:m:s') }}</em></p>
                             </div>
                         </div>
                         <br>
@@ -61,18 +61,18 @@
 
                     <!-- <h3>Comentarios</h3> -->
                     @foreach ($item['coms'] as $uncoment)
-                        @if ($uncoment['contenido_c'])
+                        @if ($uncoment['usuario'])
                         <div class="comment-container">
                             <div class="comment-info-container">
                                 <div class="post-profile-picture">
-                                    <a href="profile.php"><img src="img/logo.png" alt="MiNombre"></a>
+                                    <a href="profile"><img src="img/profiles/{{$uncoment['usuarioimg'] ? $uncoment['usuarioimg']:'' }}" alt="{{$uncoment['usuario']}}"></a>
                                 </div>
                             </div>
 
                             <div class="user-comment-container">
                                 <div class="user-link">
-                                    <a href="profile.php">Otro usuario</a>
-                                </div> 
+                                    <a href="profile">{{$uncoment['usuario']}}</a>
+                                </div>
                                 <div class="comment">
                                     <blockquote>{{ $uncoment['contenido_c'] }}</blockquote>
                                 </div>
@@ -81,8 +81,8 @@
                                         <span><strong>XXX</strong> respuestas</span>
                                     </div>
 -->                         </div>
-                                
-                              
+
+
 <!--                        <div class="actions-container-comment center-text">
                                 <a href="#">Reaccionar! <i class="fa fa-thumbs-up" aria-hidden="true"></i></a>
                                 <a href="#">Responder <i class="fa fa-comment-o" aria-hidden="true"></i></a>

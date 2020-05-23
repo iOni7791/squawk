@@ -12,6 +12,8 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use PharIo\Manifest\Author;
 use phpDocumentor\Reflection\Types\This;
+Use \Carbon\Carbon;
+use DateTime;
 
 class pages extends Controller
 {
@@ -66,14 +68,19 @@ class pages extends Controller
             return $this->goPosts();
         endif;
     }
+
     public function posts()
     {
         if (Auth::user() ):
             $user = Auth::user();
-            $posts =  Posts::all()->where('id_usuario', $user['id']);
-
+            $posts =  Posts::all()->where('id_usuario', $user['id'])->SortByDesc('id');
             foreach ($posts as $lugar=>$unpost):
                 $coms = Comentarios::all()->where('id_post', $unpost['id']);
+                foreach($coms as $luga2=>$comm):
+                    $usuario = Comentarios::getUser($comm['id_usuario']);
+                    $coms[$luga2]['usuario'] = $usuario[0]['name'];
+                    $coms[$luga2]['usuarioimg'] = $usuario[0]['imagen'];
+                endforeach;
                 $posts[$lugar]['coms'] = $coms;
                 $like = Likes::all()->where('id_post', $unpost['id']);
                 $posts[$lugar]['likes'] = $like;
@@ -86,10 +93,11 @@ class pages extends Controller
             return $this->goPosts();
         endif;
     }
+
     public function friends()
     {
-        $activo = 2;
-        if (Auth::guest()):
+        if (Auth::user() ):
+            $activo = 2;
             return view('friends',compact('activo'));
         else:
             return $this->goPosts();
@@ -99,7 +107,6 @@ class pages extends Controller
     public function logout(){
 
         Auth::logout();
-
         return $this->goPosts();
         //asdfasdf
     }

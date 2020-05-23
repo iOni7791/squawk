@@ -16,6 +16,7 @@
 }); */
 
 Route::get('/', 'pages@index');
+Route::get('/home', 'pages@index');
 Route::get('/milogin', 'pages@milogin');
 Route::get('/miregister', 'pages@miregister');
 
