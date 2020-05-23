@@ -65,16 +65,19 @@
                         <div class="comment-container">
                             <div class="comment-info-container">
                                 <div class="post-profile-picture">
-                                    <a href="profile"><img src="img/profiles/{{$uncoment['usuarioimg'] ? $uncoment['usuarioimg']:'' }}" alt="{{$uncoment['usuario']}}"></a>
+                                    <a href="profile">
+                                        <img src="img/profiles/{{$uncoment['usuarioimg'] ? $uncoment['usuarioimg']:'' }}" alt="{{$uncoment['usuario']}}">
+                                    </a>
                                 </div>
                             </div>
 
                             <div class="user-comment-container">
                                 <div class="user-link">
-                                    <a href="profile">{{$uncoment['usuario']}}</a>
-                                </div>
+                                    <a href="profile">{{$uncoment['usuario']}}&nbsp;-&nbsp;</a>
+                                </div>({{$uncoment['created_at']->format('d/m/Y H:m:s') }})
                                 <div class="comment">
-                                    <blockquote>{{ $uncoment['contenido_c'] }}</blockquote>
+                                 <!--    <blockquote>{{ $uncoment['contenido_c'] }}</blockquote>  -->
+                                 &nbsp;&nbsp;{{ $uncoment['contenido_c'] }}
                                 </div>
 <!--                                    <div class="comment-statistics">
                                         <span><strong>XXX</strong> reacciones</span>
