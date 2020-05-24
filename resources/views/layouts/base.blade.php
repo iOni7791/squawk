@@ -28,7 +28,7 @@
 
 <!--Own CSS-->
 <link rel="stylesheet" href="css/squawk.css">
-    <title>SQUAWK! - Inicio</title>
+    <title>SQUAWK!</title> <!--Habría que poner una variable acá para que diga en qué página está-->
 </head>
 <body>
     <header>
@@ -114,9 +114,9 @@
                             </a>
                         </li>
                         <li>
-                            <a class="{{ $activo == 3 ? "active":"" }} fs-1-5rem border-black" href="profile"> Perfil <br>
-                                <span title="Edita tu perfil!">
-                                    <i class="fa fa-user-plus" aria-hidden="true"></i>
+                            <a class="{{ $activo == 3 ? "active":"" }} fs-1-5rem border-black" href="search"> Buscar <br>
+                                <span title="Busca a más buitres">
+                                <i class="fa fa-search" aria-hidden="true"></i>
                                 </span>
                             </a>
                         </li>

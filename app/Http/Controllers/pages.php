@@ -111,4 +111,14 @@ class pages extends Controller
         //asdfasdf
     }
 
+    public function profile()
+    {
+        $activo = 1;
+        if (Auth::user()):
+            return view('profile',compact('activo'));
+        else:
+            return $this->goPosts();
+        endif;
+    }
+
 }

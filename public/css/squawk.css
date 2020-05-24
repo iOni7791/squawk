@@ -297,6 +297,11 @@ textarea {
     margin: 1rem;
 }
 
+.profile img{
+    border-radius: 50%;
+    width: 25%;
+}
+
 
 /** Index **/
 
