@@ -26,6 +26,8 @@ Route::get('/faq', 'pages@faq');
 Route::get('/contact', 'pages@contact');
 //Route::get('/newPost', 'pages@contact');
 Route::get('/posts', 'pages@posts');
+Route::post('/addpost', 'pages@addpost');
+
 Route::get('/friends', 'pages@friends');
 Route::get('/logout', 'pages@logout');
 

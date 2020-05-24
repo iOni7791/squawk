@@ -8,6 +8,15 @@
                 Graznidos
             </h1>
         </section>
+
+        <form action="addpost" method="POST">
+            @csrf
+            <input type="text" >
+        </form>
+        {!! Form::open(['url' => 'foo/bar']) !!}
+
+        {!! Form::close() !!}
+
         @foreach ($posts as $item)
 
             <section class="main-login-container"> <!--Recicled because muh code-->
@@ -24,7 +33,7 @@
                         </div>
                         <br>
                         <div class="post-title">
-                            <h2 class="center-text">
+                            <h2>
                                 {{ $item['descripcion'] }}
                             </h2>
                         </div>
