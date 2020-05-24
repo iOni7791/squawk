@@ -7,14 +7,14 @@
         <section class="profile-banner-container">
             <div class="profile-banner-info">
                 <div class="banner user-posts">
-                    <h2>XXX</h2> <br> posts <br> graznados
+                    <h2>XXX<!--variable--></h2> <br> posts <br> graznados
                 </div>
                 <div class="banner profile-banner-picture">
-                    <a href="posts.php"><img src="img/perfil-prueba.png" alt="Foto de perfil de [Usuario]"></a> <br>
+                    <a href="profile"><img src="img/profiles/pfp-default.png" alt="$user['name']"></a> <br>
                     <a href="profile.php">Mi Nombre de Usuario</a>
                 </div>
                 <div class="banner user-reactions">
-                    <h2>XXX</h2> <br> personas <br> reaccionaron
+                    <h2>XXX<!--variable--></h2> <br> personas <br> reaccionaron
                 </div>
             </div>
         </section>

@@ -22,6 +22,7 @@ Route::get('/miregister', 'pages@miregister');
 
 Route::post('/miregister', 'pages@index');
 
+Route::get('/profile', 'pages@profile');
 Route::get('/faq', 'pages@faq');
 Route::get('/contact', 'pages@contact');
 //Route::get('/newPost', 'pages@contact');

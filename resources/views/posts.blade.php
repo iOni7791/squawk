@@ -39,7 +39,7 @@
                         </div>
                         @if($item['contenido_p'] != '')
                         <div class="post-img-container center-text">
-                            <img src="img/posts/{{$item['contenido_p']}}">
+                            <a href="img/posts/{{$item['contenido_p']}}" target="_blank"><img src="img/posts/{{$item['contenido_p']}}"></a>
                         </div>
                         @endif
 

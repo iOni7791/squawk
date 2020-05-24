@@ -1,28 +1,6 @@
-<?php
-    session_start();
-    $_SESSION["logueado"] = true;
-?>
+@extends('layouts.base')
 
-
-<!DOCTYPE html>
-<html lang="en">
-<head>
-
-    <!-- Coloqué todas las librerías y snippets necesarios en headLibraries.php -->
-    <?php
-        require_once("headLibraries.php");
-    ?>
-
-    <title>SQUAWK! - Perfil</title>
-</head>
-
-<body>
-    
-    <?php
-        //Agregar acá una funcionalidad similar al footer
-        require_once("header.php");
-    ?>
-    
+@section('contenido')
     <main>
         <div class="main-container">
             <section class="main-title-container">
@@ -159,11 +137,4 @@
             </section> <!-- Main-profile-container -->
         </div> <!-- Main-container -->
     </main>
-
-    <?php
-        $active = 1;
-        require_once("loggedFooter.php");
-    ?>
-</body>
-
-</html>
+@endsection

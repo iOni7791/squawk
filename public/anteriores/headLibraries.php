@@ -18,7 +18,7 @@
 <link rel="icon" href="img/logo.png"> <!--Icono de pestaña-->
 
 <!--Normalize-->
-<link rel="stylesheet" href="css/normalize.css">
+<link rel="stylesheet" href="../../public/css/normalize.css">
 
 <!--Own CSS-->
-<link rel="stylesheet" href="css/squawk.css">
+<link rel="stylesheet" href="../../public/css/squawk.css">
