@@ -15,20 +15,23 @@
     return view('welcome');
 }); */
 
+// Rutas sin logueo
 Route::get('/', 'pages@index');
 Route::get('/home', 'pages@index');
 Route::get('/milogin', 'pages@milogin');
 Route::get('/miregister', 'pages@miregister');
-
 Route::post('/miregister', 'pages@index');
 
-Route::get('/profile', 'pages@profile');
 Route::get('/faq', 'pages@faq');
 Route::get('/contact', 'pages@contact');
-//Route::get('/newPost', 'pages@contact');
+
+// Rutas con logueo
 Route::get('/posts', 'pages@posts');
 Route::post('/addpost', 'pages@addpost');
+Route::post('/addcomment', 'pages@addcomment');
+Route::post('/addlike', 'pages@addlike');
 
+Route::get('/profile', 'pages@profile');
 Route::get('/friends', 'pages@friends');
 Route::get('/logout', 'pages@logout');
 

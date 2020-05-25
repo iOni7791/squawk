@@ -38,7 +38,7 @@
     </section>
 
 
-        @foreach ($posts as $item)
+        @foreach ($posts as $unPost)
             <section class="main-login-container"> <!--Recicled because muh code-->
                 <div class="post-comment-container">
                     <article class="post-container">
@@ -48,18 +48,18 @@
                             </div>
                             <div class="post-user-time-container">
                                 <p><a href="profile"><strong>{{$user['name']}}</strong></a><br>
-                                <em>Publicado: {{ $item['created_at']->format('d/m/Y H:m:s') }}</em></p>
+                                <em>Publicado: {{ $unPost['created_at']->format('d/m/Y H:m:s') }}</em></p>
                             </div>
                         </div>
                         <br>
                         <div class="post-title">
                             <h2>
-                                {{ $item['descripcion'] }}
+                                {{ $unPost['descripcion'] }}
                             </h2>
                         </div>
-                        @if($item['contenido_p'] != '')
+                        @if($unPost['contenido_p'] != '')
                         <div class="post-img-container center-text">
-                            <a href="storage/img/posts/{{$item['contenido_p']}}" target="_blank"><img src="storage/img/posts/{{$item['contenido_p']}}"></a>
+                            <a href="storage/img/posts/{{$unPost['contenido_p']}}" target="_blank"><img src="storage/img/posts/{{$unPost['contenido_p']}}"></a>
                         </div>
                         @endif
 
@@ -77,7 +77,8 @@
                             <a class="action" href="#"><i class="fa fa-thumbs-up" aria-hidden="true"></i><br>Reaccionar!</a>
                             <a class="action" href="#"><i class="fa fa-comment-o" aria-hidden="true"></i><br>Comentar</a>
                         </div>
-                        <form class="comment-response" action="posts.php"> <!--hacer visible con JS al presionar el botón COMENTAR/RESPONDER-->
+                        <!--hacer visible con JS al presionar el botón COMENTAR/RESPONDER-->
+<!--                        <form class="comment-response" action="posts.php">
                             <div class="comment-response-textarea">
                                 <textarea name="comment" maxlength="150" placeholder="Hacer un comentario" rows="2"></textarea>
                             </div>
@@ -85,12 +86,13 @@
                                     <button class="btn btn-primary fs-1-5rem" type="submit"> Enviar comentario </button>
                             </div>
                         </form>
+-->
                     </article> <!--post-container-->
 
                     <br>
 
                     <!-- <h3>Comentarios</h3> -->
-                    @foreach ($item['coms'] as $uncoment)
+                    @foreach ($unPost['coms'] as $uncoment)
                         @if ($uncoment['usuario'])
                         <div class="comment-container">
                             <div class="comment-info-container">
@@ -126,9 +128,12 @@
                         @endif
                     @endforeach
 
-                    <form class="comment-response" action="posts.php"> <!--hacer visible con JS al presionar el botón COMENTAR/RESPONDER-->
+                    <form class="comment-response" action="addcoment" method="POST"> <!--hacer visible con JS al presionar el botón COMENTAR/RESPONDER-->
+                        @csrf
+                    <input type="hidden" name="postid" value="{{ $unPost['id'] }} "></input>
+
                         <div class="comment-response-textarea">
-                            <textarea name="comment" maxlength="150" placeholder="Hacer un comentario"></textarea>
+                            <textarea name="comment" maxlength="150" placeholder="Grazna aqui..." rows="2"></textarea>
                         </div>
                         <div class="center-text">
                                 <button class="btn btn-primary fs-1-5rem" type="submit"> Enviar comentario </button>

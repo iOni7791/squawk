@@ -39,7 +39,7 @@ class pages extends Controller
         if (Auth::guest()):
             return view('auth.login',compact('activo'));
         else:
-            return $this->goPosts();
+            return redirect('home');
         endif;
     }
 
@@ -49,7 +49,7 @@ class pages extends Controller
         if (Auth::guest()):
             return view('auth.register',compact('activo'));
         else:
-            return $this->goPosts();
+            return redirect('home');
         endif;
     }
 
@@ -59,7 +59,7 @@ class pages extends Controller
         if (Auth::guest()):
             return view('faq',compact('activo'));
         else:
-            return $this->goPosts();
+            return redirect('home');
         endif;
     }
 
@@ -69,7 +69,7 @@ class pages extends Controller
         if (Auth::guest()):
             return view('contact',compact('activo'));
         else:
-            return $this->goPosts();
+            return redirect('home');
         endif;
     }
 
@@ -94,7 +94,7 @@ class pages extends Controller
             $activo = 4;
             return view('posts',compact('activo', 'posts', 'user'));
         else:
-            return $this->goPosts();
+            return redirect('home');
         endif;
     }
 
@@ -128,7 +128,7 @@ class pages extends Controller
             $activo = 2;
             return view('friends',compact('activo'));
         else:
-            return $this->goPosts();
+            return redirect('home');
         endif;
     }
 
@@ -136,7 +136,7 @@ class pages extends Controller
 
         if (Auth::user() ):
             Auth::logout();
-            return $this->goPosts();
+            return redirect('home');
         endif;
         //asdfasdf
     }
@@ -147,7 +147,7 @@ class pages extends Controller
             $activo = 1;
             return view('profile',compact('activo'));
         else:
-            return $this->goPosts();
+            return redirect('home');
         endif;
     }
 
