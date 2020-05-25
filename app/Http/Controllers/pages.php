@@ -92,8 +92,8 @@ class pages extends Controller
                     $coms[$luga2]['usuarioimg'] = $usuario[0]['imagen'];
                 endforeach;
                 $posts[$lugar]['coms'] = $coms;
-                $like = Likes::all()->where('id_post', $unpost['id']);
-                $posts[$lugar]['likes'] = $like;
+                //$like = Likes::all()->where('id_post', $unpost['id']);
+                $posts[$lugar]['likes'] = Likes::getLikes($unpost['id']);
             endforeach;
             //dd($posts);
 
@@ -174,30 +174,4 @@ class pages extends Controller
             return redirect('home');
         endif;
     }
-
-    public function getLikes($postID){
-
-        $sqlstat = "select * from t_reacciones";
-        $sqlstat = "SELECT tr.id, tr.icono, coalesce(COUNT(lk.id),0) as cant FROM t_reacciones tr
-                    left JOIN likes lk ON tr.id = lk.id_reaccion
-                    and lk.id_post = :postID
-                    GROUP BY tr.id;";
-
-        $query = $db->prepare($sqlstat);
-        $query->bindValue(":postID", $postID, PDO::PARAM_INT);
-        $query->execute();
-
-        $likes = $query->fetchAll(PDO::FETCH_ASSOC);
-
-        $toLikes = "";
-        foreach($likes as $like):
-            //  var_dump($postID);
-            $toLikes .= '<a href="dolike.php?likeid=' .$like['id'] .'&post=' .$postID .'">';
-            $toLikes .= '<img src="imgs/reacciones/' .$like['icono'] .'" width="15%">';
-            $toLikes .= "</a><spam>" .$like["cant"] ."</spam>&nbsp;";
-        endforeach;
-
-        return $toLikes;
-    }
-
 }
