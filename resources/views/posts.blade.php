@@ -75,12 +75,13 @@
                         <div class="actions-container center-text">
 
                             @foreach($unPost['likes'] as $unLike)
-                                <a href="dolike/likeid/{{$unLike->id}}/post/{{$unPost['id']}}" style="padding-top:.8rem;">
-                                    <img src="storage/img/reacciones/{{$unLike->icono}}" width="30%">
-                                    &nbsp;<spam>{{$unLike->cant}}</spam>
+                                <a class="action"  href="dolike/likeid/{{$unLike->id}}/post/{{$unPost['id']}}" style="padding-top:.2rem;">
+                                    <i class="{{$unLike->fa}}" aria-hidden="true"></i>
+                                    <br>
+                                    <spam>{{$unLike->cant}}</spam>
                                 </a>
                             @endforeach
-                                <a class="action" href="#"><i class="fa fa-comment-o" aria-hidden="true"></i><br>Comentar</a>
+                                <a class="action" href="#"><i class="fa fa-comment-o" aria-hidden="true"></i><br>{{count($unPost['coms'])}}</a>
                         </div>
                         <!--hacer visible con JS al presionar el botón COMENTAR/RESPONDER-->
                         <!--

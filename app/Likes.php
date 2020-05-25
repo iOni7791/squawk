@@ -15,10 +15,10 @@ class Likes extends Model
     public $guarded = [];
 
     public static function getLikes($postID){
-        $sqlstat = "SELECT tr.id, tr.icono, coalesce(COUNT(lk.id),0) as cant FROM t_reacciones tr
+        $sqlstat = "SELECT tr.id, tr.fa, coalesce(COUNT(lk.id),0) as cant FROM t_reacciones tr
                     left JOIN likes lk ON tr.id = lk.id_reaccion
                     and lk.id_post = :postID
-                    GROUP BY tr.id, tr.icono;";
+                    GROUP BY tr.id, tr.fa;";
 
         $likes = DB::select($sqlstat, ["postID" => $postID]);
         //dd($likes[0]->id);
