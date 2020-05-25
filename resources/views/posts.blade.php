@@ -28,7 +28,7 @@
                             <textarea class="form-control" placeholder="Ingrese aquí su comentario..." name="texto"></textarea>
                             <div class="custom-file mt-1">
                                 <input type="file" class="custom-file-input" id="customFile" name="imagen" accept="image/*">
-                                <label class="custom-file-label" for="customFile">Seleccion una imagen</label>
+                                <label class="custom-file-label" for="customFile">Seleccione una imagen</label>
                             </div>
                             <button class="btn btn-primary mt-2 py-0 px-2" type="submit">Enviar</button>
                         </form>
@@ -36,7 +36,6 @@
             </article>
         </div>
     </section>
-
 
         @foreach ($posts as $unPost)
             <section class="main-login-container"> <!--Recicled because muh code-->
@@ -78,7 +77,8 @@
                             <a class="action" href="#"><i class="fa fa-comment-o" aria-hidden="true"></i><br>Comentar</a>
                         </div>
                         <!--hacer visible con JS al presionar el botón COMENTAR/RESPONDER-->
-<!--                        <form class="comment-response" action="posts.php">
+                        <!--
+                        <form class="comment-response" action="posts.php">
                             <div class="comment-response-textarea">
                                 <textarea name="comment" maxlength="150" placeholder="Hacer un comentario" rows="2"></textarea>
                             </div>
@@ -86,14 +86,14 @@
                                     <button class="btn btn-primary fs-1-5rem" type="submit"> Enviar comentario </button>
                             </div>
                         </form>
--->
+                        -->
                     </article> <!--post-container-->
 
                     <br>
 
                     <!-- <h3>Comentarios</h3> -->
                     @foreach ($unPost['coms'] as $uncoment)
-                        @if ($uncoment['usuario'])
+                        @if ($uncoment['usuario'] && $uncoment['contenido_c'])
                         <div class="comment-container">
                             <div class="comment-info-container">
                                 <div class="post-profile-picture">
@@ -111,26 +111,29 @@
                                  <!--    <blockquote>{{ $uncoment['contenido_c'] }}</blockquote>  -->
                                  &nbsp;&nbsp;{{ $uncoment['contenido_c'] }}
                                 </div>
-<!--                                    <div class="comment-statistics">
-                                        <span><strong>XXX</strong> reacciones</span>
-                                        <span><strong>XXX</strong> respuestas</span>
-                                    </div>
--->                         </div>
+                        <!--
+                                <div class="comment-statistics">
+                                    <span><strong>XXX</strong> reacciones</span>
+                                    <span><strong>XXX</strong> respuestas</span>
+                                </div>
+                        -->
+                            </div>
 
-<!--                        <div class="actions-container-comment center-text">
+                        <!--
+                            <div class="actions-container-comment center-text">
                                 <a href="#">Reaccionar! <i class="fa fa-thumbs-up" aria-hidden="true"></i></a>
                                 <a href="#">Responder <i class="fa fa-comment-o" aria-hidden="true"></i></a>
                             </div>
                         -->
                         </div> <!--comment-container1-->
-<!--                         <br>  -->
+                        <!--    <br>    -->
 
                         @endif
                     @endforeach
 
-                    <form class="comment-response" action="addcoment" method="POST"> <!--hacer visible con JS al presionar el botón COMENTAR/RESPONDER-->
+                    <form class="comment-response" action="addcomment" method="POST"> <!--hacer visible con JS al presionar el botón COMENTAR/RESPONDER-->
                         @csrf
-                    <input type="hidden" name="postid" value="{{ $unPost['id'] }} "></input>
+                        <input type="hidden" name="postid" value="{{ $unPost['id'] }} "></input>
 
                         <div class="comment-response-textarea">
                             <textarea name="comment" maxlength="150" placeholder="Grazna aqui..." rows="2"></textarea>

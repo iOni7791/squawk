@@ -122,6 +122,24 @@ class pages extends Controller
         endif;
     }
 
+    public function addcomment(){
+        if (Auth::user() ):
+                $usuarioActual = Auth::user();
+                $param = request();
+                //dd($param['texto'], request()->imagen);
+
+                if (request()):
+                    $elCom = new Comentarios();
+                    $elCom->id_usuario = $usuarioActual['id'];
+                    $elCom->id_post = $param['postid'];
+                    $elCom->contenido_C = $param['comment'];
+                    $elCom->save();
+
+                    return redirect('posts');
+                endif;
+        endif;
+    }
+
     public function friends()
     {
         if (Auth::user() ):
