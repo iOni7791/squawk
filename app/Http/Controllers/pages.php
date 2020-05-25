@@ -77,8 +77,14 @@ class pages extends Controller
     {
         if (Auth::user() ):
             $user = Auth::user();
-            $posts =  Posts::all()->where('id_usuario', $user['id'])->SortByDesc('id');
+//          $posts =  Posts::all()->where('id_usuario', $user['id'])->SortByDesc('id');
+            $posts =  Posts::all()->SortByDesc('id');
+
             foreach ($posts as $lugar=>$unpost):
+                $postUser = Posts::getUser($unpost['id_usuario']);
+                $posts[$lugar]['postUser'] = $postUser[0]['name'];
+                $posts[$lugar]['postImg'] = $postUser[0]['imagen'];
+
                 $coms = Comentarios::all()->where('id_post', $unpost['id']);
                 foreach($coms as $luga2=>$comm):
                     $usuario = Comentarios::getUser($comm['id_usuario']);

@@ -13,4 +13,8 @@ class Posts extends Model
     public $timestamps = true;
     public $guarded = [];
 
+    public static function getUser($postId){
+        $user = User::where('id', $postId)->get();
+        return $user;
+    }
 }
