@@ -101,35 +101,20 @@ public function addpost(){
             //dd($param['texto'], request()->imagen);
 
             if (request()):
-                if (request()->hasFile('imagen') and request()->file('imagen')->isValid())
+                $archi = "";
+                if (request()->hasFile('imagen') and request()->file('imagen')->isValid()):
                     $imagen = request()->imagen;
                     $archi = uniqid().".".request()->imagen->extension();
                     $file = $imagen->storeAs('public/img/posts', $archi);
                     //dd($archi);
-
-/*
-                $usuarioAcatual = $_SESSION['usuario'];
-
-                $sqlstat  = "insert into posts set";
-                $sqlstat .= " id_usuario = :idUsuario,";
-                $sqlstat .= " contenido_p = :imagen,";
-                $sqlstat .= " descripcion = :texto";
-
-                $query = $db->prepare($sqlstat);
-                $query->bindValue(':idUsuario', $usuarioAcatual["id"], PDO::PARAM_INT);
-                $query->bindValue(':texto',  $_POST["texto"], PDO::PARAM_STR);
-
-                if ($_FILES["imagen"]["name"] != ""):
-                    $ext = pathinfo($_FILES["imagen"]["name"],PATHINFO_EXTENSION);
-                    $archi = uniqid().".".$ext;
-                    move_uploaded_file($_FILES["imagen"]["tmp_name"],"imgs/posts/".$archi);
-                    $query->bindValue(':imagen',$archi, PDO::PARAM_STR);
-                else:
-                    $query->bindValue(':imagen','', PDO::PARAM_STR);
                 endif;
-                $query->execute();
-*/            endif;
-            return $this->posts();
+                $elPost = new Posts();
+                $elPost->id_usuario = $usuarioActual['id'];
+                $elPost->contenido_p = $archi;
+                $elPost->descripcion = $param['texto'];
+                $elPost->save();
+            endif;
+            return redirect('posts');
     endif;
   }
 

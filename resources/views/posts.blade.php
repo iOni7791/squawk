@@ -15,7 +15,7 @@
                     <div class="post-info-container">
                         <div class="post-info-container">
                             <div class="post-profile-picture">
-                                <a href="profile"><img src="img/profiles/{{$user['imagen']}}" alt="{{$user['name']}}"></a>
+                                <a href="profile"><img src="storage/img/profiles/{{$user['imagen']}}" alt="{{$user['name']}}"></a>
                             </div>
                             <div class="post-user-time-container">
                                 <p><a href="profile"><strong>{{$user['name']}}</strong></a><br></p>
@@ -59,7 +59,7 @@
                         </div>
                         @if($item['contenido_p'] != '')
                         <div class="post-img-container center-text">
-                            <a href="img/posts/{{$item['contenido_p']}}" target="_blank"><img src="img/posts/{{$item['contenido_p']}}"></a>
+                            <a href="storage/img/posts/{{$item['contenido_p']}}" target="_blank"><img src="storage/img/posts/{{$item['contenido_p']}}"></a>
                         </div>
                         @endif
 
@@ -96,7 +96,7 @@
                             <div class="comment-info-container">
                                 <div class="post-profile-picture">
                                     <a href="profile">
-                                        <img src="img/profiles/{{$uncoment['usuarioimg'] ? $uncoment['usuarioimg']:'noUser.png' }}" alt="{{$uncoment['usuario']}}">
+                                        <img src="storage/img/profiles/{{$uncoment['usuarioimg'] ? $uncoment['usuarioimg']:'noUser.png' }}" alt="{{$uncoment['usuario']}}">
                                     </a>
                                 </div>
                             </div>
@@ -114,7 +114,6 @@
                                         <span><strong>XXX</strong> respuestas</span>
                                     </div>
 -->                         </div>
-
 
 <!--                        <div class="actions-container-comment center-text">
                                 <a href="#">Reaccionar! <i class="fa fa-thumbs-up" aria-hidden="true"></i></a>
