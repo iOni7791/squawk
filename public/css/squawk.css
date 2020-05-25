@@ -297,7 +297,7 @@ textarea {
     margin: 1rem;
 }
 
-.profile img{
+.profile img {
     border-radius: 50%;
     width: 25%;
 }
@@ -427,6 +427,13 @@ ul.no-deco {
     padding: 0.5rem;
     border-bottom: solid 0.1rem white;
     margin-bottom: 0.1rem;
+}
+
+.post-new-container {
+    padding: 0.5rem;
+    border-bottom: solid 0.1rem white;
+    margin-bottom: 0.1rem;
+    width: 100%;
 }
 
 .post-profile-picture,

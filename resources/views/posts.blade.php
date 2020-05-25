@@ -9,22 +9,42 @@
             </h1>
         </section>
 
-        <form action="addpost" method="POST">
-            @csrf
-            <input type="text" >
-        </form>
-        {!! Form::open(['url' => 'foo/bar']) !!}
+        <section class="main-login-container"> <!--Recicled because muh code-->
+            <div class="post-comment-container">
+                <article class="post-container">
+                    <div class="post-info-container">
+                        <div class="post-info-container">
+                            <div class="post-profile-picture">
+                                <a href="profile"><img src="img/profiles/{{$user['imagen']}}" alt="{{$user['name']}}"></a>
+                            </div>
+                            <div class="post-user-time-container">
+                                <p><a href="profile"><strong>{{$user['name']}}</strong></a><br></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="post-new-container">
+                        <form method="POST" action="addpost" enctype="multipart/form-data">
+                            @csrf
+                            <textarea class="form-control" placeholder="Ingrese aquí su comentario..." name="texto"></textarea>
+                            <div class="custom-file mt-1">
+                                <input type="file" class="custom-file-input" id="customFile" name="imagen" accept="image/*">
+                                <label class="custom-file-label" for="customFile">Seleccion una imagen</label>
+                            </div>
+                            <button class="btn btn-primary mt-2 py-0 px-2" type="submit">Enviar</button>
+                        </form>
+                    </div>
+            </article>
+    </div>
+        </section>
 
-        {!! Form::close() !!}
 
         @foreach ($posts as $item)
-
             <section class="main-login-container"> <!--Recicled because muh code-->
                 <div class="post-comment-container">
                     <article class="post-container">
                         <div class="post-info-container">
                             <div class="post-profile-picture">
-                                <a href="profile"><img src="img/profiles/{{$user['imagen']}}" alt="{{$user['name']}}"></a>
+                                <a href="profile"><img src="storage/img/profiles/{{$user['imagen']}}" alt="{{$user['name']}}"></a>
                             </div>
                             <div class="post-user-time-container">
                                 <p><a href="profile"><strong>{{$user['name']}}</strong></a><br>
@@ -43,15 +63,16 @@
                         </div>
                         @endif
 
+                        <!--
                         <div class="statistics center-text">
                             <a class="statistic" href="#">XXX<br>Reacciones</a>
                             <a class="statistic" href="#">XXX<br>Comentarios</a>
                         </div>
-                        <!--
+
                         <div class="text-container">
                             Una descripci&oacute;n de mi posteo! Me extiendo lo suficinente como para ver el ancho del cuadro de texto!
                         </div>
-                    -->
+                        -->
                         <div class="actions-container center-text">
                             <a class="action" href="#"><i class="fa fa-thumbs-up" aria-hidden="true"></i><br>Reaccionar!</a>
                             <a class="action" href="#"><i class="fa fa-comment-o" aria-hidden="true"></i><br>Comentar</a>
@@ -75,7 +96,7 @@
                             <div class="comment-info-container">
                                 <div class="post-profile-picture">
                                     <a href="profile">
-                                        <img src="img/profiles/{{$uncoment['usuarioimg'] ? $uncoment['usuarioimg']:'' }}" alt="{{$uncoment['usuario']}}">
+                                        <img src="img/profiles/{{$uncoment['usuarioimg'] ? $uncoment['usuarioimg']:'noUser.png' }}" alt="{{$uncoment['usuario']}}">
                                     </a>
                                 </div>
                             </div>

@@ -29,7 +29,7 @@ class pages extends Controller
         if (Auth::guest()):
             return view('home',compact('activo'));
         else:
-            return $this->goPosts();
+            return $this->posts();
         endif;
     }
     public function milogin()
@@ -94,36 +94,44 @@ class pages extends Controller
         endif;
     }
 
-    public function addpost(){
-        $usuarioActual = $_SESSION["usuario"];
+public function addpost(){
+    if (Auth::user() ):
+            $usuarioActual = Auth::user();
+            $param = request();
+            //dd($param['texto'], request()->imagen);
 
-        $db = conectarBase();
-        var_dump($_POST);
-        var_dump($_FILES);
-       // die();
-        if ($_POST):
-            $usuarioAcatual = $_SESSION['usuario'];
-            $sqlstat  = "insert into posts set";
-            $sqlstat .= " id_usuario = :idUsuario,";
-            $sqlstat .= " contenido_p = :imagen,";
-            $sqlstat .= " descripcion = :texto";
+            if (request()):
+                if (request()->hasFile('imagen') and request()->file('imagen')->isValid())
+                    $imagen = request()->imagen;
+                    $archi = uniqid().".".request()->imagen->extension();
+                    $file = $imagen->storeAs('public/img/posts', $archi);
+                    //dd($archi);
 
-            $query = $db->prepare($sqlstat);
-            $query->bindValue(':idUsuario', $usuarioAcatual["id"], PDO::PARAM_INT);
-            $query->bindValue(':texto',  $_POST["texto"], PDO::PARAM_STR);
+/*
+                $usuarioAcatual = $_SESSION['usuario'];
 
-            if ($_FILES["imagen"]["name"] != ""):
-                $ext = pathinfo($_FILES["imagen"]["name"],PATHINFO_EXTENSION);
-                $archi = uniqid().".".$ext;
-                move_uploaded_file($_FILES["imagen"]["tmp_name"],"imgs/posts/".$archi);
-                $query->bindValue(':imagen',$archi, PDO::PARAM_STR);
-            else:
-                $query->bindValue(':imagen','', PDO::PARAM_STR);
-            endif;
-            $query->execute();
-        endif;
-        return $this->posts();
-    }
+                $sqlstat  = "insert into posts set";
+                $sqlstat .= " id_usuario = :idUsuario,";
+                $sqlstat .= " contenido_p = :imagen,";
+                $sqlstat .= " descripcion = :texto";
+
+                $query = $db->prepare($sqlstat);
+                $query->bindValue(':idUsuario', $usuarioAcatual["id"], PDO::PARAM_INT);
+                $query->bindValue(':texto',  $_POST["texto"], PDO::PARAM_STR);
+
+                if ($_FILES["imagen"]["name"] != ""):
+                    $ext = pathinfo($_FILES["imagen"]["name"],PATHINFO_EXTENSION);
+                    $archi = uniqid().".".$ext;
+                    move_uploaded_file($_FILES["imagen"]["tmp_name"],"imgs/posts/".$archi);
+                    $query->bindValue(':imagen',$archi, PDO::PARAM_STR);
+                else:
+                    $query->bindValue(':imagen','', PDO::PARAM_STR);
+                endif;
+                $query->execute();
+*/            endif;
+            return $this->posts();
+    endif;
+  }
 
     public function friends()
     {
@@ -137,19 +145,47 @@ class pages extends Controller
 
     public function logout(){
 
-        Auth::logout();
-        return $this->goPosts();
+        if (Auth::user() ):
+            Auth::logout();
+            return $this->goPosts();
+        endif;
         //asdfasdf
     }
 
     public function profile()
     {
-        $activo = 1;
         if (Auth::user()):
+            $activo = 1;
             return view('profile',compact('activo'));
         else:
             return $this->goPosts();
         endif;
+    }
+
+    public function getLikes($postID){
+        $db = conectarBase();
+
+        $sqlstat = "select * from t_reacciones";
+        $sqlstat = "SELECT tr.id, tr.icono, coalesce(COUNT(lk.id),0) as cant FROM t_reacciones tr
+                    left JOIN likes lk ON tr.id = lk.id_reaccion
+                    and lk.id_post = :postID
+                    GROUP BY tr.id;";
+
+        $query = $db->prepare($sqlstat);
+        $query->bindValue(":postID", $postID, PDO::PARAM_INT);
+        $query->execute();
+
+        $likes = $query->fetchAll(PDO::FETCH_ASSOC);
+
+        $toLikes = "";
+        foreach($likes as $like):
+            //  var_dump($postID);
+            $toLikes .= '<a href="dolike.php?likeid=' .$like['id'] .'&post=' .$postID .'">';
+            $toLikes .= '<img src="imgs/reacciones/' .$like['icono'] .'" width="15%">';
+            $toLikes .= "</a><spam>" .$like["cant"] ."</spam>&nbsp;";
+        endforeach;
+
+        return $toLikes;
     }
 
 }
