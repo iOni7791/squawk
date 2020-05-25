@@ -535,7 +535,7 @@ ul.no-deco {
 
 .input-toggle,
 .comment-response {
-    display: none;
+    display: block;
 }
 
 .comment-statistics {

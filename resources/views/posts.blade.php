@@ -34,8 +34,8 @@
                         </form>
                     </div>
             </article>
-    </div>
-        </section>
+        </div>
+    </section>
 
 
         @foreach ($posts as $item)
@@ -79,7 +79,7 @@
                         </div>
                         <form class="comment-response" action="posts.php"> <!--hacer visible con JS al presionar el botón COMENTAR/RESPONDER-->
                             <div class="comment-response-textarea">
-                                <textarea name="comment" maxlength="150" placeholder="Hacer un comentario"></textarea>
+                                <textarea name="comment" maxlength="150" placeholder="Hacer un comentario" rows="2"></textarea>
                             </div>
                             <div class="center-text">
                                     <button class="btn btn-primary fs-1-5rem" type="submit"> Enviar comentario </button>
