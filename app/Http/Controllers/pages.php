@@ -105,14 +105,14 @@ public function addpost(){
                 if (request()->hasFile('imagen') and request()->file('imagen')->isValid()):
                     $imagen = request()->imagen;
                     $archi = uniqid().".".request()->imagen->extension();
-                    $file = $imagen->storeAs('public/img/posts', $archi);
                     //dd($archi);
                 endif;
                 $elPost = new Posts();
                 $elPost->id_usuario = $usuarioActual['id'];
                 $elPost->contenido_p = $archi;
                 $elPost->descripcion = $param['texto'];
-                $elPost->save();
+                if ( $elPost->save() )
+                    $file = $imagen->storeAs('public/img/posts', $archi);
             endif;
             return redirect('posts');
     endif;
