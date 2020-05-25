@@ -289,8 +289,6 @@ textarea {
 
 .pfp-container {
     display: flex;
-    flex: row wrap;
-    justify-content: space-evenly;
 }
 
 .profile {
@@ -298,9 +296,10 @@ textarea {
 }
 
 .profile img {
+    width: 40%;
     border-radius: 50%;
-    width: 25%;
 }
+
 
 
 /** Index **/
