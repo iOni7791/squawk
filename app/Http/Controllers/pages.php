@@ -32,6 +32,7 @@ class pages extends Controller
             return $this->posts();
         endif;
     }
+
     public function milogin()
     {
         $activo = 2;
@@ -41,6 +42,7 @@ class pages extends Controller
             return $this->goPosts();
         endif;
     }
+
     public function miregister()
     {
         $activo = 3;
@@ -50,6 +52,7 @@ class pages extends Controller
             return $this->goPosts();
         endif;
     }
+
     public function faq()
     {
         $activo = 4;
@@ -59,6 +62,7 @@ class pages extends Controller
             return $this->goPosts();
         endif;
     }
+
     public function contact()
     {
         $activo = 5;
@@ -94,29 +98,29 @@ class pages extends Controller
         endif;
     }
 
-public function addpost(){
-    if (Auth::user() ):
-            $usuarioActual = Auth::user();
-            $param = request();
-            //dd($param['texto'], request()->imagen);
+    public function addpost(){
+        if (Auth::user() ):
+                $usuarioActual = Auth::user();
+                $param = request();
+                //dd($param['texto'], request()->imagen);
 
-            if (request()):
-                $archi = "";
-                if (request()->hasFile('imagen') and request()->file('imagen')->isValid()):
-                    $imagen = request()->imagen;
-                    $archi = uniqid().".".request()->imagen->extension();
-                    //dd($archi);
+                if (request()):
+                    $archi = "";
+                    if (request()->hasFile('imagen') and request()->file('imagen')->isValid()):
+                        $imagen = request()->imagen;
+                        $archi = uniqid().".".request()->imagen->extension();
+                        //dd($archi);
+                    endif;
+                    $elPost = new Posts();
+                    $elPost->id_usuario = $usuarioActual['id'];
+                    $elPost->contenido_p = $archi;
+                    $elPost->descripcion = $param['texto'];
+                    if ( $elPost->save() )
+                        $file = $imagen->storeAs('public/img/posts', $archi);
                 endif;
-                $elPost = new Posts();
-                $elPost->id_usuario = $usuarioActual['id'];
-                $elPost->contenido_p = $archi;
-                $elPost->descripcion = $param['texto'];
-                if ( $elPost->save() )
-                    $file = $imagen->storeAs('public/img/posts', $archi);
-            endif;
-            return redirect('posts');
-    endif;
-  }
+                return redirect('posts');
+        endif;
+    }
 
     public function friends()
     {
@@ -148,7 +152,6 @@ public function addpost(){
     }
 
     public function getLikes($postID){
-        $db = conectarBase();
 
         $sqlstat = "select * from t_reacciones";
         $sqlstat = "SELECT tr.id, tr.icono, coalesce(COUNT(lk.id),0) as cant FROM t_reacciones tr
