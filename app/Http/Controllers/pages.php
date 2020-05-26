@@ -7,6 +7,7 @@ use App\User;
 use App\Posts;
 use App\Comentarios;
 use App\Likes;
+use App\Friends;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
@@ -170,8 +171,11 @@ class pages extends Controller
         if (Auth::user()):
             $activo = 4;
             $usuarioActual = User::where('id', Auth::user()->id )->get()[0];
+            $posts = Comentarios::all()->where('id_usuario', Auth::user()->id)->count();
+            $friendsnro = Friends::all()->where('id_usuario', Auth::user()->id)->count();
+            $usuarioActual['posts'] = $posts;
+            $usuarioActual['friendsnro'] = $friendsnro;
 
-            //dd($usuarioActual);
             return view('profile',compact('activo','usuarioActual'));
         else:
             return redirect('home');

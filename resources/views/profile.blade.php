@@ -7,13 +7,13 @@
             <section class="profile-banner-container">
                 <div class="profile-banner-info">
                     <div class="banner user-posts">
-                        <h2>XXX<!--variable--></h2> <br> posts <br> graznados
+                        <h2>{{$usuarioActual['posts']}}</h2> <br> posts <br> graznados
                     </div>
                     <div class="banner profile-banner-picture">
                         <a href="profile">{{$usuarioActual['name']}}</a>
                     </div>
                     <div class="banner user-reactions">
-                        <h2>XXX<!--variable--></h2> <br> amigos <br> buitres
+                        <h2>{{$usuarioActual['friendsnro']}}</h2> <br> amigos <br> buitres
                     </div>
                 </div>
             </section>
