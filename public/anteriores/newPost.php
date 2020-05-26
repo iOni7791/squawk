@@ -60,7 +60,8 @@
             
             <section class="main-login-container"> <!--Recicled because muh code-->
                 
-                <form action="newPost.php" method="POST" enctype="multipart/form-data"> 
+                <form action="addpost" method="POST" enctype="multipart/form-data"> 
+                @csrf
                     <!-- Campos de login -->
                     <fieldset class="center-text"> 
                         
@@ -69,7 +70,7 @@
 
                                 <!-- Campo para subir imagen-->
                                 <div class="input-group mb-3 px-2 py-2 rounded-pill bg-white shadow-sm">
-                                    <input id="upload" type="file" name="upload" onchange="readURL(this);" class="form-control border-0">
+                                    <input id="upload" type="file" name="imagen" onchange="readURL(this);" class="form-control border-0" accept="image/*">
                                     <label id="upload-label" for="upload" class="font-weight-light text-muted">Buscar archivo</label>
                                     <div class="input-group-append">
                                         <label for="upload" class="btn btn-light m-0 rounded-pill px-4"> 
@@ -85,11 +86,7 @@
                         </div>
                         <br> <br>
                         <div>
-                            <input class="form-control form-control-sm fs-1-5rem" type="text" name="post_title" value="" placeholder="Título" required>
-                        </div>
-
-                        <div>
-                            <textarea name="post_content" maxlength="150" placeholder="Descripción"></textarea>                            
+                            <textarea name="texto" maxlength="150" placeholder="Ingrese aquí su comentario..."></textarea>                            
                         </div>
 
                     </fieldset> 

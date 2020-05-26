@@ -80,7 +80,7 @@ blockquote {
     justify-content: space-around;
     align-items: center;
     padding: 0 1rem;
-    height: 10rem;
+    height: 8rem;
     width: 100%;
     margin-bottom: 1rem;
     background-color: #0f4c81;
@@ -289,17 +289,24 @@ textarea {
 
 .pfp-container {
     display: flex;
+    justify-content: center;
 }
 
 .profile {
     margin: 1rem;
 }
 
-.profile img {
-    width: 40%;
-    border-radius: 50%;
+.profile-pfp
+{
+    display: flex;
+    justify-content: center;
+    width: 100%;
 }
 
+.profile img {
+    border-radius: 50%;
+    width: 12rem;
+}
 
 
 /** Index **/
@@ -430,7 +437,6 @@ ul.no-deco {
 
 .post-new-container {
     padding: 0.5rem;
-    border-bottom: solid 0.1rem white;
     margin-bottom: 0.1rem;
     width: 100%;
 }
@@ -515,10 +521,6 @@ ul.no-deco {
 .user-link {
     display: inline-block;
     font-weight: 700;
-}
-
-.user-link::after {
-    /*content: " dijo: ";*/
 }
 
 .comment blockquote {

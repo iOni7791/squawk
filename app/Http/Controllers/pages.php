@@ -97,7 +97,7 @@ class pages extends Controller
             endforeach;
             //dd($posts);
 
-            $activo = 4;
+            $activo = 3;
             return view('posts',compact('activo', 'posts', 'user'));
         else:
             return redirect('home');
@@ -168,8 +168,18 @@ class pages extends Controller
     public function profile()
     {
         if (Auth::user()):
-            $activo = 1;
+            $activo = 4;
             return view('profile',compact('activo'));
+        else:
+            return redirect('home');
+        endif;
+    }
+
+    public function nest()
+    {
+        if (Auth::user()):
+            $activo = 1;
+            return view('nest',compact('activo'));
         else:
             return redirect('home');
         endif;

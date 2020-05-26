@@ -101,9 +101,9 @@
                     @endguest
                     @auth
                         <li>
-                            <a class="{{ $activo == 1 ? "active":"" }} fs-1-5rem border-black" href="profile"> Perfil <br>
-                                <span title="Acicala tu perfil">
-                                    <i class="fa fa-user-circle" aria-hidden="true"></i>
+                            <a class="{{ $activo == 1 ? "active":"" }} fs-1-5rem border-black" href="profile"> Nido <br>
+                                <span title="Tu nido">
+                                    <i class="fa fa-home" aria-hidden="true"></i>
                                 </span>
                             </a>
                         </li>
@@ -115,16 +115,16 @@
                             </a>
                         </li>
                         <li>
-                            <a class="{{ $activo == 3 ? "active":"" }} fs-1-5rem border-black" href="search"> Buscar <br>
-                                <span title="Busca a más buitres">
-                                <i class="fa fa-search" aria-hidden="true"></i>
+                            <a class="{{ $activo == 3 ? "active":"" }} fs-1-5rem border-black" href="posts">
+                                <span title="Tus graznadas"> Posts <br>
+                                    <i class="fa fa-pencil-square-o" aria-hidden="true"></i>
                                 </span>
                             </a>
                         </li>
                         <li>
-                            <a class="{{ $activo == 4 ? "active":"" }} fs-1-5rem border-black" href="posts">
-                                <span title="Tus graznadas"> Posts <br>
-                                    <i class="fa fa-pencil-square-o" aria-hidden="true"></i>
+                            <a class="{{ $activo == 4 ? "active":"" }} fs-1-5rem border-black" href="profile"> Perfil <br>
+                                <span title="Acicala tu perfil">
+                                    <i class="fa fa-user-circle" aria-hidden="true"></i>                                  
                                 </span>
                             </a>
                         </li>
