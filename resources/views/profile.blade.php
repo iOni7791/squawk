@@ -10,8 +10,7 @@
                         <h2>XXX<!--variable--></h2> <br> posts <br> graznados
                     </div>
                     <div class="banner profile-banner-picture">
-                        <a href="profile"><img src="img/profiles/pfp-default.png" alt="$user['name']"></a> <br>
-                        <a href="profile">Mi Nombre de Usuario</a>
+                        <a href="profile">{{$usuarioActual['name']}}</a>
                     </div>
                     <div class="banner user-reactions">
                         <h2>XXX<!--variable--></h2> <br> amigos <br> buitres
@@ -24,7 +23,7 @@
                     {{ __('Editar Perfil') }}
                 </h1>
             </section>
-    
+
 
 
             <!-- Datos de la cuenta -->
@@ -34,7 +33,7 @@
                     <legend class="center-text">
                         <strong> Datos de la cuenta </strong>
                     </legend>
-                    
+
                     <div class="pfp-container center-text">
                         <div class="profile">
                             <label for="img">
@@ -42,33 +41,33 @@
                             <div class="profile-pfp">
                                 <img src="../img/perfil-prueba.png" alt="Tu foto de perfil"> <br>
                             </div>
-                            </label> <br>                          
-                            
+                            </label> <br>
+
                             <label for="img">
                                 Subir una imagen
                                 <label class="btn btn-primary fs-1-5rem">
                                     Buscar <input type="file" id="img" name="img" accept="image/*" style="display: none;">
                                 </label>
                             </label> <br>
-                                                       
-                            <div class="center-text"> 
+
+                            <div class="center-text">
                                 <button class="btn btn-success fs-1-5rem" type="submit">Actualizar</button>
                             </div>
                         </div>
 
                     </div>
                 </form>
-            </section> 
-            <br> 
+            </section>
+            <br>
 
             <section class="main-profile-container">
                 <form action="profile" method="POST">
-               
+
                     <!-- Datos personales -->
-                    <fieldset class="center-text"> 
+                    <fieldset class="center-text">
                         <div class="form-text" class="row">
                             <legend class="center-text"> <strong> Datos Personales </strong></legend>
-                      
+
                             <div class="form-group row">
                                 <label for="name" class="col-md-4 col-form-label text-md-right"><strong>{{ __('Nombre') }}</strong></label>
 
@@ -82,7 +81,7 @@
                                     @enderror
                                 </div>
                             </div>
-                            
+
                             <div class="form-group row">
                                 <label for="email" class="col-md-4 col-form-label text-md-right"><strong>{{ __('E-Mail') }}</strong></label>
 
@@ -96,7 +95,7 @@
                                     @enderror
                                 </div>
                             </div>
-                            
+
                             <div class="form-group row">
                                 <label for="email" class="col-md-4 col-form-label text-md-right"><strong>{{ __('Descríbete') }}</strong></label>
 
@@ -128,24 +127,24 @@
                                 <label for="m">Masculino</label>
                             </div>
                             <br>
-                           
+
                             <div class="col-md-7 col-lg-4">
                                 <input type="radio" id="f" name="genero" value="2">
                                 <label for="f">Femenino</label>
                             </div>
 
-                        </div> 
+                        </div>
                     <br>
-                    <div class="center-text"> 
+                    <div class="center-text">
                         <button class="btn btn-primary fs-1-5rem" type="submit">Actualizar</button>
-                    </div> 
+                    </div>
                 </form>
             </section>
 
             <!-- Contraseña -->
             <section class="main-profile-container">
                 <form action="profile.php" method="POST">
-               
+
                     <div class="form-group row">
                             <label for="password" class="col-md-4 col-form-label text-md-right center-text"><strong> {{ __('Contraseña') }} </strong></label>
 
@@ -168,10 +167,10 @@
                             </div>
                         </div>
 
-                    <div class="center-text"> 
+                    <div class="center-text">
                         <button class="btn btn-primary fs-1-5rem" type="submit">Cambiar contraseña</button>
                     </div>
-    
+
                 </form>
             </section> <!-- Main-profile-container -->
         </div> <!-- Main-container -->

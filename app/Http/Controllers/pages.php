@@ -29,7 +29,7 @@ class pages extends Controller
         if (Auth::guest()):
             return view('home',compact('activo'));
         else:
-            return $this->posts();
+            return redirect('posts');
         endif;
     }
 
@@ -169,7 +169,10 @@ class pages extends Controller
     {
         if (Auth::user()):
             $activo = 4;
-            return view('profile',compact('activo'));
+            $usuarioActual = User::where('id', Auth::user()->id )->get()[0];
+
+            //dd($usuarioActual);
+            return view('profile',compact('activo','usuarioActual'));
         else:
             return redirect('home');
         endif;
