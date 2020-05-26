@@ -11,10 +11,10 @@
                 </div>
                 <div class="banner profile-banner-picture">
                     <a href="profile"><img src="img/profiles/pfp-default.png" alt="$user['name']"></a> <br>
-                    <a href="profile.php">Mi Nombre de Usuario</a>
+                    <a href="profile">Mi Nombre de Usuario</a>
                 </div>
                 <div class="banner user-reactions">
-                    <h2>XXX<!--variable--></h2> <br> personas <br> reaccionaron
+                    <h2>XXX<!--variable--></h2> <br> amigos <br> buitres
                 </div>
             </div>
         </section>

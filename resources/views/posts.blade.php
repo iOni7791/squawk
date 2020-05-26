@@ -1,5 +1,5 @@
 @extends('layouts.base')
-
+    <script src="js/subir-imagen.js"></script>
 @section('contenido')
 <main>
     <div class="main-container">
@@ -13,24 +13,46 @@
             <div class="post-comment-container">
                 <article class="post-container">
                     <div class="post-info-container">
-                        <div class="post-info-container">
+                        
                             <div class="post-profile-picture">
                                 <a href="profile"><img src="storage/img/profiles/{{$user['imagen']}}" alt="{{$user['name']}}"></a>
                             </div>
                             <div class="post-user-time-container">
                                 <p><a href="profile"><strong>{{$user['name']}}</strong></a><br></p>
                             </div>
-                        </div>
+                        
                     </div>
+
                     <div class="post-new-container">
                         <form method="POST" action="addpost" enctype="multipart/form-data">
                             @csrf
-                            <textarea class="form-control" placeholder="Ingrese aquí su comentario..." name="texto"></textarea>
-                            <div class="custom-file mt-1">
-                                <input type="file" class="custom-file-input" id="customFile" name="imagen" accept="image/*">
-                                <label class="custom-file-label" for="customFile">Seleccione una imagen</label>
+                            <div class="row py-4">
+                                <div class="col-lg-6 mx-auto">
+
+                                    <!-- Campo para subir imagen-->
+                                    <div class="input-group mb-3 px-2 py-2 rounded-pill bg-white shadow-sm">
+                                        <input id="upload" type="file" name="imagen" onchange="readURL(this);" class="form-control border-0" accept="image/*">
+                                        <label id="upload-label" for="upload" class="font-weight-light text-muted">Buscar archivo</label>
+                                        <div class="input-group-append">
+                                            <label for="upload" class="btn btn-light m-0 rounded-pill px-4"> 
+                                                <i class="fa fa-cloud-upload mr-2 text-muted"></i>
+                                                <small class="text-uppercase font-weight-bold text-muted">Buscar...</small>
+                                            </label>
+                                        </div>
+                                    </div>
+
+                                    <!-- Vista previa imagen a subir -->
+                                    <p class="font-italic text-white text-center">Vista Previa</p>
+                                <div class="image-area mt-4"><img id="imageResult" src="#" alt="" class="img-fluid rounded shadow-sm mx-auto d-block">
                             </div>
-                            <button class="btn btn-primary mt-2 py-0 px-2" type="submit">Enviar</button>
+                        <br> <br>
+                        <div>
+                            <textarea name="texto" maxlength="150" placeholder="Ingrese aquí su comentario..."></textarea>                            
+                        </div>
+                        <br>
+                        <div class="center-text">
+                            <button class="btn btn-primary fs-1-5rem" type="submit"> Postear! </button>
+                        </div>
                         </form>
                     </div>
             </article>
@@ -52,10 +74,11 @@
                         </div>
                         <br>
                         <div class="post-title">
-                            <h2>
+                            <h2 class="center-text">
                                 {{ $unPost['descripcion'] }}
                             </h2>
                         </div>
+                        <br>
                         @if($unPost['contenido_p'] != '')
                         <div class="post-img-container center-text">
                             <a href="storage/img/posts/{{$unPost['contenido_p']}}" target="_blank"><img src="storage/img/posts/{{$unPost['contenido_p']}}"></a>
@@ -145,8 +168,9 @@
                         <div class="comment-response-textarea">
                             <textarea name="comment" maxlength="150" placeholder="Grazna aqui..." rows="2"></textarea>
                         </div>
+                        <br>
                         <div class="center-text">
-                                <button class="btn btn-primary fs-1-5rem" type="submit"> Enviar comentario </button>
+                            <button class="btn btn-primary fs-1-5rem" type="submit"> Enviar comentario </button>
                         </div>
                     </form>
                 </div> <!--post-comment-container-->

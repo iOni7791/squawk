@@ -31,6 +31,7 @@ Route::post('/addpost', 'pages@addpost');
 Route::post('/addcomment', 'pages@addcomment');
 Route::post('/addlike', 'pages@addlike');
 
+Route::get('/nest', 'pages@nest');
 Route::get('/profile', 'pages@profile');
 Route::get('/friends', 'pages@friends');
 Route::get('/logout', 'pages@logout');
