@@ -93,6 +93,11 @@ blockquote {
     width: 20%;
 }
 
+.header-logo
+{
+    width: 7rem;
+}
+
 .header-title-span {
     font-size: 2rem;
 }
