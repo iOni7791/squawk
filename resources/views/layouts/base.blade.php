@@ -22,7 +22,7 @@
 
 <!--Icons-->
 <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
-<link rel="icon" href="img/logo.png"> <!--Icono de pestaña-->
+<link rel="icon" href="storage/img/logo.png"> <!--Icono de pestaña-->
 
 <!--Normalize-->
 <link rel="stylesheet" href="css/normalize.css">
@@ -44,7 +44,7 @@
 
             <div class="header-logo-container">
                 <a href="./" class="xy-center-cont">
-                    <img class="header-logo" src="img/logo.png" alt="SQUAWK!">
+                    <img class="header-logo" src="storage/img/logo.png" alt="SQUAWK!">
                 </a>
             </div>
 
