@@ -29,7 +29,8 @@ Route::get('/contact', 'pages@contact');
 Route::get('/posts', 'pages@posts');
 Route::post('/addpost', 'pages@addpost');
 Route::post('/addcomment', 'pages@addcomment');
-Route::post('/addlike', 'pages@addlike');
+
+Route::get('/addlike/{postid}/{likeid}','pages@addLike')->name('addlike');
 
 Route::get('/nest', 'pages@nest');
 Route::get('/profile', 'pages@profile');

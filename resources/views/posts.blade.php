@@ -13,14 +13,14 @@
             <div class="post-comment-container">
                 <article class="post-container">
                     <div class="post-info-container">
-                        
+
                             <div class="post-profile-picture">
                                 <a href="profile"><img src="storage/img/profiles/{{$user['imagen']}}" alt="{{$user['name']}}"></a>
                             </div>
                             <div class="post-user-time-container">
                                 <p><a href="profile"><strong>{{$user['name']}}</strong></a><br></p>
                             </div>
-                        
+
                     </div>
 
                     <div class="post-new-container">
@@ -34,7 +34,7 @@
                                         <input id="upload" type="file" name="imagen" onchange="readURL(this);" class="form-control border-0" accept="image/*">
                                         <label id="upload-label" for="upload" class="font-weight-light text-muted">Buscar archivo</label>
                                         <div class="input-group-append">
-                                            <label for="upload" class="btn btn-light m-0 rounded-pill px-4"> 
+                                            <label for="upload" class="btn btn-light m-0 rounded-pill px-4">
                                                 <i class="fa fa-cloud-upload mr-2 text-muted"></i>
                                                 <small class="text-uppercase font-weight-bold text-muted">Buscar...</small>
                                             </label>
@@ -47,7 +47,7 @@
                             </div>
                         <br> <br>
                         <div>
-                            <textarea name="texto" maxlength="150" placeholder="Ingrese aquí su comentario..."></textarea>                            
+                            <textarea name="texto" maxlength="150" placeholder="Ingrese aquí su comentario..."></textarea>
                         </div>
                         <br>
                         <div class="center-text">
@@ -98,7 +98,7 @@
                         <div class="actions-container center-text">
 
                             @foreach($unPost['likes'] as $unLike)
-                                <a class="action"  href="dolike/likeid/{{$unLike->id}}/post/{{$unPost['id']}}" style="padding-top:.2rem;">
+                                    <a class="action" href="{{ route('addlike',['postid'=>$unPost['id'], 'likeid'=>$unLike->id]) }}" style="padding-top:.2rem;">
                                     <i class="{{$unLike->fa}}" aria-hidden="true"></i>
                                     <br>
                                     <spam>{{$unLike->cant}}</spam>
