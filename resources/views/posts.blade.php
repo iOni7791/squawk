@@ -102,11 +102,11 @@
 
                             @foreach($unPost['likes'] as $unLike)
                                     <a class="action" href="{{ route('addlike',['postid'=>$unPost['id'], 'likeid'=>$unLike->id]) }}">
-                                    <i class="{{$unLike->fa}}" aria-hidden="true"></i>
+                                    <i class="{{$unLike->fa}} reaction" aria-hidden="true"></i>
                                     <spam>{{$unLike->cant}}</spam>
                                 </a>
                             @endforeach
-                                <a class="action" href="#"><i class="fa fa-comment-o" aria-hidden="true"></i>{{count($unPost['coms'])}}</a>
+                                <a class="action" href="#"><i class="fa fa-comment-o reaction" aria-hidden="true"></i>{{count($unPost['coms'])}}</a>
                         </div>
                         <!--hacer visible con JS al presionar el botón COMENTAR/RESPONDER-->
                         <!--

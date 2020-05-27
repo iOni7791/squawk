@@ -85,13 +85,13 @@
 
                             @foreach($unPost['likes'] as $unLike)
                             <span class="info" style="padding-top:.2rem;">
-                                <i class="{{$unLike->fa}}" aria-hidden="true"></i>
+                                <i class="{{$unLike->fa}} reaction" aria-hidden="true"></i>
                                 <br>
                                 <spam>{{$unLike->cant}}</spam>
                             </span>
                             @endforeach
-                            <a class="action" href="#">
-                                <i class="fa fa-comment-o" aria-hidden="true"></i><br>{{count($unPost['coms'])}}
+                            <a class="action reaction" href="#">
+                                <i class="fa fa-comment-o reaction" aria-hidden="true"></i><br>{{count($unPost['coms'])}}
                             </a>
                         </div>
                         <br>
