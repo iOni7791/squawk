@@ -79,7 +79,7 @@
                         <br>
                         <div class="post-title">
                         <h2 class="center-text">
-                            <a href="unpost/{{$unPost['id']}}/">
+                            <a href="unpost/{{$unPost['id']}}">
                                 {{ $unPost['descripcion'] }}
                             </a>
                         </h2>
