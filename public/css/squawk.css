@@ -31,15 +31,29 @@ h1 {
 }
 
 
+blockquote {
+    font-style: italic;
+}
+
+.form-group
+{
+    margin-top: 0.2rem;
+    margin-bottom: 0.2rem;
+}
+
+.form-control,
+textarea
+{
+    border-radius: 0.5rem;
+}
+
+
 /**Utilities**/
 
 .fs-1-5rem {
     font-size: 1.5rem;
 }
 
-blockquote {
-    font-style: italic;
-}
 
 .center-text {
     text-align: center;
@@ -54,6 +68,11 @@ blockquote {
 
 .white {
     color: white;
+}
+
+.black
+{
+    color: black;
 }
 
 .height-100 {
@@ -133,7 +152,7 @@ main {
 }
 
 .main-title-container h1 {
-    font-size: 3rem;
+    font-size: 2.5rem;
     font-weight: 600;
 }
 
@@ -172,7 +191,7 @@ main {
 @media (max-width: 1023px) {
     .radios {
         display: block;
-        text-align: left;
+        text-align: center;
     }
 }
 
@@ -385,8 +404,16 @@ ul.no-deco {
     transform: translateY(-50%);
 }
 
+.image-search
+{
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+}
+
 .image-area {
-    border: 2px dashed rgba(255, 255, 255, 0.7);
+    border: 1px solid rgba(255, 255, 255, 0.7);
+    border-radius: 1rem;
+    background-color: #0c5ca1;
     padding: 1rem;
     position: relative;
 }
@@ -427,6 +454,8 @@ ul.no-deco {
 }
 
 .post-img-container img {
+    border: solid 1px white;
+    border-radius: 1rem;
     width: 100%;
     margin-bottom: 0.5rem;
     background-color: white;
@@ -442,7 +471,7 @@ ul.no-deco {
 
 .post-new-container {
     padding: 0.5rem;
-    margin-bottom: 0.1rem;
+    
     width: 100%;
 }
 

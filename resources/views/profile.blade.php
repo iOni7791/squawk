@@ -120,15 +120,18 @@
                         </div>
                         <br>
 
+                        <h2 class="center-text">
+                            <b>Género</b>
+                        </h2>
                         <div class="form-group row radios">
-
-                            <div class="col-md-7 col-lg-4">
+                        
+                            <div class="col-md-12 col-lg-5">
                                 <input type="radio" id="m" name="genero" value="1">
-                                <label for="m">Masculino</label>
+                                <label for="m"> Masculino</label>
                             </div>
                             <br>
-
-                            <div class="col-md-7 col-lg-4">
+                           
+                            <div class="col-md-12 col-lg-5">
                                 <input type="radio" id="f" name="genero" value="2">
                                 <label for="f">Femenino</label>
                             </div>

@@ -27,37 +27,42 @@
                         <form method="POST" action="addpost" enctype="multipart/form-data">
                             @csrf
                             <div class="row py-4">
-                                <div class="col-lg-6 mx-auto">
-
-                                    <!-- Campo para subir imagen-->
-                                    <div class="input-group mb-3 px-2 py-2 rounded-pill bg-white shadow-sm">
-                                        <input id="upload" type="file" name="imagen" onchange="readURL(this);" class="form-control border-0" accept="image/*">
-                                        <label id="upload-label" for="upload" class="font-weight-light text-muted">Buscar archivo</label>
-                                        <div class="input-group-append">
-                                            <label for="upload" class="btn btn-light m-0 rounded-pill px-4"> 
-                                                <i class="fa fa-cloud-upload mr-2 text-muted"></i>
-                                                <small class="text-uppercase font-weight-bold text-muted">Buscar...</small>
-                                            </label>
-                                        </div>
-                                    </div>
+                                <div class="col-lg-12 mx-auto">
 
                                     <!-- Vista previa imagen a subir -->
-                                    <p class="font-italic text-white text-center">Vista Previa</p>
-                                <div class="image-area mt-4"><img id="imageResult" src="#" alt="" class="img-fluid rounded shadow-sm mx-auto d-block">
+                                    <p class="text-white text-center"> <b> Vista Previa </b></p>
+                                    <div class="image-area mt-4">
+                                        <img id="imageResult" src="#" alt="" class="img-fluid rounded shadow-sm mx-auto d-block">
+                    
+                                        <!-- Campo para subir imagen-->
+                                        <div class="input-group mb-3 px-2 py-2 bg-white shadow-sm image-search">
+                                        <input id="upload" type="file" name="imagen" onchange="readURL(this);" class="form-control border-0" accept="image/*">
+                                        <label id="upload-label" for="upload" class="black">Buscar archivo</label>
+                                        <div class="input-group-append">
+                                            <label for="upload" class="btn btn-success m-0 px-4"> 
+                                                <i class="fa fa-cloud-upload mr-2"></i>
+                                                <span class="text-uppercase font-weight-bold white">Buscar... </span>
+                                            </label>
+                                        </div>
+
+                                    </div>
+                                    </div>
+                                    <br>                                    
+                                    <div>
+                                        <textarea name="texto" maxlength="150" placeholder="Ingrese aquí su comentario..."></textarea>                            
+                                    </div>
+                                    <br>
+                                    
+                                    <div class="center-text">
+                                        <button class="btn btn-primary fs-1-5rem" type="submit"> Postear! </button>
+                                    </div>
+                                </div>
                             </div>
-                        <br> <br>
-                        <div>
-                            <textarea name="texto" maxlength="150" placeholder="Ingrese aquí su comentario..."></textarea>                            
-                        </div>
-                        <br>
-                        <div class="center-text">
-                            <button class="btn btn-primary fs-1-5rem" type="submit"> Postear! </button>
-                        </div>
                         </form>
                     </div>
-            </article>
-        </div>
-    </section>
+                </article>
+            </div>
+        </section>
 
         @foreach ($posts as $unPost)
             <section class="main-login-container"> <!--Recicled because muh code-->
@@ -74,7 +79,7 @@
                         </div>
                         <br>
                         <div class="post-title">
-                            <h2 class="center-text">
+                            <h2>
                                 {{ $unPost['descripcion'] }}
                             </h2>
                         </div>
