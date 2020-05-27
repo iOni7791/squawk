@@ -26,45 +26,49 @@
         </section>
 
         <section class="main-index-container">
-            <div class="input-group">
-                <input type="text" class="form-control" placeholder="Buscar amigos...">
-                <div class="search-but input-group-append">
-                    <button class="btn btn-secondary" type="button">
-                        <i class="fa fa-search"></i>
-                    </button>
+
+            <h3 class="center-text"><strong>Busca nuevos amigos!</strong></h3>
+            <form action="searchFriends">
+                <div class="input-group">
+                    <input type="text" class="form-control fs-1-5rem" placeholder="Ingresa un nombre aquí">
+                    <div class="search-but input-group-append">
+                        <button class="btn btn-secondary" type="submit">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
                 </div>
-            </div>
+            </form>
         </section>
 
-        <section class="main-index-container"> <!--Recicled because muh code-->
-
+        <section class="main-index-container"> <!--Acá irían los resultados pero que de principio cargue los amigos que ya tenés-->
+        <!--y que tras buscar regargue o limpie, no se, y te muestre una lista de perfiles que coinciden con la búsqueda-->
             <div class="friends-container">
                 <div class="friends">
                     <div class="friend-profile-picture">
-                        <a href="profile.php"><img src="img/logo.png" alt="NombreDePerfil"></a>
+                        <a href="nest"><img src="storage/img/pfp-default.png" alt="NombreDePerfil"></a>
                     </div>
                     <div class="friend-username">
-                        <p><a href="profile.php">Amigo1</a></p>
+                        <p><a href="nest">Amigo1</a></p>
                         <em>XXX amigos en com&uacute;n</em>
                     </div>
                 </div>
 
                 <div class="friends">
                     <div class="friend-profile-picture">
-                        <a href="profile.php"><img src="img/logo.png" alt="NombreDePerfil"></a>
+                        <a href="nest"><img src="storage/img/pfp-default.png" alt="NombreDePerfil"></a>
                     </div>
                     <div class="friend-username">
-                        <p><a href="profile.php">Amigo2</a></p>
+                        <p><a href="nest">Amigo2</a></p>
                         <em>XXX amigos en com&uacute;n</em>
                     </div>
                 </div>
 
                 <div class="friends">
                     <div class="friend-profile-picture">
-                        <a href="profile.php"><img src="img/logo.png" alt="NombreDePerfil"></a>
+                        <a href="neste"><img src="storage/img/pfp-default.png" alt="NombreDePerfil"></a>
                     </div>
                     <div class="friend-username">
-                        <p><a href="profile.php">Amigo3</a></p>
+                        <p><a href="nest">Amigo3</a></p>
                         <em>XXX amigos en com&uacute;n</em>
                     </div>
                 </div>
