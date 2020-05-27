@@ -47,12 +47,12 @@
                 <br>
                 <!--Si estás viendo el perfil de otro usuario-->
                 <div class="center-text">
-                    <a href="profile"> <button class="btn btn-success fs-1-5rem">Agregar amigo (ojo)</button></a>
+                    <a href="profile"> <button class="btn btn-success fs-1-5rem">Agregar amigo (ojo) <a href="addfriend"><i class="fa fa-user-plus" aria-hidden="true"></i></a> </button></a>
                 </div>
                 <br>
                 <!--Si este usuario ya es tu amigo-->
                 <div class="center-text">
-                    <a href="profile"> <button class="btn btn-warning fs-1-5rem">Eliminar amigo (ojo)</button></a>
+                    <a href="profile"> <button class="btn btn-warning fs-1-5rem">Eliminar amigo (ojo)<a href="deletefriend"> <i class="fa fa-user-times" aria-hidden="true"></i></a> </button></a>
                 </div>
             </section>
 
