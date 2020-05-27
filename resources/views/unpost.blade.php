@@ -9,67 +9,13 @@
             </h1>
         </section>
 
-        <section class="main-login-container"> <!--Recicled because muh code-->
-            <div class="post-comment-container">
-                <article class="post-container">
-                    <div class="post-info-container">
-
-                            <div class="post-profile-picture">
-                                <a href="profile"><img src="storage/img/profiles/{{$user['imagen']}}" alt="{{$user['name']}}"></a>
-                            </div>
-                            <div class="post-user-time-container">
-                                <p><a href="profile"><strong>{{$user['name']}}</strong></a><br></p>
-                            </div>
-
-                    </div>
-
-                    <div class="post-new-container">
-                        <form method="POST" action="addpost" enctype="multipart/form-data">
-                            @csrf
-                            <div class="row py-4">
-                                <div class="col-lg-12 mx-auto">
-
-                                    <!-- Vista previa imagen a subir -->
-                                    <p class="text-white text-center"> <b> Vista Previa </b></p>
-                                    <div class="image-area mt-4">
-                                        <img id="imageResult" src="#" alt="" class="img-fluid rounded shadow-sm mx-auto d-block">
-
-                                        <!-- Campo para subir imagen-->
-                                        <div class="input-group mb-3 px-2 py-2 bg-white shadow-sm image-search">
-                                            <input id="upload" type="file" name="imagen" onchange="readURL(this);" class="form-control border-0" accept="image/*">
-                                            <label id="upload-label" for="upload" class="black">Subir imagen</label>
-                                            <div class="input-group-append">
-                                                <label for="upload" class="btn btn-success m-0 px-4">
-                                                    <i class="fa fa-cloud-upload mr-2"></i>
-                                                    <span class="text-uppercase font-weight-bold white">Buscar... </span>
-                                                </label>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <br>
-                                    <div>
-                                        <textarea name="texto" maxlength="150" placeholder="Ingrese aquí su comentario..."></textarea>
-                                    </div>
-                                    <br>
-
-                                    <div class="center-text">
-                                        <button class="btn btn-primary fs-1-5rem" type="submit"> Postear! </button>
-                                    </div>
-                                </div>
-                            </div>
-                        </form>
-                    </div>
-                </article>
-            </div>
-        </section>
-
 
             <section class="main-login-container"> <!--Recicled because muh code-->
                 <div class="post-comment-container">
                     <article class="post-container">
                         <div class="post-info-container">
                             <div class="post-profile-picture">
-                                <a href="profile"><img src="storage/img/profiles/{{$unPost['postImg']}}" alt="{{$unPost['postUser']}}"></a>
+                                <img src="{{ $unPost['postImg'] }}" alt="{{$unPost['postUser']}}">
                             </div>
                             <div class="post-user-time-container">
                                 <p><a href="profile"><strong>{{$unPost['postUser']}}</strong></a><br>

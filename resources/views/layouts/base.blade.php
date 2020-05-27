@@ -26,9 +26,12 @@
 
 <!--Normalize-->
 <link rel="stylesheet" href="css/normalize.css">
+<link rel="stylesheet" href="{{ asset('css/normalize.css') }}">
 
 <!--Own CSS-->
 <link rel="stylesheet" href="css/squawk.css">
+<link rel="stylesheet" href="{{ asset('css/squawk.css') }}">
+
     <title>SQUAWK!</title> <!--Habría que poner una variable acá para que diga en qué página está-->
 </head>
 <body>

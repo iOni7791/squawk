@@ -27,7 +27,7 @@ Route::get('/contact', 'pages@contact');
 
 // Rutas con logueo
 Route::get('/posts', 'pages@posts');
-Route::get('/post/{id}', 'pages@post')->name('post');
+Route::get('/unpost/{mid}', 'pages@unpost');
 
 Route::post('/addpost', 'pages@addpost');
 Route::post('/addcomment', 'pages@addcomment');

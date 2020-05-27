@@ -105,9 +105,9 @@ class pages extends Controller
         endif;
     }
 
-    public function post($id)
+    public function unpost($mid)
     {
-        $unPost =  Posts::where('id',$id)->get()[0];
+        $unPost =  Posts::where('id',$mid)->get()[0];
 
         if (Auth::user() && $unPost):
             $user = Auth::user();
@@ -128,7 +128,7 @@ class pages extends Controller
 
             $activo = 3;
             //dd($unPost['likes']);
-            return view('post',compact('activo', 'unPost', 'user'));
+            return view('unpost',compact('activo', 'unPost', 'user'));
         else:
             return redirect('posts');
         endif;
