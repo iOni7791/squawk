@@ -9,12 +9,12 @@ use App\Comentarios;
 use App\Likes;
 use App\Friends;
 
-use Illuminate\Http\Request;
+//use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
-use PharIo\Manifest\Author;
-use phpDocumentor\Reflection\Types\This;
-Use \Carbon\Carbon;
-use DateTime;
+//use PharIo\Manifest\Author;
+//use phpDocumentor\Reflection\Types\This;
+//Use \Carbon\Carbon;
+//use DateTime;
 
 class pages extends Controller
 {
@@ -153,16 +153,16 @@ class pages extends Controller
             $usuarioActual = Auth::user();
             $like = Likes::where('id_usuario', $usuarioActual['id'])->where('id_post', $postid)->get();
 
+            $mlike = $like[0];
+
             if (!isset($like[0])):
                 $mlike = new Likes();
                 $mlike->id_usuario = $usuarioActual['id'];
                 $mlike->id_post = $postid;
                 $mlike->id_reaccion = $likeid;
-            else:
-                $mlike = $like[0];
-                $mlike->id_reaccion = $likeid;
             endif;
-            //dd($mlike);
+
+            $mlike->id_reaccion = $likeid;
             $mlike->save();
 
             return redirect('posts');
@@ -173,7 +173,7 @@ class pages extends Controller
     {
         if (Auth::user() ):
             $activo = 2;
-            
+
             $usuarioActual = User::where('id', Auth::user()->id )->get()[0];
             $posts = Comentarios::all()->where('id_usuario', Auth::user()->id)->count();
             $friendsnro = Friends::all()->where('id_usuario', Auth::user()->id)->count();
@@ -228,11 +228,11 @@ class pages extends Controller
                 $posts[$lugar]['postImg'] = $postUser[0]['imagen'];
 
                 $coms = Comentarios::all()->where('id_post', $unpost['id']);
-                foreach($coms as $luga2=>$comm):
+/*                foreach($coms as $luga2=>$comm):
                     $usuario = Comentarios::getUser($comm['id_usuario']);
                     $coms[$luga2]['usuario'] = $usuario[0]['name'];
                     $coms[$luga2]['usuarioimg'] = $usuario[0]['imagen'];
-                endforeach;
+                endforeach; */
                 $posts[$lugar]['coms'] = $coms;
                 //$like = Likes::all()->where('id_post', $unpost['id']);
                 $posts[$lugar]['likes'] = Likes::getLikes($unpost['id']);
