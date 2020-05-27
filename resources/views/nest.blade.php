@@ -13,15 +13,15 @@
             <section class="main-profile-container">
 
                 <h2 class="nombre-usuario"> <strong>{{$usuarioActual['name']}}</strong> </h2>
-                <div class="pfp-container center-text">
-                    <div class="profile-nest">
+                <div class="pfp-container">
+                    <div class="profile-nest center-text">
                         <div class="profile-nest-pfp">
                             <img src="storage/img/profiles/{{$usuarioActual['imagen']}}" alt="Tu foto de perfil"> <br>
                         </div>
                         <br>
                         <div class="user-personal-info">
                             <span class="center-text">
-                                <strong> Fecha de nacimiento: </strong> {{$usuarioActual['fechanac']}}
+                                <strong> Fecha de nacimiento: </strong> {{$usuarioActual['fecha_nac']}}
                                 <br>
                                 <strong> Género: </strong> Género
                                 <br>
@@ -77,22 +77,21 @@
                         </div>
                         <br>
                         <div class="post-title">
-                            <h2>
+                            <h2 class="center-text">
                                 <a href="esto-requiere-del-anclaje">{{ $unPost['descripcion'] }}</a>
                             </h2>
                         </div>
-                        <br>
                         <div class="actions-container center-text">
 
                             @foreach($unPost['likes'] as $unLike)
                             <span class="info" style="padding-top:.2rem;">
-                                <i class="{{$unLike->fa}}" aria-hidden="true"></i>
+                                <i class="{{$unLike->fa}} reaction" aria-hidden="true"></i>
                                 <br>
                                 <spam>{{$unLike->cant}}</spam>
                             </span>
                             @endforeach
-                            <a class="action" href="#">
-                                <i class="fa fa-comment-o" aria-hidden="true"></i><br>{{count($unPost['coms'])}}
+                            <a class="action reaction" href="#">
+                                <i class="fa fa-comment-o reaction" aria-hidden="true"></i><br>{{count($unPost['coms'])}}
                             </a>
                         </div>
                         <br>

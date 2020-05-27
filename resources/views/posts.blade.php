@@ -78,11 +78,10 @@
                         </div>
                         <br>
                         <div class="post-title">
-                            <h2>
-                                <a href="{{ route('post',['id'=>$unPost['id'] ]) }}">{{ $unPost['descripcion'] }}</a>
+                            <h2 class="center-text">
+                                {{ $unPost['descripcion'] }}
                             </h2>
                         </div>
-                        <br>
                         @if($unPost['contenido_p'] != '')
                         <div class="post-img-container center-text">
                             <a href="storage/img/posts/{{$unPost['contenido_p']}}" target="_blank"><img src="storage/img/posts/{{$unPost['contenido_p']}}"></a>
@@ -102,13 +101,12 @@
                         <div class="actions-container center-text">
 
                             @foreach($unPost['likes'] as $unLike)
-                                    <a class="action" href="{{ route('addlike',['postid'=>$unPost['id'], 'likeid'=>$unLike->id]) }}" style="padding-top:.2rem;">
-                                    <i class="{{$unLike->fa}}" aria-hidden="true"></i>
-                                    <br>
+                                    <a class="action" href="{{ route('addlike',['postid'=>$unPost['id'], 'likeid'=>$unLike->id]) }}">
+                                    <i class="{{$unLike->fa}} reaction" aria-hidden="true"></i>
                                     <spam>{{$unLike->cant}}</spam>
                                 </a>
                             @endforeach
-                                <a class="action" href="#"><i class="fa fa-comment-o" aria-hidden="true"></i><br>{{count($unPost['coms'])}}</a>
+                                <a class="action" href="#"><i class="fa fa-comment-o reaction" aria-hidden="true"></i>{{count($unPost['coms'])}}</a>
                         </div>
                         <!--hacer visible con JS al presionar el botón COMENTAR/RESPONDER-->
                         <!--
