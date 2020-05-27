@@ -5,7 +5,7 @@
     <div class="main-container">
         <section class="main-title-container">
             <h1 class="text-center">
-                Graznidos
+                Graznido
             </h1>
         </section>
 
