@@ -35,6 +35,15 @@
                         </div>
                     </div>
                     <br>
+                    <div class="user-bio">
+                        <h2 class="center-text"><strong>Acerca de mí...</strong></h2>
+                        <blockquote> 
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam, quaerat at, tempore cupiditate recusandae quo dolorum, nobis optio error vel neque officiis id facere earum quos quis velit? Adipisci, laboriosam.
+                            Laudantium enim corporis quam error culpa, nulla dignissimos debitis voluptates cupiditate assumenda praesentium, id iusto, laboriosam numquam laborum fugit voluptas. Incidunt quia sint animi dolorem fugit nobis labore non possimus.
+                            Hic enim illo deleniti unde, dolores, amet perferendis, nisi blanditiis quo libero saepe incidunt quas aperiam. Repudiandae corporis voluptatibus molestiae autem repellendus velit, aliquam nam sequi voluptas, quos minus at?
+                        </blockquote>
+                    </div>
+                    <br>
                         <div class="center-text">
                             <a href="profile"> <button class="btn btn-success fs-1-5rem">Editar Perfil</button></a>
                         </div>
