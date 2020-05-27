@@ -85,11 +85,11 @@
                         <div class="actions-container center-text">
 
                             @foreach($unPost['likes'] as $unLike)
-                            <a class="action" href="{{ route('addlike',['postid'=>$unPost['id'], 'likeid'=>$unLike->id]) }}" style="padding-top:.2rem;">
+                            <span class="info" style="padding-top:.2rem;">
                                 <i class="{{$unLike->fa}}" aria-hidden="true"></i>
                                 <br>
                                 <spam>{{$unLike->cant}}</spam>
-                            </a>
+                            </span>
                             @endforeach
                             <a class="action" href="#">
                                 <i class="fa fa-comment-o" aria-hidden="true"></i><br>{{count($unPost['coms'])}}

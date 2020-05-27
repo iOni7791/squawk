@@ -30,20 +30,17 @@ h1 {
     font-size: 2rem;
 }
 
-
 blockquote {
     font-style: italic;
 }
 
-.form-group
-{
+.form-group {
     margin-top: 0.2rem;
     margin-bottom: 0.2rem;
 }
 
 .form-control,
-textarea
-{
+textarea {
     border-radius: 0.5rem;
 }
 
@@ -69,8 +66,7 @@ textarea
     color: white;
 }
 
-.black
-{
+.black {
     color: black;
 }
 
@@ -111,8 +107,7 @@ textarea
     width: 20%;
 }
 
-.header-logo
-{
+.header-logo {
     width: 7rem;
 }
 
@@ -315,8 +310,7 @@ textarea {
     justify-content: center;
 }
 
-.nombre-usuario
-{
+.nombre-usuario {
     text-align: center;
     display: block;
 }
@@ -331,33 +325,25 @@ textarea {
     justify-content: space-evenly;
 }
 
-.profile-nest-pfp
-{
+.profile-nest-pfp {
     width: 15rem;
 }
 
-@media (max-width: 768px) 
-{
-    .profile-nest
-    {
+@media (max-width: 768px) {
+    .profile-nest {
         margin: 1rem;
         display: block;
         justify-content: center;
     }
-
-    .user-personal-info
-    {
-    width: 100%;
+    .user-personal-info {
+        width: 100%;
     }
-    
-    .profile-nest-pfp
-    {
+    .profile-nest-pfp {
         width: 100%;
     }
 }
 
-.profile-pfp
-{
+.profile-pfp {
     display: flex;
     justify-content: center;
     width: 100%;
@@ -441,8 +427,7 @@ ul.no-deco {
     transform: translateY(-50%);
 }
 
-.image-search
-{
+.image-search {
     margin-top: 0.5rem;
     margin-bottom: 0.5rem;
 }
@@ -550,9 +535,11 @@ ul.no-deco {
 }
 
 .actions-container a,
+.actions-container .info,
 .statistics a {
     border-right: solid 0.1rem white;
     flex: 1 1 auto;
+    font-size: 2rem;
 }
 
 .actions-container a:nth-last-of-type(1),
@@ -565,6 +552,7 @@ ul.no-deco {
 }
 
 .statistic,
+.info,
 .action {
     width: 25%;
     font-size: 2rem;
@@ -674,12 +662,10 @@ ul.no-deco {
     margin-right: 0.5rem;
 }
 
-.remember
-{
+.remember {
     display: flex;
 }
 
-.checkem
-{
+.checkem {
     margin-right: 1rem;
 }
