@@ -3,177 +3,90 @@
 @section('contenido')
     <main>
         <div class="main-container">
+            <section class="main-title-container">
+                <h1 class="text-center">
+                    Datos sobre mí
+                </h1>
+            </section>
+    
+            <!-- Datos de la cuenta -->
+            <section class="main-profile-container">
 
-            <section class="profile-banner-container">
-                <div class="profile-banner-info">
-                    <div class="banner user-posts">
-                        <h2>XXX<!--variable--></h2> <br> posts <br> graznados
+                    <h2 class="nombre-usuario"> <strong>{{$usuarioActual['name']}}</strong> </h2>
+                    <div class="pfp-container center-text">
+                        <div class="profile-nest">
+                            <div class="profile-nest-pfp">
+                                <img src="storage/img/profiles/{{$usuarioActual['imagen']}}" alt="Tu foto de perfil"> <br>
+                            </div>
+                            <br>
+                            <div class="user-personal-info">
+                                <span class="center-text">
+                                    <strong> Fecha de nacimiento: </strong> XX/XX/XX
+                                    <br>
+                                    <strong> Género: </strong> Género
+                                    <br>
+                                    <strong> Usuario desde: </strong> XX/XX/XX
+                                    <br>
+                                    <a href="friends"><strong>{{$usuarioActual['friendsnro']}} amigos buitres</strong></a> 
+                                    <br>
+                                    <a href="posts"><strong>{{$usuarioActual['postsCount']}} posts graznados </strong></a>
+                                </span>
+                            </div>
+                        </div>
                     </div>
-                    <div class="banner profile-banner-picture">
-                        <a href="profile"><img src="img/profiles/pfp-default.png" alt="$user['name']"></a> <br>
-                        <a href="profile">Mi Nombre de Usuario</a>
-                    </div>
-                    <div class="banner user-reactions">
-                        <h2>XXX<!--variable--></h2> <br> amigos <br> buitres
-                    </div>
-                </div>
+                    <br>
+                        <div class="center-text">
+                            <a href="profile"> <button class="btn btn-success fs-1-5rem">Editar Perfil</button></a>
+                        </div>
             </section>
 
             <section class="main-title-container">
                 <h1 class="text-center">
-                    {{ __('Editar Perfil') }}
+                    Mis Posts
                 </h1>
             </section>
-    
 
-
-            <!-- Datos de la cuenta -->
-            <section class="main-profile-container">
-                <form action="profile" method="POST" enctype="multipart/form-data">
-                @csrf
-                    <legend class="center-text">
-                        <strong> Datos de la cuenta </strong>
-                    </legend>
-                    
-                    <div class="pfp-container center-text">
-                        <div class="profile">
-                            <label for="img">
-                                <b> Foto de perfil </b> <br>
-                            <div class="profile-pfp">
-                                <img src="../img/perfil-prueba.png" alt="Tu foto de perfil"> <br>
+            @foreach ($posts as $unPost)
+            <section class="main-login-container"> <!--Recicled because muh code-->
+                <div class="post-comment-container">
+                    <article class="post-container">
+                        <div class="post-info-container">
+                            <div class="post-profile-picture">
+                                <a href="profile"><img src="storage/img/profiles/{{$unPost['postImg']}}" alt="{{$unPost['postUser']}}"></a>
                             </div>
-                            </label> <br>                          
-                            
-                            <label for="img">
-                                Subir una imagen
-                                <label class="btn btn-primary fs-1-5rem">
-                                    Buscar <input type="file" id="img" name="img" accept="image/*" style="display: none;">
-                                </label>
-                            </label> <br>
-                                                       
-                            <div class="center-text"> 
-                                <button class="btn btn-success fs-1-5rem" type="submit">Actualizar</button>
-                            </div>
-                        </div>
-
-                    </div>
-                </form>
-            </section> 
-            <br> 
-
-            <section class="main-profile-container">
-                <form action="profile" method="POST">
-               
-                    <!-- Datos personales -->
-                    <fieldset class="center-text"> 
-                        <div class="form-text" class="row">
-                            <legend class="center-text"> <strong> Datos Personales </strong></legend>
-                      
-                            <div class="form-group row">
-                                <label for="name" class="col-md-4 col-form-label text-md-right"><strong>{{ __('Nombre') }}</strong></label>
-
-                                <div class="col-md-8">
-                                    <input id="name" type="text" class="form-control @error('name') is-invalid @enderror" name="name" value="{{ old('name') }}" required autocomplete="name" autofocus>
-
-                                    @error('name')
-                                        <span class="invalid-feedback" role="alert">
-                                            <strong>{{ $message }}</strong>
-                                        </span>
-                                    @enderror
-                                </div>
-                            </div>
-                            
-                            <div class="form-group row">
-                                <label for="email" class="col-md-4 col-form-label text-md-right"><strong>{{ __('E-Mail') }}</strong></label>
-
-                                <div class="col-md-8">
-                                    <input id="email" type="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" autocomplete="email">
-
-                                    @error('email')
-                                        <span class="invalid-feedback" role="alert">
-                                            <strong>{{ $message }}</strong>
-                                        </span>
-                                    @enderror
-                                </div>
-                            </div>
-                            
-                            <div class="form-group row">
-                                <label for="email" class="col-md-4 col-form-label text-md-right"><strong>{{ __('Descríbete') }}</strong></label>
-
-                                <div class="col-md-8">
-                                    <textarea name="bio" value="{{ old('bio') }}" maxlength="250" placeholder="Una pequeña descripción sobre tí..." autocomplete="bio"></textarea>
-
-                                    @error('bio')
-                                        <span class="invalid-feedback" role="alert">
-                                            <strong>{{ $message }}</strong>
-                                        </span>
-                                    @enderror
-                                </div>
-                            </div>
-                    </fieldset> <br>
-
-                    <div class="form-group row">
-                    <label for="fecha_nac" class="col-md-4 col-form-label text-md-right center-text"><b>{{ __('Fecha de Nacimiento') }}</b></label>
-
-                            <div class="col-md-8">
-                                <input class="form-control" type="date" id="fecha_nac" name="fecha_nac" value="{{ old('fecha_nac') }}" step="1" max="2002-12-31" required autocomplete="fecha_nac">
+                            <div class="post-user-time-container">
+                                <p><a href="profile"><strong>{{$unPost['postUser']}}</strong></a><br>
+                                <em>Publicado: {{ $unPost['created_at']->format('d/m/Y H:m:s') }}</em></p>
                             </div>
                         </div>
                         <br>
+                        <div class="post-title">
+                            <h2>
+                                <a href="esto-requiere-del-anclaje">{{ $unPost['descripcion'] }}</a>
+                            </h2>
+                        </div>
+                        <br>
+                        <div class="actions-container center-text">
 
-                        <div class="form-group row radios">
-
-                            <div class="col-md-7 col-lg-4">
-                                <input type="radio" id="m" name="genero" value="1">
-                                <label for="m">Masculino</label>
-                            </div>
-                            <br>
-                           
-                            <div class="col-md-7 col-lg-4">
-                                <input type="radio" id="f" name="genero" value="2">
-                                <label for="f">Femenino</label>
-                            </div>
-
-                        </div> 
-                    <br>
-                    <div class="center-text"> 
-                        <button class="btn btn-primary fs-1-5rem" type="submit">Actualizar</button>
-                    </div> 
-                </form>
+                            @foreach($unPost['likes'] as $unLike)
+                            <a class="action" href="{{ route('addlike',['postid'=>$unPost['id'], 'likeid'=>$unLike->id]) }}" style="padding-top:.2rem;">
+                                <i class="{{$unLike->fa}}" aria-hidden="true"></i>
+                                <br>
+                                <spam>{{$unLike->cant}}</spam>
+                            </a>
+                            @endforeach
+                            <a class="action" href="#">
+                                <i class="fa fa-comment-o" aria-hidden="true"></i><br>{{count($unPost['coms'])}}
+                            </a>
+                        </div>
+                        <br>
+                        <div class="center-text" action="deletePost"> <!-- Ojo al piojo-->
+                            <a href="profile"> <button class="btn btn-dark fs-1-5rem">Eliminar Graznido <i class="fa fa-trash" aria-hidden="true"></i></button></a>
+                        </div>
+                    </article>
+                </div>
             </section>
-
-            <!-- Contraseña -->
-            <section class="main-profile-container">
-                <form action="profile.php" method="POST">
-               
-                    <div class="form-group row">
-                            <label for="password" class="col-md-4 col-form-label text-md-right center-text"><strong> {{ __('Contraseña') }} </strong></label>
-
-                            <div class="col-md-8">
-                                <input id="password" type="password" class="form-control @error('password') is-invalid @enderror" name="password" required autocomplete="new-password">
-
-                                @error('password')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                                @enderror
-                            </div>
-                        </div>
-
-                        <div class="form-group row">
-                            <label for="password-confirm" class="col-md-4 col-form-label text-md-right center-text"><strong> {{ __('Confirmar contraseña') }} </strong></label>
-
-                            <div class="col-md-8">
-                                <input id="password-confirm" type="password" class="form-control" name="password_confirmation" required autocomplete="new-password">
-                            </div>
-                        </div>
-
-                    <div class="center-text"> 
-                        <button class="btn btn-primary fs-1-5rem" type="submit">Cambiar contraseña</button>
-                    </div>
-    
-                </form>
-            </section> <!-- Main-profile-container -->
+            @endforeach
         </div> <!-- Main-container -->
     </main>
 @endsection

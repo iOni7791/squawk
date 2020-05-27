@@ -54,7 +54,6 @@ textarea
     font-size: 1.5rem;
 }
 
-
 .center-text {
     text-align: center;
 }
@@ -164,7 +163,7 @@ main {
     background-color: #0f4c81;
     border-radius: 1rem;
     margin-top: 1rem;
-    width: 60%;
+    width: 55%;
     padding: 1.5rem;
 }
 
@@ -288,7 +287,7 @@ a:hover {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
-    align-items: flex-end;
+    align-items: center;
     margin-top: 0.1rem;
     margin-bottom: 1rem;
     width: 60%;
@@ -299,7 +298,7 @@ a:hover {
         display: flex;
         flex-wrap: wrap;
         justify-content: space-around;
-        align-items: flex-end;
+        align-items: center;
         margin-top: 0.1rem;
         margin-bottom: 1rem;
         width: 100%;
@@ -316,8 +315,45 @@ textarea {
     justify-content: center;
 }
 
+.nombre-usuario
+{
+    text-align: center;
+    display: block;
+}
+
 .profile {
     margin: 1rem;
+}
+
+.profile-nest {
+    margin: 1rem;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.profile-nest-pfp
+{
+    width: 15rem;
+}
+
+@media (max-width: 768px) 
+{
+    .profile-nest
+    {
+        margin: 1rem;
+        display: block;
+        justify-content: center;
+    }
+
+    .user-personal-info
+    {
+    width: 100%;
+    }
+    
+    .profile-nest-pfp
+    {
+        width: 100%;
+    }
 }
 
 .profile-pfp
@@ -327,6 +363,7 @@ textarea {
     width: 100%;
 }
 
+.profile-nest img,
 .profile img {
     border-radius: 50%;
     width: 12rem;

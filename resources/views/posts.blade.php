@@ -141,7 +141,11 @@
                                 <div class="user-link">
                                     <a href="profile">{{$uncoment['usuario']}}&nbsp;-&nbsp;</a>
                                 </div>({{$uncoment['created_at']->format('d/m/Y H:m:s') }})
+
                                 <div class="comment">
+
+                                <a id="un-anclaje"></a> <!--Acá necesito un punto de anclaje tipo "posts/{id}" siendo id el número de Post -->
+
                                  <!--    <blockquote>{{ $uncoment['contenido_c'] }}</blockquote>  -->
                                  &nbsp;&nbsp;{{ $uncoment['contenido_c'] }}
                                 </div>

@@ -7,13 +7,14 @@
             <section class="profile-banner-container">
                 <div class="profile-banner-info">
                     <div class="banner user-posts">
-                        <h2>{{$usuarioActual['posts']}}</h2> <br> posts <br> graznados
+                        <b class="fs-1-5rem"><h1>{{$usuarioActual['posts']}}</h1> posts <br> graznados </b>
                     </div>
                     <div class="banner profile-banner-picture">
-                        <a href="profile">{{$usuarioActual['name']}}</a>
+                        <img src="storage/img/profiles/{{$usuarioActual['imagen']}}" alt="Tu foto de perfil"> <br>
+                        <b class="fs-1-5rem"><a href="nest">{{$usuarioActual['name']}}</a></b>
                     </div>
                     <div class="banner user-reactions">
-                        <h2>{{$usuarioActual['friendsnro']}}</h2> <br> amigos <br> buitres
+                        <b class="fs-1-5rem"><h1>{{$usuarioActual['friendsnro']}}</h1>amigos <br> buitres</b>
                     </div>
                 </div>
             </section>
@@ -45,23 +46,24 @@
 
                             <label for="img">
                                 Subir una imagen
-                                <label class="btn btn-primary fs-1-5rem">
+                                <label class="btn btn-success fs-1-5rem">
                                     Buscar <input type="file" id="img" name="img" accept="image/*" style="display: none;">
                                 </label>
                             </label> <br>
 
                             <div class="center-text">
-                                <button class="btn btn-success fs-1-5rem" type="submit">Actualizar</button>
+                                <button class="btn btn-primary fs-1-5rem" type="submit">Actualizar</button>
                             </div>
                         </div>
 
                     </div>
                 </form>
             </section>
+            
             <br>
 
             <section class="main-profile-container">
-                <form action="profile" method="POST">
+                <form action="editProfile" method="POST">
 
                     <!-- Datos personales -->
                     <fieldset class="center-text">
@@ -109,7 +111,8 @@
                                     @enderror
                                 </div>
                             </div>
-                    </fieldset> <br>
+                    </fieldset> 
+                    <br>
 
                     <div class="form-group row">
                     <label for="fecha_nac" class="col-md-4 col-form-label text-md-right center-text"><b>{{ __('Fecha de Nacimiento') }}</b></label>
@@ -146,36 +149,46 @@
 
             <!-- Contraseña -->
             <section class="main-profile-container">
-                <form action="profile.php" method="POST">
+                <form action="editProfile" method="POST">
 
                     <div class="form-group row">
-                            <label for="password" class="col-md-4 col-form-label text-md-right center-text"><strong> {{ __('Contraseña') }} </strong></label>
+                        <label for="password" class="col-md-4 col-form-label text-md-right center-text">
+                            <strong> {{ __('Contraseña') }} </strong>
+                        </label>
 
-                            <div class="col-md-8">
-                                <input id="password" type="password" class="form-control @error('password') is-invalid @enderror" name="password" required autocomplete="new-password">
+                        <div class="col-md-8">
+                            <input id="password" type="password" class="form-control @error('password') is-invalid @enderror" name="password" autocomplete="new-password">
 
-                                @error('password')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                                @enderror
-                            </div>
+                            @error('password')
+                                <span class="invalid-feedback" role="alert">
+                                    <strong>{{ $message }}</strong>
+                                </span>
+                            @enderror
                         </div>
 
-                        <div class="form-group row">
-                            <label for="password-confirm" class="col-md-4 col-form-label text-md-right center-text"><strong> {{ __('Confirmar contraseña') }} </strong></label>
 
-                            <div class="col-md-8">
-                                <input id="password-confirm" type="password" class="form-control" name="password_confirmation" required autocomplete="new-password">
-                            </div>
+                        <label for="password-confirm" class="col-md-4 col-form-label text-md-right center-text">
+                            <strong> {{ __('Confirmar contraseña') }} </strong>
+                        </label>
+
+                        <div class="col-md-8">
+                            <input id="password-confirm" type="password" class="form-control" name="password_confirmation" autocomplete="new-password">
                         </div>
-
-                    <div class="center-text">
+                    </div>
+                    <br>
+                    <div class="col-md-8 center-text">
                         <button class="btn btn-primary fs-1-5rem" type="submit">Cambiar contraseña</button>
                     </div>
-
                 </form>
             </section> <!-- Main-profile-container -->
+            
+            <!-- Borrar Cuenta -->
+            <section class="main-profile-container center-text">
+                <form action="deleteAccount" method="POST">
+                    <button class="btn btn-danger fs-1-5rem" type="submit"> Borrar Cuenta<i class="fa fa-ban" aria-hidden="true"></i></button>
+                </form>
+            </section>
+            
         </div> <!-- Main-container -->
     </main>
 @endsection

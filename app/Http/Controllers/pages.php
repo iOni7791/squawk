@@ -208,7 +208,29 @@ class pages extends Controller
     {
         if (Auth::user()):
             $activo = 1;
-            return view('nest',compact('activo'));
+            $usuarioActual = User::where('id', Auth::user()->id )->get()[0];
+            $postsCount = Comentarios::all()->where('id_usuario', Auth::user()->id)->count();
+            $friendsnro = Friends::all()->where('id_usuario', Auth::user()->id)->count();
+            $posts =  Posts::all()->where('id_usuario', Auth::user()->id)->SortByDesc('id');
+            $usuarioActual['postsCount'] = $postsCount;
+            $usuarioActual['friendsnro'] = $friendsnro;
+
+            foreach ($posts as $lugar=>$unpost):
+                $postUser = Posts::getUser($unpost['id_usuario']);
+                $posts[$lugar]['postUser'] = $postUser[0]['name'];
+                $posts[$lugar]['postImg'] = $postUser[0]['imagen'];
+
+                $coms = Comentarios::all()->where('id_post', $unpost['id']);
+                foreach($coms as $luga2=>$comm):
+                    $usuario = Comentarios::getUser($comm['id_usuario']);
+                    $coms[$luga2]['usuario'] = $usuario[0]['name'];
+                    $coms[$luga2]['usuarioimg'] = $usuario[0]['imagen'];
+                endforeach;
+                $posts[$lugar]['coms'] = $coms;
+                //$like = Likes::all()->where('id_post', $unpost['id']);
+                $posts[$lugar]['likes'] = Likes::getLikes($unpost['id']);
+            endforeach;
+            return view('nest',compact('activo','user','usuarioActual','postCount','posts'));
         else:
             return redirect('home');
         endif;

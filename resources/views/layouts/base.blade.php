@@ -101,7 +101,7 @@
                     @endguest
                     @auth
                         <li>
-                            <a class="{{ $activo == 1 ? "active":"" }} fs-1-5rem border-black" href="profile"> Nido <br>
+                            <a class="{{ $activo == 1 ? "active":"" }} fs-1-5rem border-black" href="nest"> Nido <br>
                                 <span title="Tu nido">
                                     <i class="fa fa-home" aria-hidden="true"></i>
                                 </span>
