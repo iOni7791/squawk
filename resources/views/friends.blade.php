@@ -7,14 +7,14 @@
         <section class="profile-banner-container">
             <div class="profile-banner-info">
                 <div class="banner user-posts">
-                    <h2>XXX<!--variable--></h2> <br> posts <br> graznados
+                    <b class="fs-1-5rem"><h1>{{$usuarioActual['posts']}}</h1> posts <br> graznados </b>
                 </div>
                 <div class="banner profile-banner-picture">
-                    <a href="profile"><img src="img/profiles/pfp-default.png" alt="$user['name']"></a> <br>
-                    <a href="profile">Mi Nombre de Usuario</a>
+                    <img src="storage/img/profiles/{{$usuarioActual['imagen']}}" alt="Tu foto de perfil"> <br>
+                    <b class="fs-1-5rem"><a href="nest">{{$usuarioActual['name']}}</a></b>
                 </div>
                 <div class="banner user-reactions">
-                    <h2>XXX<!--variable--></h2> <br> amigos <br> buitres
+                    <b class="fs-1-5rem"><h1>{{$usuarioActual['friendsnro']}}</h1>amigos <br> buitres</b>
                 </div>
             </div>
         </section>

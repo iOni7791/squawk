@@ -173,7 +173,14 @@ class pages extends Controller
     {
         if (Auth::user() ):
             $activo = 2;
-            return view('friends',compact('activo'));
+            
+            $usuarioActual = User::where('id', Auth::user()->id )->get()[0];
+            $posts = Comentarios::all()->where('id_usuario', Auth::user()->id)->count();
+            $friendsnro = Friends::all()->where('id_usuario', Auth::user()->id)->count();
+            $usuarioActual['posts'] = $posts;
+            $usuarioActual['friendsnro'] = $friendsnro;
+
+            return view('friends',compact('activo','usuarioActual'));
         else:
             return redirect('home');
         endif;
