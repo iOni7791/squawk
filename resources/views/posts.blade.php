@@ -13,14 +13,14 @@
             <div class="post-comment-container">
                 <article class="post-container">
                     <div class="post-info-container">
-                        
+
                             <div class="post-profile-picture">
                                 <a href="profile"><img src="storage/img/profiles/{{$user['imagen']}}" alt="{{$user['name']}}"></a>
                             </div>
                             <div class="post-user-time-container">
                                 <p><a href="profile"><strong>{{$user['name']}}</strong></a><br></p>
                             </div>
-                        
+
                     </div>
 
                     <div class="post-new-container">
@@ -36,16 +36,15 @@
                     
                                         <!-- Campo para subir imagen-->
                                         <div class="input-group mb-3 px-2 py-2 bg-white shadow-sm image-search">
-                                        <input id="upload" type="file" name="imagen" onchange="readURL(this);" class="form-control border-0" accept="image/*">
-                                        <label id="upload-label" for="upload" class="black">Buscar archivo</label>
-                                        <div class="input-group-append">
-                                            <label for="upload" class="btn btn-success m-0 px-4"> 
-                                                <i class="fa fa-cloud-upload mr-2"></i>
-                                                <span class="text-uppercase font-weight-bold white">Buscar... </span>
-                                            </label>
+                                            <input id="upload" type="file" name="imagen" onchange="readURL(this);" class="form-control border-0" accept="image/*">
+                                            <label id="upload-label" for="upload" class="black">Buscar archivo</label>
+                                            <div class="input-group-append">
+                                                <label for="upload" class="btn btn-success m-0 px-4"> 
+                                                    <i class="fa fa-cloud-upload mr-2"></i>
+                                                    <span class="text-uppercase font-weight-bold white">Buscar... </span>
+                                                </label>
+                                            </div>
                                         </div>
-
-                                    </div>
                                     </div>
                                     <br>                                    
                                     <div>
@@ -103,7 +102,7 @@
                         <div class="actions-container center-text">
 
                             @foreach($unPost['likes'] as $unLike)
-                                <a class="action"  href="dolike/likeid/{{$unLike->id}}/post/{{$unPost['id']}}" style="padding-top:.2rem;">
+                                    <a class="action" href="{{ route('addlike',['postid'=>$unPost['id'], 'likeid'=>$unLike->id]) }}" style="padding-top:.2rem;">
                                     <i class="{{$unLike->fa}}" aria-hidden="true"></i>
                                     <br>
                                     <spam>{{$unLike->cant}}</spam>

@@ -39,7 +39,7 @@
                             <label for="img">
                                 <b> Foto de perfil </b> <br>
                             <div class="profile-pfp">
-                                <img src="../img/perfil-prueba.png" alt="Tu foto de perfil"> <br>
+                                <img src="storage/img/profiles/{{$usuarioActual['imagen']}}" alt="Tu foto de perfil"> <br>
                             </div>
                             </label> <br>
 

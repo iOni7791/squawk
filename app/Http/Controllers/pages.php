@@ -147,6 +147,28 @@ class pages extends Controller
         endif;
     }
 
+    public function addLike($postid, $likeid){
+
+        if (Auth::user() ):
+            $usuarioActual = Auth::user();
+            $like = Likes::where('id_usuario', $usuarioActual['id'])->where('id_post', $postid)->get();
+
+            if (!isset($mlike)):
+                $mlike = new Likes();
+                $mlike->id_usuario = $usuarioActual['id'];
+                $mlike->id_post = $postid;
+                $mlike->id_reaccion = $likeid;
+            else:
+                $mlike = $like[0];
+                $mlike->id_reaccion = $likeid;
+            endif;
+            //dd($mlike);
+            $mlike->save();
+
+            return redirect('posts');
+        endif;
+    }
+
     public function friends()
     {
         if (Auth::user() ):
