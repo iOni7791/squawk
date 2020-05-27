@@ -48,7 +48,7 @@
                         <a href="nest"><img src="storage/img/pfp-default.png" alt="NombreDePerfil"></a>
                     </div>
                     <div class="friend-username">
-                        <p><a href="nest">Amigo1</a></p>
+                        <p><a href="nest">Amigo1</a> <a href="addfriend"><i class="fa fa-user-plus" aria-hidden="true"></i></a> </p>
                         <em>XXX amigos en com&uacute;n</em>
                     </div>
                 </div>
@@ -58,7 +58,7 @@
                         <a href="nest"><img src="storage/img/pfp-default.png" alt="NombreDePerfil"></a>
                     </div>
                     <div class="friend-username">
-                        <p><a href="nest">Amigo2</a></p>
+                        <p><a href="nest">Amigo2</a> <a href="addfriend"><i class="fa fa-user-plus" aria-hidden="true"></i></a></p>
                         <em>XXX amigos en com&uacute;n</em>
                     </div>
                 </div>
@@ -68,7 +68,7 @@
                         <a href="neste"><img src="storage/img/pfp-default.png" alt="NombreDePerfil"></a>
                     </div>
                     <div class="friend-username">
-                        <p><a href="nest">Amigo3</a></p>
+                        <p><a href="nest">Amigo3</a> <a href="addfriend"><i class="fa fa-user-plus" aria-hidden="true"></i></a></p>
                         <em>XXX amigos en com&uacute;n</em>
                     </div>
                 </div>
