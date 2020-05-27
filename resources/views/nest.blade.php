@@ -8,7 +8,7 @@
                     Datos sobre mí
                 </h1>
             </section>
-    
+
             <!-- Datos de la cuenta -->
             <section class="main-profile-container">
 
@@ -21,13 +21,13 @@
                         <br>
                         <div class="user-personal-info">
                             <span class="center-text">
-                                <strong> Fecha de nacimiento: </strong> XX/XX/XX
+                                <strong> Fecha de nacimiento: </strong> {{$usuarioActual['fechanac']}}
                                 <br>
                                 <strong> Género: </strong> Género
                                 <br>
-                                <strong> Usuario desde: </strong> XX/XX/XX
+                                <strong> Usuario desde: </strong> {{$usuarioActual['created_at']->format('d/m/Y')}}
                                 <br>
-                                <a href="friends"><strong>{{$usuarioActual['friendsnro']}} amigos buitres</strong></a> 
+                                <a href="friends"><strong>{{$usuarioActual['friendsnro']}} amigos buitres</strong></a>
                                 <br>
                                 <a href="posts"><strong>{{$usuarioActual['postsCount']}} posts graznados </strong></a>
                             </span>
@@ -37,7 +37,7 @@
                 <br>
                 <div class="user-bio">
                     <h2 class="center-text"><strong>Acerca de mí...</strong></h2>
-                    <blockquote> 
+                    <blockquote>
                         Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam, quaerat at, tempore cupiditate recusandae quo dolorum, nobis optio error vel neque officiis id facere earum quos quis velit? Adipisci, laboriosam.
                         Laudantium enim corporis quam error culpa, nulla dignissimos debitis voluptates cupiditate assumenda praesentium, id iusto, laboriosam numquam laborum fugit voluptas. Incidunt quia sint animi dolorem fugit nobis labore non possimus.
                         Hic enim illo deleniti unde, dolores, amet perferendis, nisi blanditiis quo libero saepe incidunt quas aperiam. Repudiandae corporis voluptatibus molestiae autem repellendus velit, aliquam nam sequi voluptas, quos minus at?
@@ -49,12 +49,12 @@
                     <a href="profile"> <button class="btn btn-success fs-1-5rem">Editar Perfil</button></a>
                 </div>
                 <br>
-                <!--Si estás viendo el perfil de otro usuario-->   
+                <!--Si estás viendo el perfil de otro usuario-->
                 <div class="center-text">
                     <a href="profile"> <button class="btn btn-success fs-1-5rem">Agregar amigo (ojo)</button></a>
                 </div>
                 <br>
-                <!--Si este usuario ya es tu amigo-->   
+                <!--Si este usuario ya es tu amigo-->
                 <div class="center-text">
                     <a href="profile"> <button class="btn btn-warning fs-1-5rem">Eliminar amigo (ojo)</button></a>
                 </div>
