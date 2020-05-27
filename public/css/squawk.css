@@ -476,6 +476,11 @@ ul.no-deco {
     padding: 0.1rem;
 }
 
+.post-title h2
+{
+    margin-bottom: 1.5rem;
+}
+
 .comment-container {
     display: flex;
     align-items: flex-start;
@@ -541,12 +546,18 @@ ul.no-deco {
     background-color: #0c5ca1;
 }
 
-.actions-container a,
-.actions-container .info,
 .statistics a {
     border-right: solid 0.1rem white;
     flex: 1 1 auto;
     font-size: 2rem;
+}
+
+.actions-container .info,
+.actions-container a
+{
+    border-right: solid 0.1rem white;
+    flex: 1 1 auto;
+    font-size: 1.5rem;
 }
 
 .actions-container a:nth-last-of-type(1),
@@ -558,11 +569,20 @@ ul.no-deco {
     color: rgb(11, 255, 11);
 }
 
-.statistic,
-.info,
-.action {
+.statistic {
     width: 25%;
     font-size: 2rem;
+}
+
+.info,
+.action
+{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 25%;
+    padding-top: 0.2rem;
+    padding-bottom: 0.2rem;
 }
 
 .text-container {

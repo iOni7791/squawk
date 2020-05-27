@@ -21,7 +21,7 @@
                         <br>
                         <div class="user-personal-info">
                             <span class="center-text">
-                                <strong> Fecha de nacimiento: </strong> {{$usuarioActual['fechanac']}}
+                                <strong> Fecha de nacimiento: </strong> {{$usuarioActual['fecha_nac']}}
                                 <br>
                                 <strong> Género: </strong> Género
                                 <br>
@@ -77,11 +77,10 @@
                         </div>
                         <br>
                         <div class="post-title">
-                            <h2>
+                            <h2 class="center-text">
                                 <a href="esto-requiere-del-anclaje">{{ $unPost['descripcion'] }}</a>
                             </h2>
                         </div>
-                        <br>
                         <div class="actions-container center-text">
 
                             @foreach($unPost['likes'] as $unLike)
