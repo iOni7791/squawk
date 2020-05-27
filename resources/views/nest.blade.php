@@ -84,9 +84,8 @@
                         <div class="actions-container center-text">
 
                             @foreach($unPost['likes'] as $unLike)
-                            <span class="info" style="padding-top:.2rem;">
+                            <span class="info">
                                 <i class="{{$unLike->fa}} reaction" aria-hidden="true"></i>
-                                <br>
                                 <spam>{{$unLike->cant}}</spam>
                             </span>
                             @endforeach

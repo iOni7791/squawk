@@ -121,8 +121,6 @@
                         -->
                     </article> <!--post-container-->
 
-                    <br>
-
                     <!-- <h3>Comentarios</h3> -->
                     @foreach ($unPost['coms'] as $uncoment)
                         @if ($uncoment['usuario'] && $uncoment['contenido_c'])
@@ -170,9 +168,9 @@
                         <input type="hidden" name="postid" value="{{ $unPost['id'] }} "></input>
 
                         <div class="comment-response-textarea">
-                            <textarea name="comment" maxlength="150" placeholder="Grazna aqui..." rows="2"></textarea>
+                            <textarea class="commentpost" name="comment" maxlength="150" placeholder="Grazna aqui..." rows="2"></textarea>
                         </div>
-                        <br>
+
                         <div class="center-text">
                             <button class="btn btn-primary fs-1-5rem" type="submit"> Enviar comentario </button>
                         </div>
