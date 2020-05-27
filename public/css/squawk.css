@@ -315,12 +315,17 @@ textarea {
     display: block;
 }
 
+.user-personal-info {
+    text-align: left;
+}
+
 .profile {
     margin: 1rem;
 }
 
 .profile-nest {
     margin: 1rem;
+    width: 100%;
     display: flex;
     justify-content: space-evenly;
 }
@@ -332,11 +337,13 @@ textarea {
 @media (max-width: 768px) {
     .profile-nest {
         margin: 1rem;
+        width: 100%;
         display: block;
         justify-content: center;
     }
     .user-personal-info {
         width: 100%;
+        text-align: center;
     }
     .profile-nest-pfp {
         width: 100%;

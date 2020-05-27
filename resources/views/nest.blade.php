@@ -13,8 +13,8 @@
             <section class="main-profile-container">
 
                 <h2 class="nombre-usuario"> <strong>{{$usuarioActual['name']}}</strong> </h2>
-                <div class="pfp-container center-text">
-                    <div class="profile-nest">
+                <div class="pfp-container">
+                    <div class="profile-nest center-text">
                         <div class="profile-nest-pfp">
                             <img src="storage/img/profiles/{{$usuarioActual['imagen']}}" alt="Tu foto de perfil"> <br>
                         </div>
