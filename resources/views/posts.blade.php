@@ -37,7 +37,7 @@
                                         <!-- Campo para subir imagen-->
                                         <div class="input-group mb-3 px-2 py-2 bg-white shadow-sm image-search">
                                             <input id="upload" type="file" name="imagen" onchange="readURL(this);" class="form-control border-0" accept="image/*">
-                                            <label id="upload-label" for="upload" class="black">Buscar archivo</label>
+                                            <label id="upload-label" for="upload" class="black">Subir imagen</label>
                                             <div class="input-group-append">
                                                 <label for="upload" class="btn btn-success m-0 px-4"> 
                                                     <i class="fa fa-cloud-upload mr-2"></i>
@@ -143,8 +143,6 @@
                                 </div>({{$uncoment['created_at']->format('d/m/Y H:m:s') }})
 
                                 <div class="comment">
-
-                                <a id="un-anclaje"></a> <!--Acá necesito un punto de anclaje tipo "posts/{id}" siendo id el número de Post -->
 
                                  <!--    <blockquote>{{ $uncoment['contenido_c'] }}</blockquote>  -->
                                  &nbsp;&nbsp;{{ $uncoment['contenido_c'] }}

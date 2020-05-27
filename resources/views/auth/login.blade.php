@@ -42,14 +42,17 @@
                         @enderror
                     </div>
                 </div>
-
+                <br>
                 <div class="form-group row">
-                    <div class="col-md-8 offset-md-4">
-                        <div class="form-check">
-                            <input class="form-check-input" type="checkbox" name="remember" id="remember" {{ old('remember') ? 'checked' : '' }}>
-
+                    <div class="col-md-8 offset-md-4 center-text">
+                        <div class="form-check remember">
+                            <br>
+                            <div class="checkem">
+                                <input class="form-check-input" type="checkbox" name="remember" id="remember" {{ old('remember') ? 'checked' : '' }}>
+                            </div>
+                            <br>
                             <label class="form-check-label fs-1-5rem" for="remember">
-                                {{ __('Recordarme') }}
+                                <small data-toggle="button" class="btn btn-outline-light fs-1-5rem"> {{ __('Recordarme') }} </small>
                             </label>
                         </div>
                     </div>
