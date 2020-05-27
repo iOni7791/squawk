@@ -23,15 +23,15 @@
 
                     </div>
 
-                    <div class="post-new-container">
-                        <form method="POST" action="addpost" enctype="multipart/form-data">
+                    <div class="post-new-container p0">
+                        <form method="POST" class="p0" action="addpost" enctype="multipart/form-data">
                             @csrf
-                            <div class="row py-4">
-                                <div class="col-lg-12 mx-auto">
+                            <div class="row py-4 p0">
+                                <div class="col-lg-12 mx-auto p0">
 
                                     <!-- Vista previa imagen a subir -->
                                     <p class="text-white text-center"> <b> Vista Previa </b></p>
-                                    <div class="image-area mt-4">
+                                    <div class="image-area mt-4 p0">
                                         <img id="imageResult" src="#" alt="" class="img-fluid rounded shadow-sm mx-auto d-block">
 
                                         <!-- Campo para subir imagen-->

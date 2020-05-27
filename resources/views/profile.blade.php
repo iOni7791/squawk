@@ -74,7 +74,7 @@
                                 <label for="name" class="col-md-4 col-form-label text-md-right"><strong>{{ __('Nombre') }}</strong></label>
 
                                 <div class="col-md-8">
-                                    <input id="name" type="text" class="form-control @error('name') is-invalid @enderror" name="name" value="{{ old('name') }}" required autocomplete="name" autofocus>
+                                    <input id="name" type="text" class="form-control fs-1-5rem @error('name') is-invalid @enderror" name="name" value="{{ old('name') }}" required autocomplete="name" autofocus>
 
                                     @error('name')
                                         <span class="invalid-feedback" role="alert">
@@ -88,7 +88,7 @@
                                 <label for="email" class="col-md-4 col-form-label text-md-right"><strong>{{ __('E-Mail') }}</strong></label>
 
                                 <div class="col-md-8">
-                                    <input id="email" type="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" autocomplete="email">
+                                    <input id="email" type="email" class="form-control fs-1-5rem @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" autocomplete="email">
 
                                     @error('email')
                                         <span class="invalid-feedback" role="alert">
@@ -118,7 +118,7 @@
                     <label for="fecha_nac" class="col-md-4 col-form-label text-md-right center-text"><b>{{ __('Fecha de Nacimiento') }}</b></label>
 
                             <div class="col-md-8">
-                                <input class="form-control" type="date" id="fecha_nac" name="fecha_nac" value="{{ old('fecha_nac') }}" step="1" max="2002-12-31" required autocomplete="fecha_nac">
+                                <input class="form-control fs-1-5rem" type="date" id="fecha_nac" name="fecha_nac" value="{{ old('fecha_nac') }}" step="1" max="2002-12-31" required autocomplete="fecha_nac">
                             </div>
                         </div>
                         <br>

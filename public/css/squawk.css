@@ -151,6 +151,13 @@ main {
     }
 }
 
+.main-title-container
+{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
 .main-title-container h1 {
     font-size: 2.5rem;
     font-weight: 600;
@@ -165,7 +172,7 @@ main {
     border-radius: 1rem;
     margin-top: 1rem;
     width: 55%;
-    padding: 1.5rem;
+    padding: 1rem;
 }
 
 @media (max-width: 576px) {
@@ -178,7 +185,7 @@ main {
         border-radius: 1rem;
         margin-top: 1rem;
         width: 90%;
-        padding: 1.5rem;
+        padding: 1rem;
     }
 }
 
@@ -479,7 +486,7 @@ ul.no-deco {
 
 .post-container,
 .comment-container {
-    padding: 0.1rem;
+    padding: 0rem;
 }
 
 .post-title h2
@@ -510,7 +517,6 @@ ul.no-deco {
 }
 
 .post-new-container {
-    padding: 0.5rem;
     width: 100%;
 }
 
@@ -730,4 +736,11 @@ ul.no-deco {
 
 .checkem {
     margin-right: 1rem;
+}
+
+.fixed-return
+{
+    font-size: 5rem;
+    border: solid 1px  #0c5ca1;
+    border-radius: 50%;
 }
