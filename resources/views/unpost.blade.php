@@ -24,9 +24,7 @@
                     <br>
                     <div class="post-title">
                     <h2 class="center-text">
-                        <a href="unpost/{{$unPost['id']}}">
                             {{ $unPost['descripcion'] }}
-                        </a>
                     </h2>
                     </div>
                     @if($unPost['contenido_p'] != '')
@@ -110,7 +108,7 @@
                     @endif
                 @endforeach
 
-                <form class="comment-response" action="addcomment" method="POST"> <!--hacer visible con JS al presionar el botón COMENTAR/RESPONDER-->
+                <form class="comment-response" action="{{ asset('addcomment') }}" method="POST"> <!--hacer visible con JS al presionar el botón COMENTAR/RESPONDER-->
                     @csrf
                     <input type="hidden" name="postid" value="{{ $unPost['id'] }} "></input>
 

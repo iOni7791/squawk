@@ -182,13 +182,13 @@ class pages extends Controller
             $usuarioActual = Auth::user();
             $like = Likes::where('id_usuario', $usuarioActual['id'])->where('id_post', $postid)->get();
 
-            $mlike = $like[0];
-
             if (!isset($like[0])):
                 $mlike = new Likes();
                 $mlike->id_usuario = $usuarioActual['id'];
                 $mlike->id_post = $postid;
                 $mlike->id_reaccion = $likeid;
+            else:
+                $mlike = $like[0];
             endif;
 
             $mlike->id_reaccion = $likeid;

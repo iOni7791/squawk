@@ -47,7 +47,7 @@
 
             <div class="header-logo-container">
                 <a href="./" class="xy-center-cont">
-                    <img class="header-logo" src="storage/img/logo.png" alt="SQUAWK!">
+                    <img class="header-logo" src="{{ asset('storage/img/logo.png') }}" alt="SQUAWK!">
                 </a>
             </div>
 
