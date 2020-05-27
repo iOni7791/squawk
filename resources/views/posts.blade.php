@@ -79,7 +79,7 @@
                         <br>
                         <div class="post-title">
                         <h2 class="center-text">
-                            <a href="{{ route('post',['id'=>$unPost['id'] ]) }}">{{ $unPost['descripcion'] }}</a>
+                            <a href="{{ route('post',[ 'id'=>$unPost['id'] ]) }}">{{ $unPost['descripcion'] }}</a>
                             </h2>
                         </div>
                         @if($unPost['contenido_p'] != '')

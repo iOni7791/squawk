@@ -127,7 +127,7 @@ class pages extends Controller
             $unPost['likes'] = Likes::getLikes($unPost['id']);
 
             $activo = 3;
-            dd($unPost['likes']);
+            //dd($unPost['likes']);
             return view('post',compact('activo', 'unPost', 'user'));
         else:
             return redirect('posts');

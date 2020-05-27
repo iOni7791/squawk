@@ -124,7 +124,7 @@
                         <li>
                             <a class="{{ $activo == 4 ? "active":"" }} fs-1-5rem border-black" href="profile"> Perfil <br>
                                 <span title="Acicala tu perfil">
-                                    <i class="fa fa-user-circle" aria-hidden="true"></i>                                  
+                                    <i class="fa fa-user-circle" aria-hidden="true"></i>
                                 </span>
                             </a>
                         </li>

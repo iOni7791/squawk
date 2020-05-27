@@ -1,5 +1,5 @@
 @extends('layouts.base')
-    <script src="js/subir-imagen.js"></script>
+
 @section('contenido')
 <main>
     <div class="main-container">
@@ -63,7 +63,7 @@
             </div>
         </section>
 
-        @foreach ($unPost as $unPost)
+
             <section class="main-login-container"> <!--Recicled because muh code-->
                 <div class="post-comment-container">
                     <article class="post-container">
@@ -73,7 +73,7 @@
                             </div>
                             <div class="post-user-time-container">
                                 <p><a href="profile"><strong>{{$unPost['postUser']}}</strong></a><br>
-                                <em>Publicado: {{ date('d/m/Y H:m:s', $unPost['created_at']) }}</em></p>
+                                <em>Publicado: {{ $unPost['created_at']->format('d/m/Y H:m:s') }}</em></p>
                             </div>
                         </div>
                         <br>
@@ -100,7 +100,6 @@
                         </div>
                         -->
                         <div class="actions-container center-text">
-
                             @foreach($unPost['likes'] as $unLike)
                                     <a class="action" href="{{ route('addlike',['postid'=>$unPost['id'], 'likeid'=>$unLike->id]) }}" style="padding-top:.2rem;">
                                     <i class="{{$unLike->fa}}" aria-hidden="true"></i>
@@ -126,6 +125,7 @@
                     <br>
 
                     <!-- <h3>Comentarios</h3> -->
+                    @foreach($unPost['coms'] as $uncoment)
                         @if ($uncoment['usuario'] && $uncoment['contenido_c'])
                         <div class="comment-container">
                             <div class="comment-info-container">
@@ -162,7 +162,6 @@
                         -->
                         </div> <!--comment-container1-->
                         <!--    <br>    -->
-
                         @endif
                     @endforeach
 
