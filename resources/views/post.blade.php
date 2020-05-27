@@ -63,7 +63,7 @@
             </div>
         </section>
 
-        @foreach ($posts as $unPost)
+        @foreach ($unPost as $unPost)
             <section class="main-login-container"> <!--Recicled because muh code-->
                 <div class="post-comment-container">
                     <article class="post-container">
@@ -73,13 +73,13 @@
                             </div>
                             <div class="post-user-time-container">
                                 <p><a href="profile"><strong>{{$unPost['postUser']}}</strong></a><br>
-                                <em>Publicado: {{ $unPost['created_at']->format('d/m/Y H:m:s') }}</em></p>
+                                <em>Publicado: {{ date('d/m/Y H:m:s', $unPost['created_at']) }}</em></p>
                             </div>
                         </div>
                         <br>
                         <div class="post-title">
                             <h2>
-                                <a href="{{ route('post',['id'=>$unPost['id'] ]) }}">{{ $unPost['descripcion'] }}</a>
+                                {{ $unPost['descripcion'] }}
                             </h2>
                         </div>
                         <br>
@@ -108,7 +108,7 @@
                                     <spam>{{$unLike->cant}}</spam>
                                 </a>
                             @endforeach
-                                <a class="action" href="#"><i class="fa fa-comment-o" aria-hidden="true"></i><br>{{count($unPost['coms'])}}</a>
+                        <a class="action" href="#"><i class="fa fa-comment-o" aria-hidden="true"></i><br>{{count($unPost['coms'])}}</a>
                         </div>
                         <!--hacer visible con JS al presionar el botón COMENTAR/RESPONDER-->
                         <!--
@@ -126,7 +126,6 @@
                     <br>
 
                     <!-- <h3>Comentarios</h3> -->
-                    @foreach ($unPost['coms'] as $uncoment)
                         @if ($uncoment['usuario'] && $uncoment['contenido_c'])
                         <div class="comment-container">
                             <div class="comment-info-container">
@@ -181,7 +180,6 @@
                     </form>
                 </div> <!--post-comment-container-->
             </section> <!-- Main-signup-container -->
-        @endforeach
 
     </div> <!-- Main-container -->
 </main>
