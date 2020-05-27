@@ -14,7 +14,7 @@
                 <article class="post-container">
                     <div class="post-info-container">
                         <div class="post-profile-picture">
-                            <a href="profile"><img src="storage/img/profiles/{{$unPost['postImg']}}" alt="{{$unPost['postUser']}}"></a>
+                            <a href="profile"><img src="../storage/img/profiles/{{$unPost['postImg']}}" alt="{{$unPost['postUser']}}"></a>
                         </div>
                         <div class="post-user-time-container">
                             <p><a href="profile"><strong>{{$unPost['postUser']}}</strong></a><br>
