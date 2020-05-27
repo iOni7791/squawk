@@ -63,7 +63,7 @@
             </div>
         </section>
 
-        @foreach ($posts as $unPost)
+        @foreach ($unPost as $unPost)
             <section class="main-login-container"> <!--Recicled because muh code-->
                 <div class="post-comment-container">
                     <article class="post-container">
@@ -73,15 +73,16 @@
                             </div>
                             <div class="post-user-time-container">
                                 <p><a href="profile"><strong>{{$unPost['postUser']}}</strong></a><br>
-                                <em>Publicado: {{ $unPost['created_at']->format('d/m/Y H:m:s') }}</em></p>
+                                <em>Publicado: {{ date('d/m/Y H:m:s', $unPost['created_at']) }}</em></p>
                             </div>
                         </div>
                         <br>
                         <div class="post-title">
-                        <h2 class="center-text">
-                            <a href="{{ route('post',['id'=>$unPost['id'] ]) }}">{{ $unPost['descripcion'] }}</a>
+                            <h2>
+                                {{ $unPost['descripcion'] }}
                             </h2>
                         </div>
+                        <br>
                         @if($unPost['contenido_p'] != '')
                         <div class="post-img-container center-text">
                             <a href="storage/img/posts/{{$unPost['contenido_p']}}" target="_blank"><img src="storage/img/posts/{{$unPost['contenido_p']}}"></a>
@@ -101,12 +102,13 @@
                         <div class="actions-container center-text">
 
                             @foreach($unPost['likes'] as $unLike)
-                                    <a class="action" href="{{ route('addlike',['postid'=>$unPost['id'], 'likeid'=>$unLike->id]) }}">
-                                    <i class="{{$unLike->fa}} reaction" aria-hidden="true"></i>
+                                    <a class="action" href="{{ route('addlike',['postid'=>$unPost['id'], 'likeid'=>$unLike->id]) }}" style="padding-top:.2rem;">
+                                    <i class="{{$unLike->fa}}" aria-hidden="true"></i>
+                                    <br>
                                     <spam>{{$unLike->cant}}</spam>
                                 </a>
                             @endforeach
-                                <a class="action" href="#"><i class="fa fa-comment-o reaction" aria-hidden="true"></i>{{count($unPost['coms'])}}</a>
+                        <a class="action" href="#"><i class="fa fa-comment-o" aria-hidden="true"></i><br>{{count($unPost['coms'])}}</a>
                         </div>
                         <!--hacer visible con JS al presionar el botón COMENTAR/RESPONDER-->
                         <!--
@@ -121,8 +123,9 @@
                         -->
                     </article> <!--post-container-->
 
+                    <br>
+
                     <!-- <h3>Comentarios</h3> -->
-                    @foreach ($unPost['coms'] as $uncoment)
                         @if ($uncoment['usuario'] && $uncoment['contenido_c'])
                         <div class="comment-container">
                             <div class="comment-info-container">
@@ -168,16 +171,15 @@
                         <input type="hidden" name="postid" value="{{ $unPost['id'] }} "></input>
 
                         <div class="comment-response-textarea">
-                            <textarea class="commentpost" name="comment" maxlength="150" placeholder="Grazna aqui..." rows="2"></textarea>
+                            <textarea name="comment" maxlength="150" placeholder="Grazna aqui..." rows="2"></textarea>
                         </div>
-
+                        <br>
                         <div class="center-text">
                             <button class="btn btn-primary fs-1-5rem" type="submit"> Enviar comentario </button>
                         </div>
                     </form>
                 </div> <!--post-comment-container-->
             </section> <!-- Main-signup-container -->
-        @endforeach
 
     </div> <!-- Main-container -->
 </main>

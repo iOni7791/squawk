@@ -27,12 +27,15 @@ Route::get('/contact', 'pages@contact');
 
 // Rutas con logueo
 Route::get('/posts', 'pages@posts');
+Route::get('/post/{id}', 'pages@post')->name('post');
+
 Route::post('/addpost', 'pages@addpost');
 Route::post('/addcomment', 'pages@addcomment');
 
 Route::get('/addlike/{postid}/{likeid}','pages@addLike')->name('addlike');
 
 Route::get('/nest', 'pages@nest');
+Route::get('/profile', 'pages@profile');
 Route::get('/profile', 'pages@profile');
 Route::get('/friends', 'pages@friends');
 Route::get('/logout', 'pages@logout');

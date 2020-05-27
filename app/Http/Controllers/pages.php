@@ -105,6 +105,35 @@ class pages extends Controller
         endif;
     }
 
+    public function post($id)
+    {
+        $unPost =  Posts::where('id',$id)->get()[0];
+
+        if (Auth::user() && $unPost):
+            $user = Auth::user();
+            //dd($unPost);
+            $postUser = Posts::getUser($unPost['id_usuario'])[0];
+            $unPost['postUser'] = $postUser['name'];
+            $unPost['postImg'] = $postUser['imagen'];
+
+            $coms = Comentarios::all()->where('id_post', $unPost['id']);
+            foreach($coms as $luga2=>$comm):
+                $usuario = Comentarios::getUser($comm['id_usuario'])[0];
+                $coms[$luga2]['usuario'] = $usuario['name'];
+                $coms[$luga2]['usuarioimg'] = $usuario['imagen'];
+            endforeach;
+            $unPost['coms'] = $coms;
+            //$like = Likes::all()->where('id_post', $unpost['id']);
+            $unPost['likes'] = Likes::getLikes($unPost['id']);
+
+            $activo = 3;
+            dd($unPost['likes']);
+            return view('post',compact('activo', 'unPost', 'user'));
+        else:
+            return redirect('posts');
+        endif;
+    }
+
     public function addpost(){
         if (Auth::user() ):
                 $usuarioActual = Auth::user();
