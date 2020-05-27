@@ -78,9 +78,11 @@
                         <br>
                         <div class="post-title">
                             <h2 class="center-text">
-                                <a href="esto-requiere-del-anclaje">{{ $unPost['descripcion'] }}</a>
+                                <a href="unpost/{{$unPost['id']}}">
+                                    {{ $unPost['descripcion'] }}
+                                </a>
                             </h2>
-                        </div>
+                            </div>
                         <div class="actions-container center-text">
 
                             @foreach($unPost['likes'] as $unLike)

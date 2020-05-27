@@ -74,28 +74,28 @@
                             </a>
                         </li>
                         <li>
-                            <a class="{{ $activo == 2 ? "active":"" }} fs-1-5rem border-black" href="milogin"> Ingreso <br>
+                            <a class="{{ $activo == 2 ? "active":"" }} fs-1-5rem border-black" href="{{asset('milogin')}}"> Ingreso <br>
                                 <span title="Ingresa a tu nido">
                                 <i class="fa fa-sign-in fs-1-5rem" aria-hidden="true"></i>
                                 </span>
                             </a>
                         </li>
                         <li>
-                            <a class="{{ $activo == 3 ? "active":"" }} fs-1-5rem border-black" href="miregister"> Registro <br>
+                            <a class="{{ $activo == 3 ? "active":"" }} fs-1-5rem border-black" href="{{asset('miregister')}}"> Registro <br>
                                 <span title="Crea una cuenta para buitrear!">
                                     <i class="fa fa-user-plus" aria-hidden="true"></i>
                                 </span>
                             </a>
                         </li>
                         <li>
-                            <a class="{{ $activo == 4 ? "active":"" }} fs-1-5rem border-black" href="faq">
+                            <a class="{{ $activo == 4 ? "active":"" }} fs-1-5rem border-black" href="{{asset('faq')}}">
                                 <span title="Preguntas Frecuentemente Graznadas"> F.A.Q. <br>
                                     <i class="fa fa-question-circle" aria-hidden="true"></i>
                                 </span>
                             </a>
                         </li>
                         <li>
-                            <a class="{{ $activo == 5 ? "active":"" }} fs-1-5rem border-black" href="contact">
+                            <a class="{{ $activo == 5 ? "active":"" }} fs-1-5rem border-black" href="{{asset('contact')}}">
                                 <span title="Un contacto para graznarnos"> Contacto <br>
                                     <i class="fa fa-envelope" aria-hidden="true"></i>
                                 </span>
@@ -104,35 +104,35 @@
                     @endguest
                     @auth
                         <li>
-                            <a class="{{ $activo == 1 ? "active":"" }} fs-1-5rem border-black" href="nest"> Nido <br>
+                            <a class="{{ $activo == 1 ? "active":"" }} fs-1-5rem border-black" href="{{asset('nest')}}"> Nido <br>
                                 <span title="Tu nido">
                                     <i class="fa fa-home" aria-hidden="true"></i>
                                 </span>
                             </a>
                         </li>
                         <li>
-                            <a class="{{ $activo == 2 ? "active":"" }} fs-1-5rem border-black" href="friends"> Amigos <br>
+                            <a class="{{ $activo == 2 ? "active":"" }} fs-1-5rem border-black" href="{{asset('friends')}}"> Amigos <br>
                                 <span title="Tus amigos, los buitres">
                                     <i class="fa fa-users" aria-hidden="true"></i>
                                 </span>
                             </a>
                         </li>
                         <li>
-                            <a class="{{ $activo == 3 ? "active":"" }} fs-1-5rem border-black" href="posts">
-                                <span title="Tus graznadas"> Posts <br>
+                            <a class="{{ $activo == 3 ? "active":"" }} fs-1-5rem border-black" href="{{asset('posts')}}"> Posts <br>
+                                <span title="Tus graznadas">
                                     <i class="fa fa-pencil-square-o" aria-hidden="true"></i>
                                 </span>
                             </a>
                         </li>
                         <li>
-                            <a class="{{ $activo == 4 ? "active":"" }} fs-1-5rem border-black" href="profile"> Perfil <br>
+                            <a class="{{ $activo == 4 ? "active":"" }} fs-1-5rem border-black" href="{{asset('profile')}}"> Perfil <br>
                                 <span title="Acicala tu perfil">
                                     <i class="fa fa-user-circle" aria-hidden="true"></i>
                                 </span>
                             </a>
                         </li>
                         <li>
-                            <a class="{{ $activo == 5 ? "active":"" }} fs-1-5rem border-black" href="logout">
+                            <a class="{{ $activo == 5 ? "active":"" }} fs-1-5rem border-black" href="{{asset('logout')}}">
                                 <span title="Salir volando"> Salir <br>
                                     <i class="fa fa-sign-out" aria-hidden="true"></i>
                                 </span>
