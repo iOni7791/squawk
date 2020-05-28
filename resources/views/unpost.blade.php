@@ -34,15 +34,17 @@
                     <div class="post-img-container center-text">
                         <a href="{{asset('storage/img/posts/'.$unPost['contenido_p'])}}" target="_blank"><img src="{{asset('storage/img/posts/'.$unPost['contenido_p'])}}"></a>
                     </div>
+                        @if ($esuser)
 
-                    <div class="post-actions center-text">
-                        <div class="btn btn-success fs-1-5rem">
-                           <a href=".."> Editar Post <i class="fa fa-pencil-square" aria-hidden="true"></i></a>
+                        <div class="post-actions center-text">
+                            <div class="btn btn-success fs-1-5rem">
+                            <a href=".."> Editar Post <i class="fa fa-pencil-square" aria-hidden="true"></i></a>
+                            </div>
+                            <div class="btn btn-dark fs-1-5rem">
+                                <a href="{{asset('borrarPost')}}"> Eliminar Post <i class="fa fa-trash" aria-hidden="true"></i></a>
+                            </div>
                         </div>
-                        <div class="btn btn-dark fs-1-5rem">
-                            <a href="{{asset('borrarPost')}}"> Eliminar Post <i class="fa fa-trash" aria-hidden="true"></i></a>
-                        </div>
-                    </div>
+                        @endif
 
                     @endif
 
@@ -88,7 +90,7 @@
                         <div class="comment-info-container">
                             <div class="post-profile-picture">
                                 <a href="{{asset('nest'.$unPost['idUser'])}}">
-                                    <img src="{{asset('storage/img/profiles/'.$uncoment['usuarioimg'] ? $uncoment['usuarioimg']:'noUser.png') }}" alt="{{$uncoment['usuario']}}">
+                                    <img src="{{asset($uncoment['usuarioimg'] ? 'storage/img/profiles/'.$uncoment['usuarioimg']:'storage/img/profiles/noUser.png') }}" alt="{{$uncoment['usuario']}}">
                                 </a>
                             </div>
                         </div>

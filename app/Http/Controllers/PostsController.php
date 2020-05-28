@@ -55,9 +55,9 @@ class PostsController extends Controller
     public function unpost($mid)
     {
         $unPost =  Posts::where('id',$mid)->get()[0];
-
+        $esuser = $unPost['id'] == Auth::user()->id;
         if (Auth::user() && $unPost):
-            $user = Auth::user();
+            //$user = Auth::user();
             //dd($unPost);
             $postUser = Posts::getUser($unPost['id_usuario'])[0];
             $unPost['postUser'] = $postUser['name'];
@@ -75,7 +75,7 @@ class PostsController extends Controller
 
             $activo = 3;
             //dd($unPost['likes']);
-            return view('unpost',compact('activo', 'unPost', 'user'));
+            return view('unpost',compact('activo', 'unPost', 'esuser'));
         else:
             return redirect('posts');
         endif;
