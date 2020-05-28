@@ -95,7 +95,7 @@
                         <div class="form-group row mb-0 justify-content-center">
                             <div>
                                 <button type="submit" class="btn btn-primary fs-1-5rem">
-                                    Registrar
+                                    Registrar <i class="fa fa-user-plus" aria-hidden="true"></i>
                                 </button>
                             </div>
                         </div>

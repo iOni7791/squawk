@@ -94,9 +94,9 @@
                         </div>
                         <br>
                         <div class="center-text">
-                            <button class="btn btn-primary fs-1-5rem" type="submit">Enviar</button>
+                            <button class="btn btn-primary fs-1-5rem" type="submit">Enviar <i class="fa fa-envelope" aria-hidden="true"></i></button>
                             <br> <br>
-                            <a href="faq" class="btn btn-success fs-1-5rem">Volver a F.A.Q.</a>
+                            <a href="faq" class="btn btn-success fs-1-5rem">Volver a F.A.Q. <i class="fa fa-chevron-circle-left" aria-hidden="true"></i></a>
                         </div>
                         <br>
                     </form>
