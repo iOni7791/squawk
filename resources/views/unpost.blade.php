@@ -5,7 +5,6 @@
     <div class="main-container">
         <section class="main-title-container title-fixed-container">
             <h1 class="text-center">
-
                 <a href="#"><span title="Volver a Posts"><i class="fa fa-arrow-circle-left fixed-return" aria-hidden="true" onclick="history.back();"></i></span></a>
                 Post
             </h1>
