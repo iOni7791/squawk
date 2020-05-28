@@ -21,7 +21,7 @@
                         <br>
                         <div class="user-personal-info">
                             <span class="center-text">
-                                <strong> Fecha de nacimiento: </strong> {{$usuarioActual['fecha_nac']}}
+                                <strong> Fecha de nacimiento: </strong> {{ substr($usuarioActual['fecha_nac'],8,2)."/".substr($usuarioActual['fecha_nac'],5,2)."/".substr($usuarioActual['fecha_nac'],0,4) }}
                                 <br>
                                 <strong> Género: </strong> Género
                                 <br>
@@ -29,7 +29,7 @@
                                 <br>
                                 <a href="friends"><strong>{{$usuarioActual['friendsnro']}} amigos buitres</strong></a>
                                 <br>
-                                <a href="posts"><strong>{{$usuarioActual['postsCount']}} posts graznados </strong></a>
+                                <strong>{{$usuarioActual['postsCount']}} posts graznados </strong>
                             </span>
                         </div>
                     </div>
@@ -42,7 +42,7 @@
                 <br>
                 @if($esuser)
                 <div class="center-text">
-                    <a href="profile"> <button class="btn btn-success fs-1-5rem">Editar Perfil</button></a>
+                    <a href="{{asset('profile')}}"> <button class="btn btn-success fs-1-5rem">Editar Perfil</button></a>
                 </div>
                 <br>
                 <!--Si estás viendo el perfil de otro usuario-->

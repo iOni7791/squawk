@@ -36,6 +36,7 @@ class PostsController extends Controller
                 //dd($coms);
                 foreach($coms as $luga2=>$comm):
                     $usuario = Comentarios::getUser($comm['id_usuario']);
+                    $coms[$luga2]['idUser'] = $usuario[0]['id'];
                     $coms[$luga2]['usuario'] = $usuario[0]['name'];
                     $coms[$luga2]['usuarioimg'] = $usuario[0]['imagen'];
                 endforeach;
@@ -70,13 +71,11 @@ class PostsController extends Controller
                 $coms[$luga2]['usuario'] = $usuario['name'];
                 $coms[$luga2]['usuarioimg'] = $usuario['imagen'];
             endforeach;
-            dd($coms);
             $unPost['coms'] = $coms;
             //$like = Likes::all()->where('id_post', $unpost['id']);
             $unPost['likes'] = Likes::getLikes($unPost['id']);
 
             $activo = 3;
-            //dd($unPost['likes']);
             return view('unpost',compact('activo', 'unPost', 'esuser'));
         else:
             return redirect('posts');
