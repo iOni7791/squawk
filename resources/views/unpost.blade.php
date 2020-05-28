@@ -5,11 +5,14 @@
     <div class="main-container">
         <section class="main-title-container">
             <h1 class="text-center">
+               
+                <a href=".."><i class="fa fa-arrow-circle-left fixed-return" aria-hidden="true"></i></a>
                 Graznido
             </h1>
         </section>
 
         <section class="main-login-container"> <!--Recicled because muh code-->
+                
             <div class="post-comment-container">
                 <article class="post-container">
                     <div class="post-info-container">
