@@ -59,7 +59,7 @@
                     </div>
                 </form>
             </section>
-            
+
             <br>
 
             <section class="main-profile-container">
@@ -102,7 +102,7 @@
                                 <label for="email" class="col-md-4 col-form-label text-md-right"><strong>{{ __('Descríbete') }}</strong></label>
 
                                 <div class="col-md-8">
-                                    <textarea name="bio" value="{{ old('bio') }}" maxlength="250" placeholder="Una pequeña descripción sobre tí..." autocomplete="bio"></textarea>
+                                    <textarea name="bio" value="{{ old('bio') }}" maxlength="250" placeholder="Una pequeña descripción sobre tí..." autocomplete="bio">{{ $usuarioActual['bio'] }}</textarea>
 
                                     @error('bio')
                                         <span class="invalid-feedback" role="alert">
@@ -111,7 +111,7 @@
                                     @enderror
                                 </div>
                             </div>
-                    </fieldset> 
+                    </fieldset>
                     <br>
 
                     <div class="form-group row">
@@ -127,15 +127,15 @@
                             <b>Género</b>
                         </h2>
                         <div class="form-group row radios">
-                        
+
                             <div class="col-md-12 col-lg-5">
-                                <input type="radio" id="m" name="genero" value="1">
+                                <input type="radio" id="m" name="genero" value="1" {{$usuarioActual['genero_id']==1 ? "checked" : ''}}">
                                 <label for="m"> Masculino</label>
                             </div>
                             <br>
-                           
+
                             <div class="col-md-12 col-lg-5">
-                                <input type="radio" id="f" name="genero" value="2">
+                                <input type="radio" id="f" name="genero" value="2" {{ $usuarioActual['genero_id']==2 ? "checked" : '' }}>
                                 <label for="f">Femenino</label>
                             </div>
 
@@ -181,14 +181,14 @@
                     </div>
                 </form>
             </section> <!-- Main-profile-container -->
-            
+
             <!-- Borrar Cuenta -->
             <section class="main-profile-container center-text">
                 <form action="deleteAccount" method="POST">
                     <button class="btn btn-danger fs-1-5rem" type="submit"> Borrar Cuenta<i class="fa fa-ban" aria-hidden="true"></i></button>
                 </form>
             </section>
-            
+
         </div> <!-- Main-container -->
     </main>
 @endsection

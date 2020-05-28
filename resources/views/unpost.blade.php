@@ -17,10 +17,10 @@
                 <article class="post-container">
                     <div class="post-info-container">
                         <div class="post-profile-picture">
-                            <a href="profile"><img src="../storage/img/profiles/{{$unPost['postImg']}}" alt="{{$unPost['postUser']}}"></a>
+                            <a href="{{ asset('profile') }}"><img src=" {{asset("storage/img/profiles/".$unPost['postImg']) }}" alt="{{$unPost['postUser']}}"></a>
                         </div>
                         <div class="post-user-time-container">
-                            <p><a href="profile"><strong>{{$unPost['postUser']}}</strong></a><br>
+                            <p><a href="{{ asset('profile') }}"><strong>{{$unPost['postUser']}}</strong></a><br>
                             <em>Publicado: {{ $unPost['created_at']->format('d/m/Y H:m:s') }}</em></p>
                         </div>
                     </div>
@@ -32,7 +32,7 @@
                     </div>
                     @if($unPost['contenido_p'] != '')
                     <div class="post-img-container center-text">
-                        <a href="../storage/img/posts/{{$unPost['contenido_p']}}" target="_blank"><img src="../storage/img/posts/{{$unPost['contenido_p']}}"></a>
+                        <a href="{{asset('storage/img/posts/'.$unPost['contenido_p'])}}" target="_blank"><img src="{{asset('storage/img/posts/'.$unPost['contenido_p'])}}"></a>
                     </div>
                     @endif
 
