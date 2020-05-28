@@ -89,7 +89,7 @@
                     <div class="comment-container">
                         <div class="comment-info-container">
                             <div class="post-profile-picture">
-                                <a href="{{asset('nest'.$unPost['idUser'])}}">
+                                <a href="{{asset('nest/'.$uncoment['idUser'])}}">
                                     <img src="{{asset($uncoment['usuarioimg'] ? 'storage/img/profiles/'.$uncoment['usuarioimg']:'storage/img/profiles/noUser.png') }}" alt="{{$uncoment['usuario']}}">
                                 </a>
                             </div>
@@ -97,7 +97,7 @@
 
                         <div class="user-comment-container">
                             <div class="user-link">
-                                <a href="{{asset('nest'.$unPost['idUser'])}}">{{$uncoment['usuario']}}&nbsp;-&nbsp;</a>
+                                <a href="{{asset('nest/'.$uncoment['idUser'])}}">{{$uncoment['usuario']}}&nbsp;-&nbsp;</a>
                             </div>({{$uncoment['created_at']->format('d/m/Y H:m:s') }})
 
                             <div class="comment">
