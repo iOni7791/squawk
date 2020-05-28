@@ -118,7 +118,7 @@
                     <label for="fecha_nac" class="col-md-4 col-form-label text-md-right center-text"><b>{{ __('Fecha de Nacimiento') }}</b></label>
 
                             <div class="col-md-8">
-                                <input class="form-control" type="date" id="fecha_nac" name="fecha_nac" value="{{ old('fecha_nac') }}" step="1" max="2002-12-31" required autocomplete="fecha_nac">
+                                <input class="form-control" type="date" id="fecha_nac" name="fecha_nac" value="{{ $usuarioActual['fecha_nac'] }}" step="1" max="2002-12-31" required autocomplete="fecha_nac">
                             </div>
                         </div>
                         <br>
@@ -129,16 +129,15 @@
                         <div class="form-group row radios">
 
                             <div class="col-md-12 col-lg-5">
-                                <input type="radio" id="m" name="genero" value="1" {{$usuarioActual['genero_id']==1 ? "checked" : ''}}">
+                                <input type="radio" id="m" name="genero" value="1" checked="{{ $usuarioActual['genero_id'] != 1 ? 'checked' : ''}}" />
                                 <label for="m"> Masculino</label>
                             </div>
                             <br>
 
                             <div class="col-md-12 col-lg-5">
-                                <input type="radio" id="f" name="genero" value="2" {{ $usuarioActual['genero_id']==2 ? "checked" : '' }}>
+                                <input type="radio" id="f" name="genero" value="2" checked="{{ $usuarioActual['genero_id'] === 2 ? 'checked' : '' }}" />
                                 <label for="f">Femenino</label>
                             </div>
-
                         </div>
                     <br>
                     <div class="center-text">
