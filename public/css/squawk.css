@@ -760,3 +760,14 @@ ul.no-deco {
 {
     border: solid 1px white;
 }
+
+.edit-actions
+{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.input-group-append .upload
+{
+    z-index: 0;
+}

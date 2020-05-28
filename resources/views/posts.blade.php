@@ -14,12 +14,12 @@
                 <article class="post-container">
                     <div class="post-info-container">
 
-                            <div class="post-profile-picture">
-                                <a href="profile"><img src="storage/img/profiles/{{$user['imagen']}}" alt="{{$user['name']}}"></a>
-                            </div>
-                            <div class="post-user-time-container">
-                                <p><a href="profile"><strong>{{$user['name']}}</strong></a><br></p>
-                            </div>
+                        <div class="post-profile-picture">
+                            <a href="profile"><img src="storage/img/profiles/{{$user['imagen']}}" alt="{{$user['name']}}"></a>
+                        </div>
+                        <div class="post-user-time-container">
+                            <p><a href="profile"><strong>{{$user['name']}}</strong></a><br></p>
+                        </div>
 
                     </div>
 
@@ -48,7 +48,7 @@
                                     </div>
                                     <br>
                                     <div>
-                                        <textarea name="texto" maxlength="150" placeholder="Ingrese aquí su comentario..."></textarea>
+                                        <textarea class="commentpost" name="texto" maxlength="150" placeholder="Ingrese aquí su comentario..."></textarea>
                                     </div>
                                     <br>
 

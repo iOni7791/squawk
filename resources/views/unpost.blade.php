@@ -37,7 +37,7 @@
 
                     <div class="post-actions center-text">
                         <div class="btn btn-success fs-1-5rem">
-                           <a href="editarPost"> Editar Post <i class="fa fa-pencil-square" aria-hidden="true"></i></a>
+                           <a href=".."> Editar Post <i class="fa fa-pencil-square" aria-hidden="true"></i></a>
                         </div>
                         <div class="btn btn-dark fs-1-5rem">
                             <a href="borrarPost"> Eliminar Post <i class="fa fa-trash" aria-hidden="true"></i></a>

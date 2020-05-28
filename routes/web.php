@@ -29,6 +29,8 @@ Route::get('/contact', 'pages@contact');
 Route::get('/posts', 'pages@posts');
 Route::get('/unpost/{mid}', 'pages@unpost');
 
+Route::get('/editpost/{mid}', 'pages@editpost');
+
 Route::post('/addpost', 'pages@addpost');
 Route::post('/addcomment', 'pages@addcomment');
 
