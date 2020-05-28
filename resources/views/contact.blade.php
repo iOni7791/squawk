@@ -14,21 +14,21 @@
                     <form action="mailto:yoni7791@gmail.com" enctype="text/plain">
                         @csrf
                         <div class="form-group row"> 
-                            <label for="nombre" class="col-md-4 col-form-label text-md-right fs-1-5rem">{{ __('Nombre') }}</label>
+                            <label for="nombre" class="col-md-4 col-form-label text-md-right fs-1-5rem center-text"><strong>{{ __('Nombre') }}</strong></label>
                             <div class="col-md-8">
                                 <input class="form-control" type="text" name="nombre"  value="{{ old('nombre') }}" required autocomplete="nombre">
                             </div>
                         </div>
 
                         <div class="form-group row">       
-                            <label for="email" class="col-md-4 col-form-label text-md-right fs-1-5rem">{{ __('Email') }}</label>
+                            <label for="email" class="col-md-4 col-form-label text-md-right fs-1-5rem center-text"><strong>{{ __('Email') }}</strong></label>
                             <div class="col-md-8">
                                 <input class="form-control" type="email" name="email" value="{{ old('email') }}" autocomplete="email">
                             </div>
                         </div>
 
                         <div class="form-group row">
-                            <label for="telefono" class="col-md-4 col-form-label text-md-right fs-1-5rem">{{ __('Número de contacto') }}</label>
+                            <label for="telefono" class="col-md-4 col-form-label text-md-right fs-1-5rem center-text"><strong>{{ __('Número de contacto') }}</strong></label>
                             <div class="col-md-8">
                                 <input class="form-control" type="tel" name="telefono" value="{{ old('telefono') }}" autocomplete="telefono">
                             </div> 
@@ -38,7 +38,7 @@
                             <div class="input-group mb-3 justify-content-center">
                                 <legend class="center-text">&iquest;Por qu&eacute; motivo nos contacta?</legend>
                                 <div class="input-group-prepend">
-                                    <label class="input-group-text" for="opciones">Opciones</label>
+                                    <label class="input-group-text fs-1-5rem" for="opciones">Opciones</label>
                                 </div>
                                 <select id="opciones">
                                     <option value="" disabled selected>Seleccione...</option>
@@ -50,7 +50,7 @@
 
                             <div class="input-group">
                                 <div class="input-group-prepend">
-                                    <span class="input-group-text">Mensaje</span>
+                                    <span class="input-group-text fs-1-5rem">Mensaje</span>
                                 </div>
                                 <textarea class="form-control" aria-label="Mensaje"></textarea>
                             </div>
@@ -62,12 +62,13 @@
                             </legend>
                             
                             <div class="col-md-8">
+                                <label for="telefono" class="col-md-4 col-form-label text-md-right fs-1-5rem center-text"><strong>Tel&eacute;fono</strong></label> 
                                 <input type="radio" name="contacto" value="telefono" id="telefono">
-                                <label for="telefono">Tel&eacute;fono</label> 
                             </div>
+                            <br>
                             <div class="col-md-8">
+                                <label for="correo" class="col-md-4 col-form-label text-md-right fs-1-5rem center-text"><strong>E-mail</strong></label>
                                 <input type="radio" name="contacto" value="correo" id="correo">
-                                <label for="correo">E-mail</label>
                             </div>
                         </div>
 
@@ -78,16 +79,16 @@
                             <br>
                             <div class="form-group row">
                                 <br>
-                                <label class="col-md-4 col-form-label text-md-right fs-1-5rem" for="fecha">Fecha: </label>
+                                <label class="col-md-4 col-form-label text-md-right fs-1-5rem center-text" for="fecha"><strong>Fecha</strong> </label>
                                 <div class="col-md-8">
-                                    <input class="form-control" type="date" id="fecha" name="fecha" step="1">
+                                    <input class="form-control fs-1-5rem" type="date" id="fecha" name="fecha" step="1">
                                 </div>
                             </div>
                         
                             <div class="form-group row">
-                                <label class="col-md-4 col-form-label text-md-right fs-1-5rem" for="hora">Hora: </label>
+                                <label class="col-md-4 col-form-label text-md-right fs-1-5rem center-text" for="hora"><strong>Hora</strong> </label>
                                 <div class="col-md-8">
-                                    <input class="form-control" type="time" id="hora" min="9:00" max="18:00">
+                                    <input class="form-control fs-1-5rem" type="time" id="hora" min="9:00" max="18:00">
                                 </div>
                             </div>  
                         </div>

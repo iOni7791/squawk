@@ -108,40 +108,8 @@
                 </div>
                 <br>
 
-                <!--Así tendría que verse editfaq si supiese cómo hacerlo andar-->
-                <h2 class="text-center">Así tendría que verse editfaq si supiese cómo hacerlo andar</h2>
-                <div class="edit-new-faq">
-                    <!--Pensaba que edit y new fuesen lo mimso, total acordate que si el elemento ya existe, Eloquent hace el update automáticamente-->
-                    <form action="newfaq" method="POST">
-                        <div class="form-group row">
-                            <label for="pregunta" class="col-md-4 col-form-label text-md-right center-text"><strong>{{ __('Pregunta') }}</strong></label>
-
-                            <div class="col-md-8">
-                                <input id="pregunta" type="text" class="form-control fs-1-5rem" name="pregunta" value="" placeholder="Ingrese aquí la pregunta" required> 
-                            </div>
-                        </div>
-                        <br>
-                        <div class="form-group row">
-                            <label for="respuesta" class="col-md-4 col-form-label text-md-right center-text"><strong>{{ __('Respuesta') }}</strong></label>
-
-                            <div class="col-md-8">
-                                <textarea name="respuesta" id="respuesta" value="" maxlength="500" placeholder="Ingrese aquí la respuesta" required></textarea>
-                            </div>
-                        </div>
-                        <br>
-
-                        <div class="faq-actions center-text">
-                            <div class="center-text">
-                                <a href=""> <button class="btn btn-success fs-1-5rem" type="submit">Confirmar <i class="fa fa-check-square" aria-hidden="true"></i></button></a>
-                            </div>
-                        
-                            <div class="center-text"> 
-                                <a href=""> <button class="btn btn-dark fs-1-5rem" type="submit">Cancelar <i class="fa fa-times-circle" aria-hidden="true"></i></button></a>
-                            </div>
-                        </div>
-                        Y lo vas a tener que meter en otra página llamada newfaq o edit faq, no se. Onda, si le das editfaq que cargue los datos de la pregunta y la respuesta y si es newfaq entonces que te de el formulario en blanco
-                    </form>
-                </div>
+                
+        
             </section> <!-- Main-signup-container -->
 
         </div> <!-- Main-container -->

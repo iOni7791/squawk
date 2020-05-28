@@ -15,10 +15,10 @@
             @csrf
 
                 <div class="form-group row">
-                    <label for="email" class="col-md-4 col-form-label text-md-right fs-1-5rem">{{ __('E-mail') }}</label>
+                    <label for="email" class="col-md-4 col-form-label text-md-right fs-1-5rem center-text"> <strong> {{ __('E-mail') }}</strong></label>
 
                     <div class="col-md-8">
-                        <input id="email" type="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email" autofocus>
+                        <input id="email" type="email" class="form-control fs-1-5rem @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email" autofocus>
 
                         @error('email')
                         <span class="invalid-feedback" role="alert">
@@ -30,10 +30,10 @@
                 </div>  
 
                 <div class="form-group row">
-                    <label for="password" class="col-md-4 col-form-label text-md-right fs-1-5rem">{{ __('Contraseña') }}</label>
+                    <label for="password" class="col-md-4 col-form-label text-md-right fs-1-5rem center-text"> <strong> {{ __('Contraseña') }}</strong></label>
 
                     <div class="col-md-8">
-                        <input id="password" type="password" class="form-control @error('password') is-invalid @enderror" name="password" required autocomplete="current-password">
+                        <input id="password" type="password" class="form-control fs-1-5rem @error('password') is-invalid @enderror" name="password" required autocomplete="current-password">
 
                         @error('password')
                         <span class="invalid-feedback" role="alert">

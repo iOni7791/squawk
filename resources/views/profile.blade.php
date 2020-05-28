@@ -102,7 +102,7 @@
                                 <label for="email" class="col-md-4 col-form-label text-md-right"><strong>{{ __('Descríbete') }}</strong></label>
 
                                 <div class="col-md-8">
-                                    <textarea name="bio" value="{{ old('bio') }}" maxlength="250" placeholder="Una pequeña descripción sobre tí..." autocomplete="bio">{{ $usuarioActual['bio'] }}</textarea>
+                                    <textarea name="bio" value="{{ old('bio') }}" maxlength="500" placeholder="Una pequeña descripción sobre tí..." autocomplete="bio">{{ $usuarioActual['bio'] }}</textarea>
 
                                     @error('bio')
                                         <span class="invalid-feedback" role="alert">

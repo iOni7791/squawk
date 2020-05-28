@@ -86,7 +86,7 @@
                         </div>
                         @if($unPost['contenido_p'] != '')
                         <div class="post-img-container center-text">
-                            <a href="storage/img/posts/{{$unPost['contenido_p']}}" target="_blank"><img src="storage/img/posts/{{$unPost['contenido_p']}}"></a>
+                            <img src="storage/img/posts/{{$unPost['contenido_p']}}">
                         </div>
                         @endif
 
@@ -139,7 +139,7 @@
 
                             <div class="user-comment-container">
                                 <div class="user-link">
-                                    <a href="{{asset('nest/'.$uncoment['idUser'])}}">{{$uncoment['usuario']}}&nbsp;-&nbsp;</a>
+                                    <a href="{{asset('nest/'.$uncoment['idUser'])}}">{{$uncoment['usuario']}}</a>&nbsp;-&nbsp;
                                 </div>({{$uncoment['created_at']->format('d/m/Y H:m:s') }})
 
                                 <div class="comment">
