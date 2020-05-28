@@ -64,7 +64,9 @@
                                 <spam>{{$unLike->cant}}</spam>
                             </a>
                         @endforeach
+                        <span class="info2">
                             <i class="fa fa-comment-o reaction" aria-hidden="true"></i>{{count($unPost['coms'])}}
+                        </span>
                     </div>
                     <!--hacer visible con JS al presionar el botón COMENTAR/RESPONDER-->
                     <!--

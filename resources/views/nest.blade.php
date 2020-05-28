@@ -92,7 +92,7 @@
                                 <spam>{{$unLike->cant}}</spam>
                             </span>
                             @endforeach
-                            <a class="action reaction" href="#">
+                            <a class="action reaction" href="{{asset('unpost/'.$unPost['id'])}}">
                                 <i class="fa fa-comment-o reaction" aria-hidden="true"></i><br>{{count($unPost['coms'])}}
                             </a>
                         </div>
