@@ -17,10 +17,10 @@
                 <article class="post-container">
                     <div class="post-info-container">
                         <div class="post-profile-picture">
-                            <a href="{{ asset('profile') }}"><img src=" {{asset("storage/img/profiles/".$unPost['postImg']) }}" alt="{{$unPost['postUser']}}"></a>
+                            <a href="{{ asset('nest/'.$unPost['id_usuario'])}}"><img src=" {{asset("storage/img/profiles/".$unPost['postImg']) }}" alt="{{$unPost['postUser']}}"></a>
                         </div>
                         <div class="post-user-time-container">
-                            <p><a href="{{ asset('profile') }}"><strong>{{$unPost['postUser']}}</strong></a><br>
+                            <p><a href="{{ asset('nest/'.$unPost['id_usuario'])}}"><strong>{{$unPost['postUser']}}</strong></a><br>
                             <em>Publicado: {{ $unPost['created_at']->format('d/m/Y H:m:s') }}</em></p>
                         </div>
                     </div>

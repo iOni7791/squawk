@@ -61,6 +61,7 @@ class PostsController extends Controller
             //$user = Auth::user();
             //dd($unPost);
             $postUser = Posts::getUser($unPost['id_usuario'])[0];
+            $unPosts['idUser'] = $postUser['id'];
             $unPost['postUser'] = $postUser['name'];
             $unPost['postImg'] = $postUser['imagen'];
 
@@ -74,7 +75,7 @@ class PostsController extends Controller
             $unPost['coms'] = $coms;
             //$like = Likes::all()->where('id_post', $unpost['id']);
             $unPost['likes'] = Likes::getLikes($unPost['id']);
-
+            //dd($unPost);
             $activo = 3;
             return view('unpost',compact('activo', 'unPost', 'esuser'));
         else:
