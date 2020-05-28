@@ -19,7 +19,7 @@
                         para el curso de <strong><u> Desarrollo Web Fullstack</u></strong> de <strong> <a href="https://www.digitalhouse.com/">Digital House</a></strong>.
                         <br>
                         <br>
-                        <h3 class="text-center">Por ahora, y hasta el día de hoy, aca va el dia fechaCastellano ($diaBase), el proyecto cuenta con las siguientes p&aacute;ginas:</h3><br>
+                        <h3 class="text-center">Por ahora, y hasta el día de hoy, el proyecto cuenta con las siguientes p&aacute;ginas:</h3><br>
                         <ul class="no-deco text-center">
                             <li><a href="./">Inicio</a></li>
                             <li><a href="miregister">Registro</a></li>

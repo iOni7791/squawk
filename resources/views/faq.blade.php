@@ -25,7 +25,7 @@
                         ¿Ya es completamente funcional?
                     </h2>
                     <p class="answer text-center">
-                        Todavía se encuentra en desarrollo, hasta el día de la fecha, aca va fechaCastellano ($diaBase);.
+                        Todavía se encuentra en desarrollo, hasta el día de la fecha.
                     </p>
                 </article>
                 <br>
