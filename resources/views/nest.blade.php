@@ -42,17 +42,17 @@
                 <br>
                 @if($esuser)
                 <div class="center-text">
-                    <a href="{{asset('profile')}}"> <button class="btn btn-success fs-1-5rem">Editar Perfil</button></a>
+                    <a href="{{asset('profile')}}"> <button class="btn btn-success fs-1-5rem">Editar Perfil <i class="fa fa-pencil-square" aria-hidden="true"></i></button></a>
                 </div>
                 <br>
                 <!--Si estás viendo el perfil de otro usuario-->
                 <div class="center-text">
-                    <a href="profile"> <button class="btn btn-success fs-1-5rem">Agregar amigo (ojo) <a href="addfriend"><i class="fa fa-user-plus" aria-hidden="true"></i></a> </button></a>
+                    <a href="profile"> <button class="btn btn-success fs-1-5rem"><a href="addfriend">Agregar amigo <i class="fa fa-user-plus" aria-hidden="true"></i></a> </button></a>
                 </div>
                 <br>
                 <!--Si este usuario ya es tu amigo-->
                 <div class="center-text">
-                    <a href="profile"> <button class="btn btn-warning fs-1-5rem">Eliminar amigo (ojo)<a href="deletefriend"> <i class="fa fa-user-times" aria-hidden="true"></i></a> </button></a>
+                    <a href="profile"> <button class="btn btn-warning fs-1-5rem"><a href="deletefriend">Eliminar amigo <i class="fa fa-user-times" aria-hidden="true"></i></a> </button></a>
                 </div>
                 @endif
             </section>
@@ -99,13 +99,13 @@
                         @if($esuser)
                         <br>
                         <div class="center-text" action="deletePost"> <!-- Ojo al piojo-->
-                            <a href="{{asset('deletePost/'.$unPost['id'])}}"> <button class="btn btn-dark fs-1-5rem">Eliminar Graznido <i class="fa fa-trash" aria-hidden="true"></i></button></a>
+                            <a href="{{asset('deletePost/'.$unPost['id'])}}"> <button class="btn btn-dark fs-1-5rem">Eliminar Post <i class="fa fa-trash" aria-hidden="true"></i></button></a>
                         </div>
                         @endif
                         <br>
                         <!--de vuelta, si estás viendo el perfil de otro usuario-->
                         <div class="center-text">
-                            <a href="{{asset('unpost/'.$unPost['id'])}}"> <button class="btn btn-primary fs-1-5rem">Ver post (ojo)</button></a>
+                            <a href="{{asset('unpost/'.$unPost['id'])}}"> <button class="btn btn-primary fs-1-5rem">Ver Post <i class="fa fa-eye" aria-hidden="true"></i></button></a>
                         </div>
                     </article>
                 </div>

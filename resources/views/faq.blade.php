@@ -49,8 +49,7 @@
                             <a href="contact" class="btn btn-success fs-1-5rem">Contactar</a>
                         </div>
                         <br>
-                        <!-- <marquee behavior="scroll" direction="right"> Saludos! </marquee> -->
-
+                       <!--<marquee behavior="scroll" direction="right"> Saludos! </marquee>-->
                </article>
             </section> <!-- Main-signup-container -->
 

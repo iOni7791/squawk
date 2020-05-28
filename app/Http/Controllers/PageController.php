@@ -8,6 +8,7 @@ use App\Posts;
 use App\Comentarios;
 use App\Likes;
 use App\Friends;
+use App\Faq;
 
 //use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
