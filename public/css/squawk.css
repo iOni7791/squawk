@@ -68,6 +68,10 @@ textarea {
     height: 100%;
 }
 
+.border-white{
+    border: solid 1px white;
+}
+
 .white {
     color: white;
 }
@@ -738,9 +742,21 @@ ul.no-deco {
     margin-right: 1rem;
 }
 
+.title-fixed-container
+{
+    position: relative;
+}
+
 .fixed-return
 {
+    position: absolute;
+    left: 2rem;
+    top: 20%;
     font-size: 5rem;
-    border: solid 1px  #0c5ca1;
     border-radius: 50%;
+}
+
+.post-actions .btn
+{
+    border: solid 1px white;
 }
