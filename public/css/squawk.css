@@ -68,7 +68,8 @@ textarea {
     height: 100%;
 }
 
-.border-white {
+.border-white,
+.btn {
     border: solid 1px white;
 }
 
@@ -289,10 +290,17 @@ a:hover {
     width: 30%;
 }
 
-.profile-banner-picture img {
+.friend-profile-picture img,
+.post-profile-picture img,
+.profile-nest img,
+.profile-banner-picture img,
+.profile img {
     width: 8rem;
     border-radius: 50%;
+    border: solid 1px white;
 }
+
+
 
 .profile-banner-info {
     display: flex;
