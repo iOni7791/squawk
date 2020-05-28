@@ -69,10 +69,10 @@
                     <article class="post-container">
                         <div class="post-info-container">
                             <div class="post-profile-picture">
-                                <a href="profile"><img src="{{asset('storage/img/profiles/'.$unPost['postImg'])}}" alt="{{$unPost['postUser']}}"></a>
+                                <img src="{{asset('storage/img/profiles/'.$unPost['postImg'])}}" alt="{{$unPost['postUser']}}">
                             </div>
                             <div class="post-user-time-container">
-                                <p><a href="profile"><strong>{{$unPost['postUser']}}</strong></a><br>
+                                <p><strong>{{$unPost['postUser']}}</strong><br>
                                 <em>Publicado: {{ $unPost['created_at']->format('d/m/Y H:m:s') }}</em></p>
                             </div>
                         </div>
