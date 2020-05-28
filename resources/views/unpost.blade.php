@@ -3,11 +3,11 @@
 @section('contenido')
 <main>
     <div class="main-container">
-        <section class="main-title-container">
+        <section class="main-title-container title-fixed-container">
             <h1 class="text-center">
                
-                <a href=".."><i class="fa fa-arrow-circle-left fixed-return" aria-hidden="true"></i></a>
-                Graznido
+                <a href=".."><span title="Volver a Posts"><i class="fa fa-arrow-circle-left fixed-return" aria-hidden="true"></i></span></a>
+                Post
             </h1>
         </section>
 
@@ -34,6 +34,16 @@
                     <div class="post-img-container center-text">
                         <a href="{{asset('storage/img/posts/'.$unPost['contenido_p'])}}" target="_blank"><img src="{{asset('storage/img/posts/'.$unPost['contenido_p'])}}"></a>
                     </div>
+
+                    <div class="post-actions center-text">
+                        <div class="btn btn-success fs-1-5rem">
+                           <a href="editarPost"> Editar Post <i class="fa fa-pencil-square" aria-hidden="true"></i></a>
+                        </div>
+                        <div class="btn btn-dark fs-1-5rem">
+                            <a href="borrarPost"> Eliminar Post <i class="fa fa-trash" aria-hidden="true"></i></a>
+                        </div>
+                    </div>
+
                     @endif
 
                     <!--
