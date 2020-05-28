@@ -16,7 +16,7 @@
                 <div class="pfp-container">
                     <div class="profile-nest center-text">
                         <div class="profile-nest-pfp">
-                            <img src="storage/img/profiles/{{$usuarioActual['imagen']}}" alt="Tu foto de perfil"> <br>
+                            <img src="{{asset('storage/img/profiles/'.$usuarioActual['imagen'])}}" alt="Tu foto de perfil"> <br>
                         </div>
                         <br>
                         <div class="user-personal-info">
@@ -40,7 +40,7 @@
                     <blockquote>{{$usuarioActual['bio']}}</blockquote>
                 </div>
                 <br>
-
+                @if($esuser)
                 <div class="center-text">
                     <a href="profile"> <button class="btn btn-success fs-1-5rem">Editar Perfil</button></a>
                 </div>
@@ -54,6 +54,7 @@
                 <div class="center-text">
                     <a href="profile"> <button class="btn btn-warning fs-1-5rem">Eliminar amigo (ojo)<a href="deletefriend"> <i class="fa fa-user-times" aria-hidden="true"></i></a> </button></a>
                 </div>
+                @endif
             </section>
 
             <section class="main-title-container">
@@ -68,7 +69,7 @@
                     <article class="post-container">
                         <div class="post-info-container">
                             <div class="post-profile-picture">
-                                <a href="profile"><img src="storage/img/profiles/{{$unPost['postImg']}}" alt="{{$unPost['postUser']}}"></a>
+                                <a href="profile"><img src="{{asset('storage/img/profiles/'.$unPost['postImg'])}}" alt="{{$unPost['postUser']}}"></a>
                             </div>
                             <div class="post-user-time-container">
                                 <p><a href="profile"><strong>{{$unPost['postUser']}}</strong></a><br>
@@ -78,7 +79,7 @@
                         <br>
                         <div class="post-title">
                             <h2 class="center-text">
-                                <a href="unpost/{{$unPost['id']}}">
+                                <a href="{{asset('unpost/'.$unPost['id'])}}">
                                     {{ $unPost['descripcion'] }}
                                 </a>
                             </h2>
@@ -95,14 +96,16 @@
                                 <i class="fa fa-comment-o reaction" aria-hidden="true"></i><br>{{count($unPost['coms'])}}
                             </a>
                         </div>
+                        @if($esuser)
                         <br>
                         <div class="center-text" action="deletePost"> <!-- Ojo al piojo-->
-                            <a href="profile"> <button class="btn btn-dark fs-1-5rem">Eliminar Graznido <i class="fa fa-trash" aria-hidden="true"></i></button></a>
+                            <a href="{{asset('deletePost/'.$unPost['id'])}}"> <button class="btn btn-dark fs-1-5rem">Eliminar Graznido <i class="fa fa-trash" aria-hidden="true"></i></button></a>
                         </div>
+                        @endif
                         <br>
                         <!--de vuelta, si estás viendo el perfil de otro usuario-->
                         <div class="center-text">
-                            <a href="profile"> <button class="btn btn-primary fs-1-5rem">Ver post (ojo)</button></a>
+                            <a href="{{asset('unpost/'.$unPost['id'])}}"> <button class="btn btn-primary fs-1-5rem">Ver post (ojo)</button></a>
                         </div>
                     </article>
                 </div>

@@ -40,7 +40,7 @@
                            <a href=".."> Editar Post <i class="fa fa-pencil-square" aria-hidden="true"></i></a>
                         </div>
                         <div class="btn btn-dark fs-1-5rem">
-                            <a href="borrarPost"> Eliminar Post <i class="fa fa-trash" aria-hidden="true"></i></a>
+                            <a href="{{asset('borrarPost')}}"> Eliminar Post <i class="fa fa-trash" aria-hidden="true"></i></a>
                         </div>
                     </div>
 
@@ -64,7 +64,7 @@
                                 <spam>{{$unLike->cant}}</spam>
                             </a>
                         @endforeach
-                            <a class="action" href="#"><i class="fa fa-comment-o reaction" aria-hidden="true"></i>{{count($unPost['coms'])}}</a>
+                            <i class="fa fa-comment-o reaction" aria-hidden="true"></i>{{count($unPost['coms'])}}
                     </div>
                     <!--hacer visible con JS al presionar el botón COMENTAR/RESPONDER-->
                     <!--
@@ -85,15 +85,15 @@
                     <div class="comment-container">
                         <div class="comment-info-container">
                             <div class="post-profile-picture">
-                                <a href="profile">
-                                    <img src="../storage/img/profiles/{{$uncoment['usuarioimg'] ? $uncoment['usuarioimg']:'noUser.png' }}" alt="{{$uncoment['usuario']}}">
+                                <a href="{{asset('nest'.$unPost['idUser'])}}">
+                                    <img src="{{asset('storage/img/profiles/'.$uncoment['usuarioimg'] ? $uncoment['usuarioimg']:'noUser.png') }}" alt="{{$uncoment['usuario']}}">
                                 </a>
                             </div>
                         </div>
 
                         <div class="user-comment-container">
                             <div class="user-link">
-                                <a href="profile">{{$uncoment['usuario']}}&nbsp;-&nbsp;</a>
+                                <a href="{{asset('nest'.$unPost['idUser'])}}">{{$uncoment['usuario']}}&nbsp;-&nbsp;</a>
                             </div>({{$uncoment['created_at']->format('d/m/Y H:m:s') }})
 
                             <div class="comment">

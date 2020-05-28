@@ -38,7 +38,7 @@
     <header>
         <div class="main-header-container">
             <div class="header-title-container">
-                <a href="./" class="xy-center-cont">
+                <a href="{{asset('/')}}" class="xy-center-cont">
                     <h1>
                         SQUAWK!
                     </h1>
@@ -52,7 +52,7 @@
             </div>
 
             <div class="header-link-container">
-                <a href="./" class="xy-center-cont">
+                <a href="{{asset('/')}}" class="xy-center-cont">
                     <span class="header-title-span">
                         Home
                     </span>

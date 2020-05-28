@@ -16,31 +16,31 @@
 }); */
 
 // Rutas sin logueo
-Route::get('/', 'pages@index');
-Route::get('/home', 'pages@index');
-Route::get('/milogin', 'pages@milogin');
-Route::get('/miregister', 'pages@miregister');
-Route::post('/miregister', 'pages@index');
+Route::get('/', 'PageController@index');
+Route::get('/home', 'PageController@index');
+Route::get('/milogin', 'PageController@milogin');
+Route::get('/miregister', 'PageController@miregister');
+Route::post('/miregister', 'PageController@index');
 
-Route::get('/faq', 'pages@faq');
-Route::get('/contact', 'pages@contact');
+Route::get('/faq', 'PageController@faq');
+Route::get('/contact', 'PageController@contact');
 
 // Rutas con logueo
-Route::get('/posts', 'pages@posts');
-Route::get('/unpost/{mid}', 'pages@unpost');
+Route::get('/posts', 'PostsController@posts');
+Route::get('/unpost/{mid}', 'PostsController@unpost');
 
-Route::get('/editpost/{mid}', 'pages@editpost');
+Route::get('/editpost/{mid}', 'PostsController@editpost');
 
-Route::post('/addpost', 'pages@addpost');
-Route::post('/addcomment', 'pages@addcomment');
+Route::post('/addpost', 'PostsController@addpost');
+Route::post('/addcomment', 'PostsController@addcomment');
 
-Route::get('/addlike/{postid}/{likeid}','pages@addLike')->name('addlike');
+Route::get('/addlike/{postid}/{likeid}','PostsController@addLike')->name('addlike');
 
-Route::get('/nest', 'pages@nest');
-Route::get('/profile', 'pages@profile');
-Route::get('/profile', 'pages@profile');
-Route::get('/friends', 'pages@friends');
-Route::get('/logout', 'pages@logout');
+Route::get('/nest', 'UsersController@nest');
+Route::get('/nest/{id}', 'UsersController@nest');
+Route::get('/profile', 'UsersController@profile');
+Route::get('/friends', 'FriendsController@friends');
+Route::get('/logout', 'UsersControlleres@logout');
 
 
 Auth::routes();

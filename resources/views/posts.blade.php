@@ -69,10 +69,10 @@
                     <article class="post-container">
                         <div class="post-info-container">
                             <div class="post-profile-picture">
-                                <a href="profile"><img src="storage/img/profiles/{{$unPost['postImg']}}" alt="{{$unPost['postUser']}}"></a>
+                                <a href="nest/{{$unPost['idUser']}}"><img src="storage/img/profiles/{{$unPost['postImg']}}" alt="{{$unPost['postUser']}}"></a>
                             </div>
                             <div class="post-user-time-container">
-                                <p><a href="profile"><strong>{{$unPost['postUser']}}</strong></a><br>
+                                <p><a href="nest/{{$unPost['idUser']}}"><strong>{{$unPost['postUser']}}</strong></a><br>
                                 <em>Publicado: {{ $unPost['created_at']->format('d/m/Y H:m:s') }}</em></p>
                             </div>
                         </div>
@@ -101,14 +101,13 @@
                         </div>
                         -->
                         <div class="actions-container center-text">
-
                             @foreach($unPost['likes'] as $unLike)
                                     <a class="action" href="{{ route('addlike',['postid'=>$unPost['id'], 'likeid'=>$unLike->id]) }}">
                                     <i class="{{$unLike->fa}} reaction" aria-hidden="true"></i>
                                     <spam>{{$unLike->cant}}</spam>
                                 </a>
                             @endforeach
-                                <a class="action" href="#"><i class="fa fa-comment-o reaction" aria-hidden="true"></i>{{count($unPost['coms'])}}</a>
+                                <a class="action" href="unpost/{{$unPost['id']}}"><i class="fa fa-comment-o reaction" aria-hidden="true"></i>{{$unPost['comentcount']}}</a>
                         </div>
                         <!--hacer visible con JS al presionar el botón COMENTAR/RESPONDER-->
                         <!--
@@ -124,6 +123,9 @@
                     </article> <!--post-container-->
 
                     <!-- <h3>Comentarios</h3> -->
+                    @isset($unPost['coms'][0])
+                    Último Comentario <br>
+                    @endisset
                     @foreach ($unPost['coms'] as $uncoment)
                         @if ($uncoment['usuario'] && $uncoment['contenido_c'])
                         <div class="comment-container">
@@ -137,7 +139,7 @@
 
                             <div class="user-comment-container">
                                 <div class="user-link">
-                                    <a href="profile">{{$uncoment['usuario']}}&nbsp;-&nbsp;</a>
+                                    <a href="nest/{{$uncoment['idUser']}}">{{$uncoment['usuario']}}&nbsp;-&nbsp;</a>
                                 </div>({{$uncoment['created_at']->format('d/m/Y H:m:s') }})
 
                                 <div class="comment">
