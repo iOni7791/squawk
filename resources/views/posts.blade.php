@@ -15,10 +15,10 @@
                     <div class="post-info-container">
 
                         <div class="post-profile-picture">
-                            <a href="profile"><img src="storage/img/profiles/{{$user['imagen']}}" alt="{{$user['name']}}"></a>
+                            <a href="{{asset('profile')}}"><img src="storage/img/profiles/{{$user['imagen']}}" alt="{{$user['name']}}"></a>
                         </div>
                         <div class="post-user-time-container">
-                            <p><a href="profile"><strong>{{$user['name']}}</strong></a><br></p>
+                            <p><a href="{{asset('profile')}}"><strong>{{$user['name']}}</strong></a><br></p>
                         </div>
 
                     </div>
@@ -131,7 +131,7 @@
                         <div class="comment-container">
                             <div class="comment-info-container">
                                 <div class="post-profile-picture">
-                                    <a href="profile">
+                                    <a href="{{asset('nest/'.$uncoment['idUser'])}}">
                                         <img src="storage/img/profiles/{{$uncoment['usuarioimg'] ? $uncoment['usuarioimg']:'noUser.png' }}" alt="{{$uncoment['usuario']}}">
                                     </a>
                                 </div>
@@ -139,7 +139,7 @@
 
                             <div class="user-comment-container">
                                 <div class="user-link">
-                                    <a href="nest/{{$uncoment['idUser']}}">{{$uncoment['usuario']}}&nbsp;-&nbsp;</a>
+                                    <a href="{{asset('nest/'.$uncoment['idUser'])}}">{{$uncoment['usuario']}}&nbsp;-&nbsp;</a>
                                 </div>({{$uncoment['created_at']->format('d/m/Y H:m:s') }})
 
                                 <div class="comment">

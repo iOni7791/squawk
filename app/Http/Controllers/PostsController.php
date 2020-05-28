@@ -66,9 +66,11 @@ class PostsController extends Controller
             $coms = Comentarios::all()->where('id_post', $unPost['id']);
             foreach($coms as $luga2=>$comm):
                 $usuario = Comentarios::getUser($comm['id_usuario'])[0];
+                $coms[$luga2]['idUser'] = $usuario['id'];
                 $coms[$luga2]['usuario'] = $usuario['name'];
                 $coms[$luga2]['usuarioimg'] = $usuario['imagen'];
             endforeach;
+            dd($coms);
             $unPost['coms'] = $coms;
             //$like = Likes::all()->where('id_post', $unpost['id']);
             $unPost['likes'] = Likes::getLikes($unPost['id']);
