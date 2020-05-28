@@ -48,7 +48,7 @@
                                     </div>
                                     <br>
                                     <div>
-                                        <textarea class="commentpost" name="texto" maxlength="150" placeholder="Ingrese aquí su comentario..."></textarea>
+                                        <textarea class="commentpost" name="texto" maxlength="150" placeholder="Ingrese aquí su comentario..." required></textarea>
                                     </div>
                                     <br>
 
@@ -172,7 +172,7 @@
                         <input type="hidden" name="postid" value="{{ $unPost['id'] }} "></input>
 
                         <div class="comment-response-textarea">
-                            <textarea class="commentpost" name="comment" maxlength="150" placeholder="Grazna aqui..." rows="2"></textarea>
+                            <textarea class="commentpost" name="comment" maxlength="150" placeholder="Grazna aqui..." rows="2" required></textarea>
                         </div>
 
                         <div class="center-text">
