@@ -84,12 +84,11 @@
                                 </div>
                             </div>
 
+                        <!--
                             <div class="form-group row">
                                 <label for="email" class="col-md-4 col-form-label text-md-right"><strong>{{ __('E-Mail') }}</strong></label>
-
                                 <div class="col-md-8">
                                     <input id="email" type="email" class="form-control fs-1-5rem @error('email') is-invalid @enderror" name="email" value="{{ $usuarioActual['email'] }}" autocomplete="email">
-
                                     @error('email')
                                         <span class="invalid-feedback" role="alert">
                                             <strong>{{ $message }}</strong>
@@ -97,12 +96,12 @@
                                     @enderror
                                 </div>
                             </div>
-
+                        -->
                             <div class="form-group row">
                                 <label for="email" class="col-md-4 col-form-label text-md-right"><strong>{{ __('Descríbete') }}</strong></label>
 
                                 <div class="col-md-8">
-                                    <textarea name="bio" value="{{ old('bio') }}" maxlength="500" placeholder="Una pequeña descripción sobre tí..." autocomplete="bio">{{ $usuarioActual['bio'] }}</textarea>
+                                    <textarea name="bio" value="{{ old('bio') }}" maxlength="500" placeholder="Una pequeña descripción sobre tí..." autocomplete="bio" style="padding:4px;">{{ $usuarioActual['bio'] }}</textarea>
 
                                     @error('bio')
                                         <span class="invalid-feedback" role="alert">
@@ -118,7 +117,7 @@
                     <label for="fecha_nac" class="col-md-4 col-form-label text-md-right center-text"><b>{{ __('Fecha de Nacimiento') }}</b></label>
 
                             <div class="col-md-8">
-                                <input class="form-control" type="date" id="fecha_nac" name="fecha_nac" value="{{ $usuarioActual['fecha_nac'] }}" step="1" max="2002-12-31" required autocomplete="fecha_nac">
+                                <input class="form-control fs-1-5rem" type="date" id="fecha_nac" name="fecha_nac" value="{{ $usuarioActual['fecha_nac'] }}" step="1" max="2002-12-31" required autocomplete="fecha_nac">
                             </div>
                         </div>
                         <br>
