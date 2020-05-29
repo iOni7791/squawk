@@ -42,7 +42,8 @@ Route::get('/profile', 'UsersController@profile');
 Route::get('/logout', 'UsersController@logout');
 
 Route::get('/friends/{id?}', 'FriendsController@friends');
-Route::get('/addfriend/{id?}', 'FriendsController@addfriend');
+Route::get('/addfriend/{id?}', 'FriendsController@add');
+Route::get('/delfriend/{id?}', 'FriendsController@del');
 
 Auth::routes();
 // Route::get('/home', 'HomeController@index')->name('home');

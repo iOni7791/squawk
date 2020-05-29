@@ -61,7 +61,18 @@ class FriendsController extends Controller
         endif;
     }
 
-    public function addfriend($mid = 0){
+    public function add($mid = 0){
+        if (Auth::user()):
+            $activo = 2;
+            $amigo = new Friends();
+            $amigo->id_usuario =  Auth::user()->id;
+            $amigo->id_amigo = $mid;
+            $amigo->save();
+            return redirect('friends');
+        endif;
+    }
+
+    public function del($mid = 0){
         if (Auth::user()):
             $activo = 2;
             $amigo = new Friends();
