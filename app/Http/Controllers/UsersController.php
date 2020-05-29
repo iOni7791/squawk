@@ -89,7 +89,7 @@ class UsersController extends Controller
             $usuarioActual = Auth::user();
 
             $param = request();
-
+            //dd($param);
                 if ($param):
                     $archi = null;
                     if ($param->hasFile('imagen') and $param->file('imagen')->isValid()):
@@ -107,7 +107,6 @@ class UsersController extends Controller
 
                     //dd($param, $usuarioActual, $archi);
                     if ( $usuarioActual->save() && $archi )
-
                         $file = $imagen->storeAs('public/img/profiles', $archi);
                 endif;
                 return redirect('profile');

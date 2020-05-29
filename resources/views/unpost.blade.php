@@ -34,13 +34,12 @@
                         <a href="{{asset('storage/img/posts/'.$unPost['contenido_p'])}}" target="_blank"><img src="{{asset('storage/img/posts/'.$unPost['contenido_p'])}}"></a>
                     </div>
                         @if ($esuser)
-
                         <div class="post-actions center-text">
                             <div class="btn btn-success fs-1-5rem">
-                            <a href=".."> Editar Post <i class="fa fa-pencil-square" aria-hidden="true"></i></a>
+                            <a href="{{asset('editpost/'.$unPost['id'])}}"> Editar Post <i class="fa fa-pencil-square" aria-hidden="true"></i></a>
                             </div>
                             <div class="btn btn-dark fs-1-5rem">
-                                <a href="{{asset('borrarPost')}}"> Eliminar Post <i class="fa fa-trash" aria-hidden="true"></i></a>
+                                <a href="{{asset('deletePost/'.$unPost['id'])}}"> Eliminar Post <i class="fa fa-trash" aria-hidden="true"></i></a>
                             </div>
                         </div>
                         @endif

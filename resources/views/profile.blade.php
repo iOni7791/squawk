@@ -152,14 +152,14 @@
                         <div class="form-group row radios">
 
                             <div class="col-md-12 col-lg-5">
-                                <?php $check = ($usuarioActual['genero_id'] == '1') ? 'checked' : ''; ?>
+                                <?php $check = ($usuarioActual['genero_id'] == '1') ? 'checked="checked"' : ''; ?>
                                 <input type="radio" id="masc" name="genero" value="1" {{$check}} />
                                 <label for="masc"> Masculino</label>
                             </div>
                             <br>
-
                             <div class="col-md-12 col-lg-5">
-                                <input type="radio" id="fem" name="genero" value="2" {{$check}}" />
+                                <?php $check2 = ($usuarioActual['genero_id'] == '2') ? 'checked="checked"' : ''; ?>
+                                <input type="radio" id="fem" name="genero" value="2" {{$check2}}" />
                                 <label for="fem">Femenino</label>
                             </div>
                         </div>

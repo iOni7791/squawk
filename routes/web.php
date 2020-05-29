@@ -29,15 +29,18 @@ Route::get('/contact', 'PageController@contact');
 Route::get('/posts', 'PostsController@posts');
 Route::get('/unpost/{mid}', 'PostsController@unpost');
 
-Route::get('/editpost/{mid}', 'PostsController@editpost');
 
 Route::post('/addpost', 'PostsController@addpost');
+Route::get('/editpost/{mid}', 'PostsController@editpost');
+Route::post('/updpost', 'PostsController@updpost');
+Route::post('/delpost', 'PostsController@delpost');
+
 Route::post('/addcomment', 'PostsController@addcomment');
+Route::post('/delcomment', 'PostsController@delcomment');
 
 Route::get('/addlike/{postid}/{likeid}','PostsController@addLike')->name('addlike');
 
-Route::get('/nest', 'UsersController@nest');
-Route::get('/nest/{id}', 'UsersController@nest');
+Route::get('/nest/{id?}', 'UsersController@nest');
 Route::get('/profile', 'UsersController@profile');
 Route::post('/editdata', 'UsersController@editdata');
 Route::get('/passreset', 'UsersController@passreset');

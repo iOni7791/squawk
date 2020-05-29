@@ -56,7 +56,7 @@ class PostsController extends Controller
     public function unpost($mid)
     {
         $unPost =  Posts::where('id',$mid)->get()[0];
-        $esuser = $unPost['id'] == Auth::user()->id;
+        $esuser = $unPost['id_usuario'] == Auth::user()->id;
         if (Auth::user() && $unPost):
             //$user = Auth::user();
             //dd($unPost);
@@ -150,8 +150,9 @@ class PostsController extends Controller
     public function editpost($mid)
     {
         $unPost =  Posts::where('id',$mid)->get()[0];
+        $esmio = $unPost['id_usuario'] == Auth::user()->id;
 
-        if (Auth::user() && $unPost):
+        if (Auth::user() && $esmio):
             $user = Auth::user();
             //dd($unPost);
             $postUser = Posts::getUser($unPost['id_usuario'])[0];
@@ -172,7 +173,31 @@ class PostsController extends Controller
             //dd($unPost['likes']);
             return view('editpost',compact('activo', 'unPost', 'user'));
         else:
-            return redirect('posts');
+            return redirect('nest');
+        endif;
+    }
+
+    public function updpost(){
+        if (Auth::user()):
+                $usuarioActual = Auth::user();
+                $param = request();
+
+                $elPost = Posts::where('id', $param['postid'])->get()[0];
+
+                if ($param):
+                    $archi = null;
+                    if ($param->hasFile('imagen') and $param->file('imagen')->isValid()):
+                        $imagen = $param->imagen;
+                        $archi = uniqid().".".$param->imagen->extension();
+                        //dd($archi);
+                        $elPost->contenido_p = $archi;
+                    endif;
+//                    $elPost = new Posts();
+                    $elPost->descripcion = $param['texto'];
+                    if ( $elPost->save() && $archi )
+                        $file = $imagen->storeAs('public/img/posts', $archi);
+                endif;
+                return redirect('nest');
         endif;
     }
 

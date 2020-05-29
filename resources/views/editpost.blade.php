@@ -5,7 +5,7 @@
     <div class="main-container">
         <section class="main-title-container title-fixed-container">
             <h1 class="text-center">
-               
+
                 <a href=".."><span title="Volver a Posts"><i class="fa fa-arrow-circle-left fixed-return" aria-hidden="true"></i></span></a>
                 Editar Post
             </h1>
@@ -22,9 +22,11 @@
                         <em>Publicado: {{ $unPost['created_at']->format('d/m/Y H:m:s') }}</em></p>
                     </div>
                 </div>
-                <form method="POST" class="p0" action="addpost" enctype="multipart/form-data">
+
+                <form method="POST" class="p0" action="{{asset('updpost')}}" enctype="multipart/form-data">
                     @csrf
                     <br>
+                    <input type="hidden" name="postid" value="{{$unPost['id']}}">
                     <h3 class="center-text">Descripción</h3>
                     <div class="row py-4 p0">
                         <div class="col-lg-12 mx-auto p0">
