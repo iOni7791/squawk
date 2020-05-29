@@ -34,11 +34,24 @@ class FriendsController extends Controller
             $usuarioActual['friendsnro'] = $friendslist->count();
             foreach($friendslist as $pos=>$unuser):
                 $friendslist[$pos]['usuario'] = User::where('id', $unuser['id_amigo'])->get()[0];
-                $friendslist[$pos]['friendsno'] = Friends::all()->where('id_usuario', $friendslist[$pos]['usuario']['id'])->count();
-                $friendslist[$pos]['friendsme'] = Friends::all()
+
+                $friendslist[$pos]['friendsno'] = Friends::all()
                                                     ->where('id_usuario', $friendslist[$pos]['usuario']['id'])
-                                                    ->where('id_amigo',  Auth::user()->id)
                                                     ->count();
+
+                $susamigos = Friends::all()
+                                ->where('id_usuario', $friendslist[$pos]['usuario']['id'])
+                                ->where('id_amigo',  Auth::user()->id);
+
+                $friendslist[$pos]['friendsme'] = $susamigos->count();
+
+                $cuantos = Friends::all()->where('id_amigo', $unuser['id_amigo'])
+                            ->where('id_usuario',  Auth::user()->id)
+                            ->count();
+                            //dd($cuantos);
+                $friendslist[$pos]['esamigo'] =  $cuantos == 1;
+
+                $friendslist[$pos]['soyyo'] =  $friendslist[$pos]['usuario']['id'] == Auth::user()->id;
             endforeach;
             $usuarioActual['friends'] = $friendslist;
             //dd($usuarioActual['friends']);
