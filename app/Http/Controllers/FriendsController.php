@@ -71,4 +71,5 @@ class FriendsController extends Controller
             return redirect('friends');
         endif;
     }
+
 }
