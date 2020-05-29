@@ -49,7 +49,7 @@
                 <!--Si estás viendo el perfil de otro usuario-->
 <!--                <div class="center-text">
                     <a href="addfriend"> <button class="btn btn-success fs-1-5rem">Agregar amigo <i class="fa fa-user-plus" aria-hidden="true"></i></button></a>
-                </div>
+                </div>   
                 <br>
             -->                <!--Si este usuario ya es tu amigo--> <!--
                 <div class="center-text">
