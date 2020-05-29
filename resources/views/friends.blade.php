@@ -44,7 +44,6 @@
         <section class="main-index-container"> <!--Acá irían los resultados pero que de principio cargue los amigos que ya tenés-->
         <!--y que tras buscar regargue o limpie, no se, y te muestre una lista de perfiles que coinciden con la búsqueda-->
             <div class="friends-container">
-<<<<<<< HEAD
                 @foreach ($usuarioActual['friends'] as $item)
                     <div class="friends">
                         <div class="friend-profile-picture">
@@ -59,35 +58,6 @@
                             <em>{{$item['friendsno']}} amigos</em><br>
                             <em>{{$item['friendsme']}} amigos en com&uacute;n</em>
                         </div>
-=======
-                <div class="friends">
-                    <div class="friend-profile-picture">
-                        <a href="nest"><img src="storage/img/pfp-default.png" alt="NombreDePerfil"></a>
-                    </div>
-                    <div class="friend-username">
-                        <p><a href="nest"><strong> Amigo1</strong></a> <a href="addfriend"><i class="fa fa-user-plus" aria-hidden="true"></i></a> </p>
-                        <em>XXX amigos en com&uacute;n</em>
-                    </div>
-                </div>
-
-                <div class="friends">
-                    <div class="friend-profile-picture">
-                        <a href="nest"><img src="storage/img/pfp-default.png" alt="NombreDePerfil"></a>
-                    </div>
-                    <div class="friend-username">
-                        <p><a href="nest"><strong>Amigo2</strong></a> <a href="addfriend"><i class="fa fa-user-plus" aria-hidden="true"></i></a></p>
-                        <em>XXX amigos en com&uacute;n</em>
-                    </div>
-                </div>
-
-                <div class="friends">
-                    <div class="friend-profile-picture">
-                        <a href="neste"><img src="storage/img/pfp-default.png" alt="NombreDePerfil"></a>
-                    </div>
-                    <div class="friend-username">
-                        <p><a href="nest"><strong> Amigo3</strong></a> <a href="addfriend"><i class="fa fa-user-plus" aria-hidden="true"></i></a></p>
-                        <em>XXX amigos en com&uacute;n</em>
->>>>>>> 74e789c1adc216a2600ee2a29fbf6d2ebb651ace
                     </div>
                 @endforeach
             </div>
