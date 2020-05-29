@@ -86,8 +86,7 @@
                                 </a>
                             </h2>
                             </div>
-                        <div class="actions-container center-text">
-
+                        <div class="actions-container center-text" id="likes{{$unPost['id']}}">
                             @foreach($unPost['likes'] as $unLike)
                             <span class="info">
                                 <i class="{{$unLike->fa}} reaction" aria-hidden="true"></i>

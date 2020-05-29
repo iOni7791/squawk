@@ -56,7 +56,7 @@
                         Una descripci&oacute;n de mi posteo! Me extiendo lo suficinente como para ver el ancho del cuadro de texto!
                     </div>
                     -->
-                    <div class="actions-container center-text">
+                    <div class="actions-container center-text"  id="likes{{$unPost['id']}}">
 
                         @foreach($unPost['likes'] as $unLike)
                                 <a class="action" href="{{ route('addlike',['postid'=>$unPost['id'], 'likeid'=>$unLike->id]) }}">
