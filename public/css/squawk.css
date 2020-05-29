@@ -852,6 +852,11 @@ ul.no-deco {
     z-index: 0;
 }
 
+.reset-pass-email
+{
+    display: none;
+}
+
 /**faq**/
 
 .faq-actions

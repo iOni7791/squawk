@@ -26,21 +26,6 @@
             </h1>
         </section>
 
-        <!-- <section class="main-index-container">
-
-            <h3 class="center-text"><strong>Busca nuevos amigos!</strong></h3>
-            <form action="searchFriends">
-                <div class="input-group">
-                    <input type="text" class="form-control fs-1-5rem" placeholder="Ingresa un nombre aquí">
-                    <div class="search-but input-group-append">
-                        <button class="btn btn-secondary" type="submit">
-                            <i class="fa fa-search"></i>
-                        </button>
-                    </div>
-                </div>
-            </form>
-        </section> -->
-
         <section class="main-index-container"> <!--Acá irían los resultados pero que de principio cargue los amigos que ya tenés-->
         <!--y que tras buscar regargue o limpie, no se, y te muestre una lista de perfiles que coinciden con la búsqueda-->
             <div class="friends-container">
