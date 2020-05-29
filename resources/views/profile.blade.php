@@ -29,7 +29,7 @@
 
             <!-- Datos de la cuenta -->
             <section class="main-profile-container">
-                <form action="editphoto" method="POST" enctype="multipart/form-data">
+                <form action="editdata" method="POST" enctype="multipart/form-data">
                 @csrf
                     <legend class="center-text">
                         <strong> Datos de la cuenta </strong>
@@ -64,13 +64,13 @@
                                 </div>
                             </div>
                             <br>
-
+<!--
                             <!--<label for="img">
                                 Subir una imagen
                                 <label class="btn btn-success fs-1-5rem">
                                     Buscar <input type="file" id="img" name="img" accept="image/*" style="display: none;">
                                 </label>
-                            </label> <br>-->
+                            </label> <br>
 
                             <div class="center-text">
                                 <button class="btn btn-primary fs-1-5rem" type="submit">Actualizar</button>
@@ -85,7 +85,7 @@
 
             <section class="main-profile-container">
                 <form action="editdata" method="POST">
-
+                -->
                     <!-- Datos personales -->
                     <fieldset class="center-text">
                         <div class="form-text" class="row">
@@ -119,10 +119,13 @@
                             </div>
                         -->
                             <div class="form-group row">
-                                <label for="email" class="col-md-4 col-form-label text-md-right"><strong>{{ __('Descríbete') }}</strong></label>
+                                <label for="bio" class="col-md-4 col-form-label text-md-right">
+                                    <strong>{{ __('Descríbete') }}</strong>
+                                </label>
 
                                 <div class="col-md-8">
-                                    <textarea name="bio" value="{{ old('bio') }}" maxlength="500" placeholder="Una pequeña descripción sobre tí..." autocomplete="bio" style="padding:4px;">{{ $usuarioActual['bio'] }}</textarea>
+                                    <textarea name="bio" value="{{ old('bio') }}" maxlength="500" placeholder="Una pequeña descripción sobre tí..." autocomplete="bio" style="padding:4px;">{{ $usuarioActual['bio'] }}
+                                    </textarea>
 
                                     @error('bio')
                                         <span class="invalid-feedback" role="alert">
@@ -149,13 +152,14 @@
                         <div class="form-group row radios">
 
                             <div class="col-md-12 col-lg-5">
-                                <input type="radio" id="masc" name="genero" value="1" checked="{{ $usuarioActual['genero_id'] == 1 ? 'checked' : ''}}" />
+                                <?php $check = ($usuarioActual['genero_id'] == '1') ? 'checked' : ''; ?>
+                                <input type="radio" id="masc" name="genero" value="1" {{$check}} />
                                 <label for="masc"> Masculino</label>
                             </div>
                             <br>
 
                             <div class="col-md-12 col-lg-5">
-                                <input type="radio" id="fem" name="genero" value="2" checked="{{ $usuarioActual['genero_id'] === 2 ? 'checked' : '' }}" />
+                                <input type="radio" id="fem" name="genero" value="2" {{$check}}" />
                                 <label for="fem">Femenino</label>
                             </div>
                         </div>
