@@ -29,7 +29,7 @@
 
             <!-- Datos de la cuenta -->
             <section class="main-profile-container">
-                <form action="profile" method="POST" enctype="multipart/form-data">
+                <form action="editphoto" method="POST" enctype="multipart/form-data">
                 @csrf
                     <legend class="center-text">
                         <strong> Datos de la cuenta </strong>
@@ -46,7 +46,7 @@
 
                             <!-- Vista previa imagen a subir -->
                             <!--<p class="text-white text-center"> <b> Vista Previa </b></p>-->
-                            
+
                             <div class="image-area mt-4 p0 pfp-upload-preview">
                                 <div class="new-pfp">
                                     <img id="imageResult" src="storage/img/profiles/{{$usuarioActual['imagen']}}" alt="Tu foto de perfil" class="img-fluid shadow-sm mx-auto d-block">
@@ -62,7 +62,7 @@
                                         </label>
                                     </div>
                                 </div>
-                            </div> 
+                            </div>
                             <br>
 
                             <!--<label for="img">
@@ -84,7 +84,7 @@
             <br>
 
             <section class="main-profile-container">
-                <form action="editProfile" method="POST">
+                <form action="editdata" method="POST">
 
                     <!-- Datos personales -->
                     <fieldset class="center-text">
