@@ -47,7 +47,7 @@ class UsersController extends Controller
 
         if (Auth::user()):
             $activo = 1;
-            if ($user == 0):
+            if ($muser == 0):
                 $usuarioActual = User::where('id', Auth::user()->id )->get()[0];
             else:
                 $usuarioActual = User::where('id', $muser)->get()[0];

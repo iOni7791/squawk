@@ -111,7 +111,7 @@
                             </a>
                         </li>
                         <li>
-                            <a class="{{ $activo == 2 ? "active":"" }} fs-1-5rem border-black" href="{{asset('friends')}}"> Amigos <br>
+                            <a class="{{ $activo == 2 ? "active":"" }} fs-1-5rem border-black" href="{{asset('friends/0')}}"> Amigos <br>
                                 <span title="Tus amigos, los buitres">
                                     <i class="fa fa-users" aria-hidden="true"></i>
                                 </span>

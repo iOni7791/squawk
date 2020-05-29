@@ -39,9 +39,8 @@ Route::get('/addlike/{postid}/{likeid}','PostsController@addLike')->name('addlik
 Route::get('/nest', 'UsersController@nest');
 Route::get('/nest/{id}', 'UsersController@nest');
 Route::get('/profile', 'UsersController@profile');
-Route::get('/friends', 'FriendsController@friends');
 Route::get('/logout', 'UsersController@logout');
-
+Route::get('/friends/{id?}', 'FriendsController@friends');
 
 Auth::routes();
 // Route::get('/home', 'HomeController@index')->name('home');

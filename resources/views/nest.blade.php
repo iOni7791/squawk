@@ -16,7 +16,8 @@
                 <div class="pfp-container">
                     <div class="profile-nest center-text">
                         <div class="profile-nest-pfp">
-                            <img src="{{asset('storage/img/profiles/'.$usuarioActual['imagen'])}}" alt="Tu foto de perfil"> <br>
+                            <?php $aaa = ($usuarioActual['imagen'] ) ? ($usuarioActual['imagen']) : 'pfp-default.png'; ?>
+                            <img src="{{asset('storage/img/profiles/'.$aaa)}}" alt="Tu foto de perfil"> <br>
                         </div>
                         <br>
                         <div class="user-personal-info">
@@ -27,7 +28,7 @@
                                 <br>
                                 <strong> Usuario desde: </strong> {{$usuarioActual['created_at']->format('d/m/Y')}}
                                 <br>
-                                <a href="friends"><strong>{{$usuarioActual['friendsnro']}} amigos buitres</strong></a>
+                                <a href="{{asset('friends/'.$usuarioActual['id'])}}"><strong>{{$usuarioActual['friendsnro']}} amigos buitres</strong></a>
                                 <br>
                                 <strong>{{$usuarioActual['postsCount']}} posts graznados </strong>
                             </span>
@@ -69,7 +70,8 @@
                     <article class="post-container">
                         <div class="post-info-container">
                             <div class="post-profile-picture">
-                                <img src="{{asset('storage/img/profiles/'.$unPost['postImg'])}}" alt="{{$unPost['postUser']}}">
+                                <?php $aaa = ($unPost['postImg'] ) ? ($unPost['postImg']) : 'pfp-default.png'; ?>
+                                <img src="{{asset('storage/img/profiles/'.$aaa)}}" alt="{{$unPost['postUser']}}">
                             </div>
                             <div class="post-user-time-container">
                                 <p><strong>{{$unPost['postUser']}}</strong><br>

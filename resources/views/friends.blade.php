@@ -10,8 +10,9 @@
                     <b class="fs-1-5rem"><h1>{{$usuarioActual['posts']}}</h1> posts <br> graznados </b>
                 </div>
                 <div class="banner profile-banner-picture">
-                    <img src="storage/img/profiles/{{$usuarioActual['imagen']}}" alt="Tu foto de perfil"> <br>
-                    <b class="fs-1-5rem"><a href="nest">{{$usuarioActual['name']}}</a></b>
+                    <?php $aaa = ($usuarioActual['imagen']) ? ($usuarioActual['imagen']) : 'pfp-default.png'; ?>
+                    <img src="{{asset('storage/img/profiles/'.$usuarioActual['imagen'])}}" alt="Tu foto de perfil"> <br>
+                    <b class="fs-1-5rem"><a href="{{asset('nest/'.$usuarioActual['id'])}}">{{$usuarioActual['name']}}</a></b>
                 </div>
                 <div class="banner user-reactions">
                     <b class="fs-1-5rem"><h1>{{$usuarioActual['friendsnro']}}</h1>amigos <br> buitres</b>
@@ -43,36 +44,22 @@
         <section class="main-index-container"> <!--Acá irían los resultados pero que de principio cargue los amigos que ya tenés-->
         <!--y que tras buscar regargue o limpie, no se, y te muestre una lista de perfiles que coinciden con la búsqueda-->
             <div class="friends-container">
-                <div class="friends">
-                    <div class="friend-profile-picture">
-                        <a href="nest"><img src="storage/img/pfp-default.png" alt="NombreDePerfil"></a>
-                    </div>
-                    <div class="friend-username">
-                        <p><a href="nest">Amigo1</a> <a href="addfriend"><i class="fa fa-user-plus" aria-hidden="true"></i></a> </p>
-                        <em>XXX amigos en com&uacute;n</em>
-                    </div>
-                </div>
+                @foreach ($usuarioActual['friends'] as $item)
+                    <div class="friends">
+                        <div class="friend-profile-picture">
 
-                <div class="friends">
-                    <div class="friend-profile-picture">
-                        <a href="nest"><img src="storage/img/pfp-default.png" alt="NombreDePerfil"></a>
-                    </div>
-                    <div class="friend-username">
-                        <p><a href="nest">Amigo2</a> <a href="addfriend"><i class="fa fa-user-plus" aria-hidden="true"></i></a></p>
-                        <em>XXX amigos en com&uacute;n</em>
-                    </div>
-                </div>
+                            <a href="{{asset('nest/'.$item['usuario']['id'])}}">
+                                <?php $aaa = ($item['usuario']['imagen']) ? ($item['usuario']['imagen']) : 'pfp-default.png'; ?>
 
-                <div class="friends">
-                    <div class="friend-profile-picture">
-                        <a href="neste"><img src="storage/img/pfp-default.png" alt="NombreDePerfil"></a>
+                                <img src="{{asset('storage/img/profiles/'.$aaa)}}" alt="NombreDePerfil"></a>
+                        </div>
+                        <div class="friend-username">
+                            <p><a href="{{asset('nest/'.$item['usuario']['id'])}}">{{$item['usuario']['name']}}</a> <a href="addfriend"><i class="fa fa-user-plus" aria-hidden="true"></i></a> </p>
+                            <em>{{$item['friendsno']}} amigos</em><br>
+                            <em>{{$item['friendsme']}} amigos en com&uacute;n</em>
+                        </div>
                     </div>
-                    <div class="friend-username">
-                        <p><a href="nest">Amigo3</a> <a href="addfriend"><i class="fa fa-user-plus" aria-hidden="true"></i></a></p>
-                        <em>XXX amigos en com&uacute;n</em>
-                    </div>
-                </div>
-
+                @endforeach
             </div>
         </section> <!-- Main-index-container -->
 
