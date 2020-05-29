@@ -175,6 +175,7 @@
                 <form action="editProfile" method="POST">
 
                     <div class="form-group row">
+                <!--
                         <label for="password" class="col-md-4 col-form-label text-md-right center-text">
                             <strong> {{ __('Contraseña') }} </strong>
                         </label>
@@ -193,14 +194,15 @@
                         <label for="password-confirm" class="col-md-4 col-form-label text-md-right center-text">
                             <strong> {{ __('Confirmar contraseña') }} </strong>
                         </label>
-
                         <div class="col-md-8">
                             <input id="password-confirm" type="password" class="form-control" name="password_confirmation" autocomplete="new-password">
                         </div>
                     </div>
                     <br>
-                    <div class="col-md-12 col-lg-12 center-text">
-                        <button class="btn btn-primary fs-1-5rem" type="submit">Cambiar contraseña</button>
+                --> <div class="col-md-12 col-lg-12 center-text">
+                        <a href="passreset"
+                            <button class="btn btn-primary fs-1-5rem" type="submit">Cambiar contraseña</button>
+                        </a>
                     </div>
                 </form>
             </section> <!-- Main-profile-container -->
@@ -209,7 +211,7 @@
             <section class="main-profile-container center-text">
                 <form action="deleteAccount" method="POST">
                 <br>
-                    <button class="btn btn-danger fs-1-5rem" type="submit"> Borrar Cuenta<i class="fa fa-ban" aria-hidden="true"></i></button>
+                    <button class="btn btn-danger fs-1-5rem" type="button"> Borrar Cuenta<i class="fa fa-ban" aria-hidden="true"></i></button>
                 </form>
             </section>
 

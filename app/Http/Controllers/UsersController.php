@@ -115,5 +115,15 @@ class UsersController extends Controller
 
         endif;
     }
+    public function passreset()
+    {
+        $token = "";
+        $activo = 4;
 
+        if (Auth::user()):
+            return view('auth.passwords.reset', compact('token', 'activo'));
+        else:
+            return redirect('profile');
+        endif;
+    }
 }

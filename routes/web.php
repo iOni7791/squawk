@@ -39,8 +39,8 @@ Route::get('/addlike/{postid}/{likeid}','PostsController@addLike')->name('addlik
 Route::get('/nest', 'UsersController@nest');
 Route::get('/nest/{id}', 'UsersController@nest');
 Route::get('/profile', 'UsersController@profile');
-//Route::post('/editphoto', 'UsersController@editphoto');
 Route::post('/editdata', 'UsersController@editdata');
+Route::get('/passreset', 'UsersController@passreset');
 Route::get('/logout', 'UsersController@logout');
 
 Route::get('/friends/{id?}', 'FriendsController@friends');
