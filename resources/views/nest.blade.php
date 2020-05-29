@@ -95,7 +95,7 @@
                             </span>
                             @endforeach
                             <a class="action reaction" href="{{asset('unpost/'.$unPost['id'])}}">
-                                <i class="fa fa-comment-o reaction" aria-hidden="true"></i><br>{{count($unPost['coms'])}}
+                                <i class="fa fa-comment-o reaction" aria-hidden="true"></i>{{count($unPost['coms'])}}
                             </a>
                         </div>
                         @if($esuser)

@@ -19,7 +19,7 @@
                         para el curso de <strong><u> Desarrollo Web Fullstack</u></strong> de <strong> <a href="https://www.digitalhouse.com/">Digital House</a></strong>.
                         <br>
                         <br>
-                        <h3 class="text-center">Por ahora, y hasta el día de hoy, aca va el dia fechaCastellano ($diaBase), el proyecto cuenta con las siguientes maquetas:</h3><br>
+                        <h3 class="text-center">Por ahora, y hasta el día de hoy, el proyecto cuenta con las siguientes p&aacute;ginas:</h3><br>
                         <ul class="no-deco text-center">
                             <li><a href="./">Inicio</a></li>
                             <li><a href="miregister">Registro</a></li>
@@ -27,7 +27,6 @@
                             <li><a href="profile">Perfil</a></li>
                             <li><a href="faq">F.A.Q.</a></li>
                             <li><a href="contact">Contacto</a></li>
-                            <li><a href="newPost">Nuevos post</a></li>
                             <li><a href="posts">Posteos</a></li>
                             <li><a href="friends">Amigos (En progreso...)</a></li>
                         </ul>
@@ -42,14 +41,14 @@
                 <!-- login/register-buttons -->
                 <div class="center-text button-element">
                     <p class="opcion-index"> Si no ten&eacute;s una cuenta, pod&eacute;s registrarte ac&aacute; </p> <br>
-                    <a href="miregister"><button class="boton-index btn btn-primary fs-1-5rem"> Registrar </button></a>
+                    <a href="miregister"><button class="boton-index btn btn-primary fs-1-5rem"><b>Registrar</b> <i class="fa fa-user-plus" aria-hidden="true"></i></button></a>
                 </div> <br>
 
                 <span class="divisor"></span>
 
                 <div class="center-text button-element">
                    <p class="opcion-index"> Si ya ten&eacute;s una cuenta, pod&eacute;s ingresar ac&aacute; </p> <br>
-                   <a href="milogin"><button class="boton-index btn btn-success fs-1-5rem"> Login </button></a>
+                   <a href="milogin"><button class="boton-index btn btn-success fs-1-5rem"><b>Login</b> <i class="fa fa-sign-in" aria-hidden="true"></i></button></a>
                 </div>
             </section> <!-- Main-signup-container -->
         </div> <!-- Main-container -->

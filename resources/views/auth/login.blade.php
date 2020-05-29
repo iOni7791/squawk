@@ -61,7 +61,7 @@
                 <div class="form-group row mb-0">
                     <div class="col-md-8 offset-md-2 center-text">
                         <button type="submit" class="btn btn-primary fs-1-5rem">
-                            {{ __('Ingresar') }}
+                            {{ __('Ingresar') }} <i class="fa fa-sign-in fs-1-5rem" aria-hidden="true"></i>
                         </button>
                         <br> <br>
                         @if (Route::has('password.request'))
