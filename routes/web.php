@@ -40,7 +40,9 @@ Route::get('/nest', 'UsersController@nest');
 Route::get('/nest/{id}', 'UsersController@nest');
 Route::get('/profile', 'UsersController@profile');
 Route::get('/logout', 'UsersController@logout');
+
 Route::get('/friends/{id?}', 'FriendsController@friends');
+Route::get('/addfriend/{id?}', 'FriendsController@addfriend');
 
 Auth::routes();
 // Route::get('/home', 'HomeController@index')->name('home');

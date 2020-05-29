@@ -48,8 +48,8 @@ class FriendsController extends Controller
                 $cuantos = Friends::all()->where('id_amigo', $unuser['id_amigo'])
                             ->where('id_usuario',  Auth::user()->id)
                             ->count();
-                            //dd($cuantos);
-                $friendslist[$pos]['esamigo'] =  $cuantos == 1;
+
+                            $friendslist[$pos]['esamigo'] =  $cuantos == 1;
 
                 $friendslist[$pos]['soyyo'] =  $friendslist[$pos]['usuario']['id'] == Auth::user()->id;
             endforeach;
@@ -61,4 +61,14 @@ class FriendsController extends Controller
         endif;
     }
 
+    public function addfriend($mid = 0){
+        if (Auth::user()):
+            $activo = 2;
+            $amigo = new Friends();
+            $amigo->id_usuario =  Auth::user()->id;
+            $amigo->id_amigo = $mid;
+            $amigo->save();
+            return redirect('friends');
+        endif;
+    }
 }

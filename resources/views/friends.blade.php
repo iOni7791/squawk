@@ -56,7 +56,7 @@
                         <div class="friend-username">
                             <p><a href="{{asset('nest/'.$item['usuario']['id'])}}">{{$item['usuario']['name']}}</a>
                                 @unless ($item['soyyo'] or $item['esamigo'])
-                                    <a href="addfriend"><i class="fa fa-user-plus" aria-hidden="true"></i></a>
+                                    <a href="{{asset('addfriend/'.$item['usuario']['id'])}}"><i class="fa fa-user-plus" aria-hidden="true"></i></a>
                                 @endif
                             </p>
                             <em>{{$item['friendsno']}} amigos</em><br>
