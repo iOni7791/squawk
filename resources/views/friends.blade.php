@@ -48,15 +48,15 @@
                     <div class="friends">
                         <div class="friend-profile-picture">
 
-                            <a href="{{asset('nest/'.$item['usuario']['id'])}}">
+                            <a href="{{asset('nest/'.$item['usuario']['id'])}}">  
                                 <?php $aaa = ($item['usuario']['imagen']) ? ($item['usuario']['imagen']) : 'pfp-default.png'; ?>
 
                                 <img src="{{asset('storage/img/profiles/'.$aaa)}}" alt="NombreDePerfil"></a>
                         </div>
                         <div class="friend-username">
-                            <p><a href="{{asset('nest/'.$item['usuario']['id'])}}">{{$item['usuario']['name']}}</a>
+                            <p><a href="{{asset('nest/'.$item['usuario']['id'])}}">{{$item['usuario']['name']}}</a> <span title="Borrar Amigo"><a href="deletefriend"><i class="fa fa-trash" aria-hidden="true"></i></a></span>
                                 @unless ($item['soyyo'] or $item['esamigo'])
-                                    <a href="{{asset('addfriend/'.$item['usuario']['id'])}}"><i class="fa fa-user-plus" aria-hidden="true"></i></a>
+                                    <span title="Agregar Amigo"><a href="{{asset('addfriend/'.$item['usuario']['id'])}}"><i class="fa fa-user-plus" aria-hidden="true"></i></a></span>
                                 @endif
                             </p>
                             <em>{{$item['friendsno']}} amigos</em><br>

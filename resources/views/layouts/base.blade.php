@@ -68,7 +68,7 @@
                     @guest
                         <li>
                             <a class="{{ $activo == 1 ? "active":"" }} fs-1-5rem border-black" href="./"> Inicio <br>
-                                <span title="De vuelta al nido">
+                                <span title="SQUAWK!">
                                     <i class="fa fa-home" aria-hidden="true"></i>
                                 </span>
                             </a>
@@ -104,7 +104,7 @@
                     @endguest
                     @auth
                         <li>
-                            <a class="{{ $activo == 1 ? "active":"" }} fs-1-5rem border-black" href="{{asset('nest')}}"> Nido <br>
+                            <a class="{{ $activo == 1 ? "active":"" }} fs-1-5rem border-black" href="{{asset('nest')}}"> Mi Nido <br>
                                 <span title="Tu nido">
                                     <i class="fa fa-home" aria-hidden="true"></i>
                                 </span>
