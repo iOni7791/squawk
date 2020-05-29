@@ -744,10 +744,12 @@ ul.no-deco {
 }
 
 .friends {
-    width: 33%;
+    width: 49.5%;
     border-radius: 1rem;
     display: flex;
+    flex-wrap: wrap;
     justify-content: flex-start;
+    align-items: flex-end;
     padding: 0.5rem;
     background-color: #0c5ca1;
     margin-bottom: 0.5rem;
@@ -757,7 +759,9 @@ ul.no-deco {
     .friends {
         width: 100%;
         display: flex;
+        flex-wrap: wrap;
         justify-content: flex-start;
+        align-items: flex-end;
         padding: 0.5rem;
         background-color: #0c5ca1;
         margin-bottom: 0.5rem;
@@ -768,15 +772,45 @@ ul.no-deco {
     .friends {
         width: 49.5%;
         display: flex;
+        flex-wrap: wrap;
         justify-content: flex-start;
+        align-items: flex-end;
         padding: 0.5rem;
         background-color: #0c5ca1;
         margin-bottom: 0.5rem;
     }
 }
 
-.friends:nth-last-of-type(1) {
+.friend-profile
+{
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.friends:nth-child(3n) {
     margin-right: none;
+}
+
+.delete-friend
+{
+    display: block;
+    width: 100%;
+    margin: 0.5rem 0 0.2rem;
+}
+
+.friend-button-container
+{
+    
+    display: block;
+    width: 100%;
+}
+
+.friend-info
+{
+    width: 100%;
+    padding: 0.2rem;
 }
 
 .friend-profile-picture,
