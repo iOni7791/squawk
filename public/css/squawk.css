@@ -744,7 +744,7 @@ ul.no-deco {
 }
 
 .friends {
-    width: 32%;
+    width: 49.5%;
     border-radius: 1rem;
     display: flex;
     flex-wrap: wrap;
@@ -802,6 +802,7 @@ ul.no-deco {
 
 .friend-button-container
 {
+    
     display: block;
     width: 100%;
 }

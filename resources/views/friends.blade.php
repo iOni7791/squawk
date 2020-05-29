@@ -45,56 +45,41 @@
         <!--y que tras buscar regargue o limpie, no se, y te muestre una lista de perfiles que coinciden con la búsqueda-->
             <div class="friends-container">
                 @foreach ($usuarioActual['friends'] as $item)
-                    <div class="friends">
-                        <div class="friend-profile">
-                            <div class="friend-profile-picture">
-
-                                <a href="{{asset('nest/'.$item['usuario']['id'])}}">  
-                                    <?php $aaa = ($item['usuario']['imagen']) ? ($item['usuario']['imagen']) : 'pfp-default.png'; ?>
-
-                                    <img src="{{asset('storage/img/profiles/'.$aaa)}}" alt="NombreDePerfil"></a>
-                            </div>
-                            <div class="friend-username">
-                                <p><a href="{{asset('nest/'.$item['usuario']['id'])}}">{{$item['usuario']['name']}}</a>
-                                    <!-- @unless ($item['soyyo'] or $item['esamigo'])
-                                        <span title="Agregar Amigo"><a href="{{asset('addfriend/'.$item['usuario']['id'])}}"><i class="fa fa-user-plus" aria-hidden="true"></i></a></span>
-                                    @endif -->
-                                </p>
-                            </div>
-                        </div>
-                        <br>
-                        
-                        <div class="friend-info">
-                            <a href="{{asset('nest/'.$item['usuario']['id'])}}">
+                <div class="friends">
+                    <div class="friend-profile">
+                        <div class="friend-profile-picture">
+                            <a href="{{asset('nest/'.$item['usuario']['id'])}}">  
                                 <?php $aaa = ($item['usuario']['imagen']) ? ($item['usuario']['imagen']) : 'pfp-default.png'; ?>
-                                <img src="{{asset('storage/img/profiles/'.$aaa)}}" alt="NombreDePerfil"></a>
+
+                                <img src="{{asset('storage/img/profiles/'.$aaa)}}" alt="NombreDePerfil">
+                            </a>
                         </div>
                         <div class="friend-username">
-                            <p><a href="{{asset('nest/'.$item['usuario']['id'])}}">{{$item['usuario']['name']}}</a>
-                                @unless ($item['soyyo'] or $item['esamigo'])
-                                    <span title="Agregar Amigo"><a href="{{asset('addfriend/'.$item['usuario']['id'])}}"><i class="fa fa-user-plus" aria-hidden="true"></i></a></span>
-                                @endunless
-                                @if(Auth::user()->id == $usuarioActual['id'])
-                                    <span title="Borrar Amigo"> <a href="{{asset('delfriend/'.$item['usuario']['id'])}}"><i class="fa fa-trash" aria-hidden="true"></i></a></span>
-                                @endif
+                            <p>
+                                <a href="{{asset('nest/'.$item['usuario']['id'])}}">{{$item['usuario']['name']}}</a>
                             </p>
-                            <em>{{$item['friendsno']}} amigos</em><br>
-                            <em>{{$item['friendsme']}} amigos en com&uacute;n</em>
-                            @unless ($item['soyyo'] or $item['esamigo'])
-                            <a href="{{asset('addfriend/'.$item['usuario']['id'])}}"  class="delete-friend">                  
-                                <span title="Agregar Amigo" class="btn btn-success fs-1-5rem delete-friend">
-                                    Agregar Amigo <i class="fa fa-user-plus" aria-hidden="true"></i>
-                                </span>
-                            </a>
-                            @endif
-                            <a href="deletefriend" class="delete-friend">
-                                <span class="btn btn-dark fs-1-5rem delete-friend">
-                                    Borrar Amigo <i class="fa fa-trash" aria-hidden="true"></i>
-                                </span>
-                            </a>
                         </div>
                     </div>
-                    
+                    <br>
+                    <div class="friend-info"> 
+                        <em>{{$item['friendsno']}} amigos</em><br>
+                        <em>{{$item['friendsme']}} amigos en com&uacute;n</em>
+                        @unless ($item['soyyo'] or $item['esamigo'])
+                        <a href="{{asset('addfriend/'.$item['usuario']['id'])}}"  class="delete-friend">                  
+                            <span title="Agregar Amigo" class="btn btn-success fs-1-5rem delete-friend">
+                                Agregar Amigo <i class="fa fa-user-plus" aria-hidden="true"></i>
+                            </span>
+                        </a>                            
+                        @endunless
+                        @if(Auth::user()->id == $usuarioActual['id'])
+                        <a href="{{asset('delfriend/'.$item['usuario']['id'])}}" class="delete-friend">
+                            <span class="btn btn-dark fs-1-5rem delete-friend">
+                                Borrar Amigo <i class="fa fa-trash" aria-hidden="true"></i>
+                            </span>
+                        </a>
+                        @endif 
+                    </div>
+                </div>
                 @endforeach
             </div>
         </section> <!-- Main-index-container -->
