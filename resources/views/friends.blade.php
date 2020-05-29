@@ -26,7 +26,7 @@
             </h1>
         </section>
 
-        <section class="main-index-container">
+        <!-- <section class="main-index-container">
 
             <h3 class="center-text"><strong>Busca nuevos amigos!</strong></h3>
             <form action="searchFriends">
@@ -39,7 +39,7 @@
                     </div>
                 </div>
             </form>
-        </section>
+        </section> -->
 
         <section class="main-index-container"> <!--Acá irían los resultados pero que de principio cargue los amigos que ya tenés-->
         <!--y que tras buscar regargue o limpie, no se, y te muestre una lista de perfiles que coinciden con la búsqueda-->

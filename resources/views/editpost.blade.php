@@ -53,10 +53,10 @@
 
                             <div class="edit-actions center-text">
                                 <div class="center-text">
-                                    <button class="btn btn-primary fs-1-5rem border-white" type="submit"> Postear! </button>
+                                    <button class="btn btn-primary fs-1-5rem border-white" type="submit"> Postear! <i class="fa fa-check-square" aria-hidden="true"></i></button>
                                 </div>
                                 <div class="center-text">
-                                    <button class="btn btn-dark fs-1-5rem border-white"> <a href=".."> Cancelar </a></button>
+                                    <a href=".."><button class="btn btn-dark fs-1-5rem border-white">  Cancelar <i class="fa fa-window-close" aria-hidden="true"></i></button></a>
                                 </div>
                             </div>
                         </div>

@@ -129,7 +129,7 @@
                     <input type="hidden" name="postid" value="{{ $unPost['id'] }} "></input>
 
                     <div class="comment-response-textarea">
-                        <textarea class="commentpost" name="comment" maxlength="150" placeholder="Grazna aqui..." rows="2"></textarea>
+                        <textarea class="commentpost" name="comment" maxlength="150" placeholder="Comente aquí..." rows="2" required></textarea>
                     </div>
 
                     <div class="center-text">

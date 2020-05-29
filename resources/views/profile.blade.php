@@ -1,5 +1,5 @@
 @extends('layouts.base')
-
+<script src="js/subir-imagen.js"></script>
 @section('contenido')
     <main>
         <div class="main-container">
@@ -37,19 +37,40 @@
 
                     <div class="pfp-container center-text">
                         <div class="profile">
-                            <label for="img">
+                            <!--<label for="img">-->
                                 <b> Foto de perfil </b> <br>
-                            <div class="profile-pfp">
-                                <img src="storage/img/profiles/{{$usuarioActual['imagen']}}" alt="Tu foto de perfil"> <br>
-                            </div>
-                            </label> <br>
+                            <!--<div class="profile-pfp">-->
+                                <!-- <img src="storage/img/profiles/{{$usuarioActual['imagen']}}" alt="Tu foto de perfil"> <br> -->
+                            <!--</div>
+                            </label> <br>-->
 
-                            <label for="img">
+                            <!-- Vista previa imagen a subir -->
+                            <!--<p class="text-white text-center"> <b> Vista Previa </b></p>-->
+                            
+                            <div class="image-area mt-4 p0 pfp-upload-preview">
+                                <div class="new-pfp">
+                                    <img id="imageResult" src="storage/img/profiles/{{$usuarioActual['imagen']}}" alt="Tu foto de perfil" class="img-fluid shadow-sm mx-auto d-block">
+                                </div>
+                                <!-- Campo para subir imagen-->
+                                <div class="input-group mb-3 px-2 py-2 bg-white shadow-sm image-search">
+                                    <input id="upload" type="file" name="imagen" onchange="readURL(this);" class="form-control border-0" accept="image/*">
+                                    <label id="upload-label" for="upload" class="black">Cambiar imagen</label>
+                                    <div class="input-group-append search-but">
+                                        <label for="upload" class="btn btn-success m-0 px-4">
+                                            <i class="fa fa-cloud-upload mr-2"></i>
+                                            <span class="text-uppercase font-weight-bold white">Buscar... </span>
+                                        </label>
+                                    </div>
+                                </div>
+                            </div> 
+                            <br>
+
+                            <!--<label for="img">
                                 Subir una imagen
                                 <label class="btn btn-success fs-1-5rem">
                                     Buscar <input type="file" id="img" name="img" accept="image/*" style="display: none;">
                                 </label>
-                            </label> <br>
+                            </label> <br>-->
 
                             <div class="center-text">
                                 <button class="btn btn-primary fs-1-5rem" type="submit">Actualizar</button>
@@ -117,7 +138,7 @@
                     <label for="fecha_nac" class="col-md-4 col-form-label text-md-right center-text"><b>{{ __('Fecha de Nacimiento') }}</b></label>
 
                             <div class="col-md-8">
-                                <input class="form-control fs-1-5rem" type="date" id="fecha_nac" name="fecha_nac" value="{{ $usuarioActual['fecha_nac'] }}" step="1" max="2002-12-31" required autocomplete="fecha_nac">
+                                <input class="form-control fs-1-5rem center-text" type="date" id="fecha_nac" name="fecha_nac" value="{{ $usuarioActual['fecha_nac'] }}" step="1" max="2002-12-31" required autocomplete="fecha_nac">
                             </div>
                         </div>
                         <br>
@@ -174,7 +195,7 @@
                         </div>
                     </div>
                     <br>
-                    <div class="col-md-8 center-text">
+                    <div class="col-md-12 col-lg-12 center-text">
                         <button class="btn btn-primary fs-1-5rem" type="submit">Cambiar contraseña</button>
                     </div>
                 </form>
@@ -183,6 +204,7 @@
             <!-- Borrar Cuenta -->
             <section class="main-profile-container center-text">
                 <form action="deleteAccount" method="POST">
+                <br>
                     <button class="btn btn-danger fs-1-5rem" type="submit"> Borrar Cuenta<i class="fa fa-ban" aria-hidden="true"></i></button>
                 </form>
             </section>

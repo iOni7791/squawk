@@ -386,6 +386,45 @@ textarea {
     width: 12rem;
 }
 
+.new-pfp #imageResult
+{
+    height: 12rem;
+    width: 12rem;
+    border-radius: 50%;
+}
+
+.pfp-upload-preview
+{
+    width: 30rem;
+}
+
+@media (max-width: 480px) 
+{
+    .pfp-upload-preview
+    {
+        width: 25rem;
+    }
+
+}
+
+@media (min-width: 720px) 
+{
+    .pfp-upload-preview
+    {
+        width: 35rem;
+    }
+
+}
+
+@media (min-width: 900px) 
+{
+    .pfp-upload-preview
+    {
+        width: 45rem;
+    }
+
+}
+
 
 /** Index **/
 
@@ -581,7 +620,8 @@ ul.no-deco {
     font-size: 1.5rem;
 }
 
-.actions-container .info2 {
+.info2
+{
     display: flex;
     justify-content: space-evenly;
     align-items: center;
@@ -613,6 +653,10 @@ ul.no-deco {
     width: 25%;
     padding-top: 0.2rem;
     padding-bottom: 0.2rem;
+}
+
+.reaction {
+    margin-right: 1rem;
 }
 
 @media (min-width: 768px) {

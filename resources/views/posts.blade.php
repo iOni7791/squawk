@@ -1,11 +1,11 @@
 @extends('layouts.base')
-    <script src="js/subir-imagen.js"></script>
+<script src="js/subir-imagen.js"></script>
 @section('contenido')
 <main>
     <div class="main-container">
         <section class="main-title-container">
             <h1 class="text-center">
-                Graznidos
+                Posts
             </h1>
         </section>
 
@@ -38,7 +38,7 @@
                                         <div class="input-group mb-3 px-2 py-2 bg-white shadow-sm image-search">
                                             <input id="upload" type="file" name="imagen" onchange="readURL(this);" class="form-control border-0" accept="image/*">
                                             <label id="upload-label" for="upload" class="black">Subir imagen</label>
-                                            <div class="input-group-append">
+                                            <div class="input-group-append search-but">
                                                 <label for="upload" class="btn btn-success m-0 px-4">
                                                     <i class="fa fa-cloud-upload mr-2"></i>
                                                     <span class="text-uppercase font-weight-bold white">Buscar... </span>
@@ -172,7 +172,7 @@
                         <input type="hidden" name="postid" value="{{ $unPost['id'] }} "></input>
 
                         <div class="comment-response-textarea">
-                            <textarea class="commentpost" name="comment" maxlength="150" placeholder="Grazna aqui..." rows="2" required></textarea>
+                            <textarea class="commentpost" name="comment" maxlength="150" placeholder="Comente aquí..." rows="2" required></textarea>
                         </div>
 
                         <div class="center-text">

@@ -48,12 +48,12 @@
                 <br>
                 <!--Si estás viendo el perfil de otro usuario-->
                 <div class="center-text">
-                    <a href="profile"> <button class="btn btn-success fs-1-5rem"><a href="addfriend">Agregar amigo <i class="fa fa-user-plus" aria-hidden="true"></i></a> </button></a>
+                    <a href="addfriend"> <button class="btn btn-success fs-1-5rem">Agregar amigo <i class="fa fa-user-plus" aria-hidden="true"></i></button></a>
                 </div>
                 <br>
                 <!--Si este usuario ya es tu amigo-->
                 <div class="center-text">
-                    <a href="profile"> <button class="btn btn-warning fs-1-5rem"><a href="deletefriend">Eliminar amigo <i class="fa fa-user-times" aria-hidden="true"></i></a> </button></a>
+                    <a href="deletefriend"> <button class="btn btn-warning fs-1-5rem">Eliminar amigo <i class="fa fa-user-times" aria-hidden="true"></i></button></a>
                 </div>
                 @endif
             </section>
@@ -94,7 +94,7 @@
                                 <spam>{{$unLike->cant}}</spam>
                             </span>
                             @endforeach
-                            <a class="action reaction" href="{{asset('unpost/'.$unPost['id'])}}">
+                            <a class="action" href="{{asset('unpost/'.$unPost['id'])}}">
                                 <i class="fa fa-comment-o reaction" aria-hidden="true"></i>{{count($unPost['coms'])}}
                             </a>
                         </div>
