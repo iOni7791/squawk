@@ -49,7 +49,7 @@ class FriendsController extends Controller
                             ->where('id_usuario',  Auth::user()->id)
                             ->count();
 
-                            $friendslist[$pos]['esamigo'] =  $cuantos == 1;
+                $friendslist[$pos]['esamigo'] =  $cuantos == 1;
 
                 $friendslist[$pos]['soyyo'] =  $friendslist[$pos]['usuario']['id'] == Auth::user()->id;
             endforeach;
@@ -80,6 +80,17 @@ class FriendsController extends Controller
                             ->delete();
             return redirect('friends');
         endif;
+    }
+
+    public function probar(){
+
+        $friendslist = Friends::
+                        where( function ($q, $mid = 8){
+                            $q->where('id_usuario', $mid)
+                            ->orWhere('id_amigo', $mid);
+                        })->count();
+
+        dd($friendslist);
     }
 
 }

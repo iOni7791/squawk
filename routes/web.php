@@ -50,6 +50,9 @@ Route::get('/friends/{id?}', 'FriendsController@friends');
 Route::get('/addfriend/{id?}', 'FriendsController@add');
 Route::get('/delfriend/{id?}', 'FriendsController@del');
 
+Route::get('/prueba', 'FriendsController@probar');
+
+
 Auth::routes();
 // Route::get('/home', 'HomeController@index')->name('home');
 
