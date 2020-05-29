@@ -81,4 +81,11 @@ class UsersController extends Controller
         endif;
     }
 
+    public function edit()
+    {
+        if (Auth::user()):
+            $datos = request();
+        endif;
+    }
+
 }

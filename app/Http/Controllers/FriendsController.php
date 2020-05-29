@@ -75,10 +75,9 @@ class FriendsController extends Controller
     public function del($mid = 0){
         if (Auth::user()):
             $activo = 2;
-            $amigo = new Friends();
-            $amigo->id_usuario =  Auth::user()->id;
-            $amigo->id_amigo = $mid;
-            $amigo->save();
+            Friends::where('id_usuario', Auth::user()->id)
+                            ->where('id_amigo', $mid)
+                            ->delete();
             return redirect('friends');
         endif;
     }
