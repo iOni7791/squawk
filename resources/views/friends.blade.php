@@ -63,7 +63,21 @@
                             </div>
                         </div>
                         <br>
+                        
                         <div class="friend-info">
+                            <a href="{{asset('nest/'.$item['usuario']['id'])}}">
+                                <?php $aaa = ($item['usuario']['imagen']) ? ($item['usuario']['imagen']) : 'pfp-default.png'; ?>
+                                <img src="{{asset('storage/img/profiles/'.$aaa)}}" alt="NombreDePerfil"></a>
+                        </div>
+                        <div class="friend-username">
+                            <p><a href="{{asset('nest/'.$item['usuario']['id'])}}">{{$item['usuario']['name']}}</a>
+                                @unless ($item['soyyo'] or $item['esamigo'])
+                                    <span title="Agregar Amigo"><a href="{{asset('addfriend/'.$item['usuario']['id'])}}"><i class="fa fa-user-plus" aria-hidden="true"></i></a></span>
+                                @endunless
+                                @if(Auth::user()->id == $usuarioActual['id'])
+                                    <span title="Borrar Amigo"> <a href="{{asset('delfriend/'.$item['usuario']['id'])}}"><i class="fa fa-trash" aria-hidden="true"></i></a></span>
+                                @endif
+                            </p>
                             <em>{{$item['friendsno']}} amigos</em><br>
                             <em>{{$item['friendsme']}} amigos en com&uacute;n</em>
                             @unless ($item['soyyo'] or $item['esamigo'])
@@ -80,6 +94,7 @@
                             </a>
                         </div>
                     </div>
+                    
                 @endforeach
             </div>
         </section> <!-- Main-index-container -->

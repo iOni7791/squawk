@@ -81,4 +81,49 @@ class UsersController extends Controller
         endif;
     }
 
+    public function editdata()
+    {
+        if (Auth::user()):
+            $datos = request();
+
+            $usuarioActual = Auth::user();
+
+            $param = request();
+
+                if ($param):
+                    $archi = null;
+                    if ($param->hasFile('imagen') and $param->file('imagen')->isValid()):
+                        $imagen = request()->imagen;
+                        $archi = uniqid().".".request()->imagen->extension();
+                        //dd($archi);
+                    endif;
+                    $usuarioActual->name = $param['name'];
+                    $usuarioActual->bio = $param['bio'];
+                    $usuarioActual->fecha_nac = $param['fecha_nac'];
+                    $usuarioActual->genero_id = $param['genero'];
+                    if ($archi):
+                        $usuarioActual->imagen = $archi;
+                    endif;
+
+                    //dd($param, $usuarioActual, $archi);
+                    if ( $usuarioActual->save() && $archi )
+
+                        $file = $imagen->storeAs('public/img/profiles', $archi);
+                endif;
+                return redirect('profile');
+
+
+        endif;
+    }
+    public function passreset()
+    {
+        $token = "";
+        $activo = 4;
+
+        if (Auth::user()):
+            return view('auth.passwords.reset', compact('token', 'activo'));
+        else:
+            return redirect('profile');
+        endif;
+    }
 }

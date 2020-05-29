@@ -47,14 +47,14 @@
                 </div>
                 <br>
                 <!--Si estás viendo el perfil de otro usuario-->
-                <div class="center-text">
+<!--                <div class="center-text">
                     <a href="addfriend"> <button class="btn btn-success fs-1-5rem">Agregar amigo <i class="fa fa-user-plus" aria-hidden="true"></i></button></a>
                 </div>
                 <br>
-                <!--Si este usuario ya es tu amigo-->
+            -->                <!--Si este usuario ya es tu amigo--> <!--
                 <div class="center-text">
                     <a href="deletefriend"> <button class="btn btn-warning fs-1-5rem">Eliminar amigo <i class="fa fa-user-times" aria-hidden="true"></i></button></a>
-                </div>
+                </div> -->
                 @endif
             </section>
 
