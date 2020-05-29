@@ -200,6 +200,7 @@
                     </div>
                     <br>
                 --> <div class="col-md-12 col-lg-12 center-text">
+                        <br>
                         <a href="passreset"
                             <button class="btn btn-primary fs-1-5rem" type="submit">Cambiar contraseña</button>
                         </a>

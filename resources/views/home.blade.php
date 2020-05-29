@@ -28,7 +28,7 @@
                             <li><a href="faq">F.A.Q.</a></li>
                             <li><a href="contact">Contacto</a></li>
                             <li><a href="posts">Posteos</a></li>
-                            <li><a href="friends">Amigos (En progreso...)</a></li>
+                            <li><a href="friends">Amigos</a></li>
                         </ul>
                         <br><br>
                         <!-- <marquee behavior="scroll" direction="right"> Saludos! </marquee> -->
